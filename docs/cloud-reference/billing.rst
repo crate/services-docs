@@ -18,7 +18,7 @@ need about billing, invoicing, and payments.
 Your current accumulated bill can be always found under the billing tab in
 Organization section:
 
-.. image:: _assets/img/billing-meter.png
+.. image:: ../_assets/img/billing-meter.png
    :alt: Cloud Console billing meter
 
 .. _billing-principles:
@@ -65,7 +65,7 @@ you). There are several ways you can provide the necessary billing information:
 Address information, along with the payment methods can be edited in the
 payment methods tab, in Organization section:
 
-.. image:: _assets/img/payment-methods2.png
+.. image:: ../_assets/img/payment-methods2.png
    :alt: Cloud Console payment methods
 
 
@@ -97,7 +97,7 @@ Crate also offers a special type of payment method suited for large customers
 that don't want to use a credit card or marketplace subscriptions (AWS/Azure).
 With this type of subscription, a contract is created directly with Crate.
 
-.. image:: _assets/img/custom-contract.png
+.. image:: ../_assets/img/custom-contract.png
    :alt: Custom contract payment option
 
 .. NOTE::

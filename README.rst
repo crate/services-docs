@@ -1,11 +1,11 @@
-=======================
-CrateDB Cloud Reference
-=======================
+==================
+CrateDB Cloud Docs
+==================
 
 |ci| |rtd| |build|
 
 
-Reference documentation for `CrateDB Cloud`_.
+Documentation for `CrateDB Cloud`_.
 
 
 Contributing

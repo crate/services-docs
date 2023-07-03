@@ -22,7 +22,7 @@ information on CrateDB Cloud-related terminology.
 Basics
 ======
 
-.. image:: _assets/img/start.png
+.. image:: ../_assets/img/start.png
    :alt: CrateDB Cloud sign-in screen
 
 The CrateDB Cloud user interface permalink is the `CrateDB Cloud Console`_.
@@ -68,7 +68,7 @@ To see a list of all the organizations you have acesss to, go to
 
 the My Account page in the dropdown menu in the top-right.
 
-.. image:: _assets/img/organization-dashboard.png
+.. image:: ../_assets/img/organization-dashboard.png
    :alt: Cloud Console organization overview
 
 The Organization overview consists of seven tabs: *Clusters*, *Settings*, 
@@ -76,14 +76,14 @@ The Organization overview consists of seven tabs: *Clusters*, *Settings*,
 you are brought to the Clusters tab, which provides a quick overview of all
 your clusters.
 
-.. image:: _assets/img/clusters-overview.png
+.. image:: ../_assets/img/clusters-overview.png
    :alt: Cloud Console clusters overview
 
 If you are a member of multiple organizations, you can quickly change
 between them on every tab/page in the Cloud Console. Simply use the
 dropdown menu at the top-right of the current page/tab: 
 
-.. image:: _assets/img/change-organization.png
+.. image:: ../_assets/img/change-organization.png
    :alt: Cloud Console quick org swap
 
 The CrateDB Cloud Console is structured on a per-organization basis: all pages
@@ -99,7 +99,7 @@ Settings
 The Settings tab shows you the name, notification settings, and ID of your
 currently selected organization.
 
-.. image:: _assets/img/general-settings.png
+.. image:: ../_assets/img/general-settings.png
    :alt: Cloud Console general settings tab
 
 By clicking the *Edit* button next to the organization, you can rename it. 
@@ -120,7 +120,7 @@ The Billing tab shows all your existing subscriptions, along with which
 cluster is currently using the subscription. The current accumulated billing
 snapshot is also visible here, along with additional information:
 
-.. image:: _assets/img/billing-meter.png
+.. image:: ../_assets/img/billing-meter.png
    :alt: Cloud Console billing meter
 
 .. NOTE::
@@ -142,7 +142,7 @@ Click the *Add payment method* button at the top right to add a new card.
 
 Cloud subscription payment methods can also be added here.
 
-.. image:: _assets/img/payment-methods2.png
+.. image:: ../_assets/img/payment-methods2.png
    :alt: Cloud Console payment methods
 
 .. _overview-org-audit:
@@ -152,7 +152,7 @@ Organization Audit Logs
 
 This tab shows the Audit Logs of the current organization.
 
-.. image:: _assets/img/organization-audit-log.png
+.. image:: ../_assets/img/organization-audit-log.png
    :alt: Cloud Console organization audit log tab
 
 In the Audit Log, a user with the correct credentials (`an organization
@@ -172,7 +172,7 @@ of :ref:`CrateDB Edge <gloss-edge>` clusters in a :ref:`custom region
 <gloss-region>`. To do so, provide a name for the custom region and click the
 *Create edge region* button. Once created, the custom region will appear:
 
-.. image:: _assets/img/organization-regions.png
+.. image:: ../_assets/img/organization-regions.png
    :alt: Cloud Console organization regions tab
 
 This field will show a script to set up the dependencies for cluster
@@ -189,7 +189,7 @@ The detailed view of Cluster provides a broad range of relevant data of the
 selected cluster. It also displays metrics for the cluster. It can be accessed
 by clicking "View" on the desired cluster in the Clusters tab.
 
-.. image:: _assets/img/cluster-overview.png
+.. image:: ../_assets/img/cluster-overview.png
    :alt: Cloud Console cluster overview page
 
 Information visible on the Overview page includes:
@@ -282,13 +282,13 @@ file.
 Import from URL
 ~~~~~~~~~~~~~~~
 
-.. image:: _assets/img/cluster-data-tab.png
+.. image:: ../_assets/img/cluster-data-tab.png
    :alt: Cloud Console cluster data tab
 
 Here you can choose between the Import from URL and Import from file. To 
 import from a URL, click the Import from a URL button:
 
-.. image:: _assets/img/cluster-data-tab-url.png
+.. image:: ../_assets/img/cluster-data-tab-url.png
    :alt: Cloud Console cluster upload from url
 
 To import data, fill out the URL, name of the table which will be created and
@@ -321,7 +321,7 @@ You may re-import the same file into multiple tables without having to
 re-upload it within those 3 days. Up to 5 files may be uploaded at the same
 time, with the oldest ones being automatically deleted if you upload more.
 
-.. image:: _assets/img/cluster-data-tab-file.png
+.. image:: ../_assets/img/cluster-data-tab-file.png
    :alt: Cloud Console cluster upload from file
 
 As with the URL import, CSV, JSON, and Parquet files are supported. There is 
@@ -375,13 +375,13 @@ We also keep the last 14 backups indefinitely, no matter the state of your clust
 The Backups tab provides a list of all your backups. By default, a backup is
 made every hour.
 
-.. image:: _assets/img/cluster-backups.png
+.. image:: ../_assets/img/cluster-backups.png
    :alt: Cloud Console cluster backups page
 
 You can also control the schedule of your backups by clicking the *Edit backup
 schedule* button.
 
-.. image:: _assets/img/cluster-backups-edit.png
+.. image:: ../_assets/img/cluster-backups-edit.png
    :alt: Cloud Console cluster backups edit page
 
 Here you can create a custom schedule by selecting any number of hour slots.
@@ -394,7 +394,7 @@ console eitheir by copy-pasting it, or clicking the *Run query in Admin UI*.
 The latter will bring you directly to the Admin UI console with the statement
 automatically pre-filled.
 
-.. image:: _assets/img/cluster-backups-restore.png
+.. image:: ../_assets/img/cluster-backups-restore.png
    :alt: Cloud Console cluster backups restore page
 
 .. _overview-cluster-cloning:
@@ -407,7 +407,7 @@ specific snapshot into a different cluster. Creating the new cluster isn't
 part of the cloning process, you need to create the target cluster yourself. 
 You can clone a cluster from the Backups page. 
 
-.. image:: _assets/img/cluster-backups.png
+.. image:: ../_assets/img/cluster-backups.png
    :alt: Cloud Console cluster backup snapshots
 
 Choose a snapshot and click the *Clone* button. A popup window will appear,
@@ -416,7 +416,7 @@ If you don't have a second cluster created, click the *Deploy a new cluster*
 button, and you will be brought to the cluster deployment screen. After you've
 selected a cluster, click the *Clone to selected cluster*. 
 
-.. image:: _assets/img/cluster-clone-popup.png
+.. image:: ../_assets/img/cluster-clone-popup.png
    :alt: Cloud Console cluster clone popup
 
 .. NOTE::
@@ -452,7 +452,7 @@ These are:
 When cloning fails, it is indicated by a banner in the cluster overview
 screen.
 
-.. image:: _assets/img/cluster-clone-failed.png
+.. image:: ../_assets/img/cluster-clone-failed.png
    :alt: Cloud Console cluster failed cloning
 
 .. _overview-cluster-settings-scale:
@@ -464,13 +464,13 @@ On the Scale tab, current configuration of your cluster is shown. You can see
 your current plan, resources of a single node, and overall resources of the
 cluster.
 
-.. image:: _assets/img/cluster-scale.png
+.. image:: ../_assets/img/cluster-scale.png
    :alt: Cloud Console cluster scaling tab
 
 You can scale your cluster by clicking the *Edit cluster configuration* button
 in the top-right:
 
-.. image:: _assets/img/cluster-scale-edit.png
+.. image:: ../_assets/img/cluster-scale-edit.png
    :alt: Cloud Console cluster scaling edit
 
 Now you can do three different things:
@@ -508,7 +508,7 @@ Manage
 The manage tab contains credentials settings, deletion protection, upgrades, 
 IP allowlist, private links, suspend cluster, and delete cluster options.
 
-.. image:: _assets/img/cluster-manage.png
+.. image:: ../_assets/img/cluster-manage.png
    :alt: Cloud Console Manage tab
 
 * **Credentials** - These are the username and password used for accessing the

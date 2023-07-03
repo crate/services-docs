@@ -6,7 +6,7 @@ Similar to Croud, we offer an API to allow programmatic access to our Cloud
 products. The API can be accessed by generating a key and secret in your 
 account page:
 
-.. image:: _assets/img/create-api-key.png
+.. image:: ../_assets/img/create-api-key.png
    :alt: Cloud Console New Api Key
 
 Click the *Generate new key* button to create your key. A popup with your
