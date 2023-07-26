@@ -11,7 +11,7 @@ CrateDB handles snapshots can be found in the CrateDB documentation about
 :ref:`snapshots <crate-reference:snapshot-restore>`.
 
 You may also want to read our reference on :ref:`the backup page on the 
-CrateDB Cloud Console <cloud-reference:overview-cluster-backups>`.
+CrateDB Cloud Console <overview-cluster-backups>`.
 
 .. rubric:: Table of contents
 
