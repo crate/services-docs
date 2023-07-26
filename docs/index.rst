@@ -34,5 +34,5 @@ in the tutorials below.
 .. _CrateDB: https://crate.io/products/cratedb/
 .. _Croud CLI: https://crate.io/docs/cloud/cli/en/latest/
 .. _GitHub: https://github.com/crate/cloud-docs
-.. _How-To Guides: https://crate.io/docs/cloud/howtos/en/latest/
-.. _Reference: https://crate.io/docs/cloud/reference/en/latest/
+.. _How-To Guides: https://crate.io/docs/cloud/en/latest/cloud-howtos/
+.. _Reference: https://crate.io/docs/cloud/en/latest/cloud-reference/
