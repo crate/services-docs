@@ -1,6 +1,6 @@
-==================
-CrateDB Cloud Docs
-==================
+==============================
+CrateDB Services Documentation
+==============================
 
 |ci| |rtd| |build|
 

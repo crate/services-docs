@@ -1,3 +1,10 @@
+.. _services-docs-index:
+
+################
+CrateDB Services
+################
+
+
 .. _cloud-docs-index:
 
 =============
