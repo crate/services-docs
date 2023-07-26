@@ -1,4 +1,4 @@
-from crate.theme.rtd.conf.cloud_reference import *
+from crate.theme.rtd.conf.cloud import *
 
 linkcheck_ignore = [
     "https://eks1.eu-west-1.aws.cratedb.cloud",
