@@ -12,7 +12,7 @@ data in real-time.
 For the purposes of this guide, it is assumed that you
 have a cluster up and running and can access the Console. If not, please refer
 to the :ref:`tutorial on how to deploy a cluster for the first time
-<cloud-tutorials:cluster-deployment>`.
+<cluster-deployment>`.
 
 .. rubric:: Table of contents
 
