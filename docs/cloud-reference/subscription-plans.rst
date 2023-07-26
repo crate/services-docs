@@ -65,7 +65,7 @@ This plan is aimed at new users who want to test and evaluate CrateDB Cloud
 and is perpetually free to use. Every user can deploy one free tier cluster 
 in their organization without adding a payment method. This plan
 also doesn't consume any 
-:ref:`Free Credit <cloud-tutorials:free-trial-budget>` that you may have
+:ref:`Free Credit <free-trial-budget>` that you may have
 available. They are limited to one node with 2 CPUs, 2 GiB of memory, and 4
 GiB of storage.
 
@@ -122,9 +122,8 @@ scaling up/down:
 - Usage is billed based on consumption
 - Billing is done in $0.001 increments for the compute + storage usage
 
-For details visit :ref:`Azure
-<cloud-tutorials:signup-azure-to-cluster>`, or :ref:`AWS
-<cloud-tutorials:signup-aws-to-cluster>` marketplace deployment tutorials.
+For details visit :ref:`Azure <signup-azure-to-cluster>`, or :ref:`AWS
+<signup-aws-to-cluster>` marketplace deployment tutorials.
 
 .. _subscription-plans-contracts:
 

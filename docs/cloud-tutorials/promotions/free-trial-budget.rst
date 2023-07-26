@@ -28,7 +28,7 @@ Create an organization
 
 To get the credit, simply create an organization. For the detailed
 instructions, see  :ref:`Create a new organization how-to
-<cloud-howtos:create-org>`.
+<create-org>`.
 
 Enter the desired name for the organization in the field and click *Create
 organization*. Once this is done, you will be returned to the Clusters
