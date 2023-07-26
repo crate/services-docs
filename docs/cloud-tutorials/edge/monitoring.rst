@@ -241,9 +241,9 @@ If this looks interesting to you, go to `Cloud Console`_ and give it a try!
 
 .. _and Prometheus: https://grafana.com/docs/grafana/latest/datasources/prometheus/
 .. _Cloud Console: https://console.cratedb.cloud/?utm_campaign=2022-Q3-WS-Developer-Motion&utm_source=docs
-.. _Cluster performance dashboard: https://raw.githubusercontent.com/crate/cloud-tutorials/master/docs/_extra/cratedb-edge-cluster-dashboard.json
+.. _Cluster performance dashboard: https://github.com/crate/services-docs/raw/main/docs/_extra/cratedb-edge-cluster-dashboard.json
 .. _for Loki: https://grafana.com/docs/loki/latest/
 .. _Grafana: https://grafana.com/
 .. _Loki: https://grafana.com/oss/loki/
-.. _Logs monitoring dashboard: https://raw.githubusercontent.com/crate/cloud-tutorials/master/docs/_extra/cratedb-edge-logs-dashboard.json
+.. _Logs monitoring dashboard: https://github.com/crate/services-docs/raw/main/docs/_extra/cratedb-edge-logs-dashboard.json
 .. _Prometheus: https://grafana.com/oss/prometheus/

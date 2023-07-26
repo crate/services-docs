@@ -48,4 +48,4 @@ documentation for :ref:`Croud <cloud-cli:index>`, the CLI for CrateDB Cloud.
     private-endpoints
 
 
-.. _GitHub: https://github.com/crate/cloud-howtos/
+.. _GitHub: https://github.com/crate/services-docs/
