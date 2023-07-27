@@ -6,7 +6,7 @@ Add users
 
 This is a quick guide on how to add users to organizations and
 how to manage their privileges. This information can also be found in the
-CrateDB Cloud Console :ref:`Overview <cloud-reference:overview>` but is
+CrateDB Cloud Console :ref:`Overview <overview>` but is
 presented here separately for ease of use.
 
 .. rubric:: Table of contents
@@ -31,7 +31,7 @@ New users can be added to an organization by going to the Users tab in the
 left-hand menu. To add and manage users of the organization, you must be the
 organization admin. (For more information on user roles and associated
 privileges, see our documentation on 
-:ref:`user roles <cloud-reference:user-roles>`.)
+:ref:`user roles <user-roles>`.)
 
 .. image:: ../_assets/img/users-overview.png
    :alt: Cloud Console users overview
