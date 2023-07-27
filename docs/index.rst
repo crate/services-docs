@@ -26,13 +26,13 @@ in the tutorials below.
 .. toctree::
     :maxdepth: 4
 
-    cloud-reference/index
-    cloud-tutorials/index
-    cloud-howtos/index
+    reference/index
+    tutorials/index
+    howtos/index
 
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
 .. _CrateDB: https://crate.io/products/cratedb/
 .. _Croud CLI: https://crate.io/docs/cloud/cli/en/latest/
 .. _GitHub: https://github.com/crate/cloud-docs
-.. _How-To Guides: https://crate.io/docs/cloud/en/latest/cloud-howtos/
-.. _Reference: https://crate.io/docs/cloud/en/latest/cloud-reference/
+.. _How-To Guides: https://crate.io/docs/cloud/en/latest/howtos/
+.. _Reference: https://crate.io/docs/cloud/en/latest/reference/

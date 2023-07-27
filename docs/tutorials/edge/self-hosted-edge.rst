@@ -126,7 +126,7 @@ install.
 The ``<token>`` in question is the token you receive from the CrateDB Console
 Edge region field in the Regions tab of the Organization Overview. For more
 information on this section of the CrateDB Console, refer to our :ref:`CrateDB
-Cloud Console overview <cloud-reference:overview-org-regions>`.
+Cloud Console overview <overview-org-regions>`.
 
 With this, you should be ready to use CrateDB Edge via Microk8s.
 
@@ -246,7 +246,7 @@ install.
 The ``<token>`` in question is the token you receive from the CrateDB Console
 Edge region field in the Regions tab of the Organization Overview. For more
 information on this section of the CrateDB Console, refer to our :ref:`CrateDB
-Cloud Console overview <cloud-reference:overview-org-regions>`.
+Cloud Console overview <overview-org-regions>`.
 
 With this, you should be ready to use CrateDB Edge via K3S.
 
