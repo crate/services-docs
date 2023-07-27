@@ -9,3 +9,4 @@ Unreleased
 - Consolidate ``cloud-reference``, ``cloud-howtos``, and ``cloud-tutorials``
 - Adjust links to accompany renaming to ``cloud-docs``
 - Adjust intersphinx references to accompany consolidation into single repository
+- Rename top-level directories to `howtos`, `reference`, and `tutorials`
