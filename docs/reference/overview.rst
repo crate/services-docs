@@ -409,8 +409,8 @@ History of your exports is also visible in the Export tab.
 
     Export limitations:
 
-     - Size limit for exporting is 1 GiB
-     - Exports are held for 3 days, then automatically deleted
+   - Size limit for exporting is 1 GiB
+   - Exports are held for 3 days, then automatically deleted
 
 .. _overview-cluster-backups:
 
