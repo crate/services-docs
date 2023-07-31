@@ -1,2 +1,1 @@
-git+https://github.com/crate/crate-docs-theme@amo/adjust-leftnav
-# crate-docs-theme
+crate-docs-theme
