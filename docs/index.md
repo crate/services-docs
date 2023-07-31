@@ -2,6 +2,7 @@
 
 # CrateDB Cloud
 
+
 ## About
 
 **CrateDB Cloud** is the fully-managed database as a service offering by
@@ -21,12 +22,12 @@ Learn how to get started and make the most of your CrateDB cloud subscription
 in the resources and tutorials below.
 
 
-## Explore
-
+## Manage
 
 ::::{grid} 1 2 2 3
 :margin: 4 4 0 0
 :gutter: 1
+
 
 :::{grid-item-card} {octicon}`rocket` Get started
 :link: free-trial-budget
@@ -36,12 +37,14 @@ Learn how to [sign up](#sign-up) to get started with free credits
 on the trial budget plan.
 :::
 
+
 :::{grid-item-card} {octicon}`unfold` Deploy
 :link: cluster-deployment
 :link-type: ref
 
 Deploy a CrateDB cluster.
 :::
+
 
 :::{grid-item-card} {octicon}`infinity` Scale
 :link: reconfigure-cluster
@@ -50,12 +53,14 @@ Deploy a CrateDB cluster.
 Learn about the available options to scale your clusters.
 :::
 
+
 :::{grid-item-card} {octicon}`tools` Manage
 :link: cloud-howtos-index
 :link-type: ref
 
 Learn about general information how to manage your cluster.
 :::
+
 
 :::{grid-item-card} {octicon}`table` Console
 :link: console-overview
@@ -65,6 +70,7 @@ The web-based management console for all your managed and on-premise
 clusters.
 :::
 
+
 :::{grid-item-card} {octicon}`terminal` Croud
 :link: cluster-deployment-croud
 :link-type: ref
@@ -72,7 +78,45 @@ clusters.
 A command-line based terminal program to operate your managed clusters.
 :::
 
+
 ::::
+
+
+## Connect
+
+::::{grid} 1 2 2 3
+:margin: 4 4 0 0
+:gutter: 1
+
+
+:::{grid-item-card} {octicon}`plug` Client libraries
+:link: connect-to-cluster-howto-index
+:link-type: ref
+
+Learn how to configure your favorite client library to connect to a
+CrateDB Cloud cluster.
+:::
+
+
+:::{grid-item-card} {octicon}`paper-airplane` Integration tutorials
+:link: https://community.crate.io/t/overview-of-cratedb-integration-tutorials/1015
+:link-type: url
+
+Integration-focused tutorials about using  CrateDB
+with popular applications, frameworks, and tools.
+:::
+
+
+:::{grid-item-card} {octicon}`graph` Visualization options
+:link: visualize-data-with-grafana
+:link-type: ref
+
+Visualize information in your CrateDB cluster.
+:::
+
+
+::::
+
 
 
 ```{rubric} Table of contents
