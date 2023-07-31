@@ -4,15 +4,17 @@
 Python
 ======
 
-This guideasdasd
+This guide demonstrates how to connect to a CrateDB Cloud cluster using different
+kinds of Python drivers. Individual drivers offer specific features for specific
+needs of your application, so consider reading this enumeration carefully.
 
 crate-python
 ------------
 
-crate-python library implements the Python Database API 2.0 specification, 
-which defines a common interface for accessing databases in Python
-
-Example implementation will look like this:
+The ``crate`` Python package offers a database client implementation compatible
+with the Python Database API 2.0 specification, and also includes the CrateDB
+SQLAlchemy dialect. See the full documentation :ref:`here <crate-python:index>`.
+The package can be installed using ``pip install crate[sqlalchemy]``.
 
 .. code-block:: python
 
@@ -26,16 +28,13 @@ Example implementation will look like this:
 	    result = cursor.fetchone()
 	    print(result)
 
-See full documentation :ref:`here <crate-python:index>`.
-
 psycopg2
 --------
 
 Psycopg is a popular PostgreSQL database adapter for Python. Its main features
 are the complete implementation of the Python DB API 2.0 specification and the
 thread safety (several threads can share the same connection).
-
-Example implementation will look like this:
+For more information, see the `psycopg documentation`_.
 
 .. code-block:: python
 
@@ -49,16 +48,13 @@ Example implementation will look like this:
 	        result = cursor.fetchone()
 	        print(result)
 
-For more information see `psycopg documentation`_.
-
 aiopg
 -----
 
 aiopg is a python library for accessing a PostgreSQL database from the asyncio
 PEP-3156/tulip) framework. It wraps asynchronous features of the Psycopg
 database driver.
-
-Example implementation will look like this:
+For more information, see the `aiopg documentation`_.
 
 .. code-block:: python
 
@@ -76,16 +72,13 @@ Example implementation will look like this:
 	loop = asyncio.get_event_loop()
 	loop.run_until_complete(run())
 
-For more information see `aiopg documentation`_.
-
 asyncpg
 -------
 
 asyncpg is a database interface library designed specifically for PostgreSQL
-and Python/asyncio. asyncpg is an efficient, clean implementation of PostgreSQL
-server binary protocol for use with Python’s asyncio framework.
-
-Example implementation will look like this:
+and Python/asyncio. asyncpg is an efficient, clean implementation of the
+PostgreSQL server binary protocol for use with Python's asyncio framework.
+For more information, see the `asyncpg documentation`_.
 
 .. code-block:: python
 
@@ -103,7 +96,6 @@ Example implementation will look like this:
 	loop = asyncio.get_event_loop()
 	loop.run_until_complete(run())
 
-For more information see `asyncpg documentation`_.
 
 .. _psycopg documentation: https://www.psycopg.org/docs/
 .. _aiopg documentation: https://aiopg.readthedocs.io/
