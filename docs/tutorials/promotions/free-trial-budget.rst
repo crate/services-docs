@@ -46,8 +46,8 @@ first cluster running.
 .. NOTE::
     Notes on the free credit:
      
-     - Credit can be spent on any cluster configuration
-     - Credit expires 30 days after organization is created
-     - Billing starts when the free credit is consumed or expired
-     - It is possible to deploy multiple clusters with the free credit
-     - It is possible to scale clusters with the free credit
+    - Credit can be spent on any cluster configuration
+    - Credit expires 30 days after organization is created
+    - Billing starts when the free credit is consumed or expired
+    - It is possible to deploy multiple clusters with the free credit
+    - It is possible to scale clusters with the free credit
