@@ -14,7 +14,7 @@ CrateDB is a distributed and scalable open-source SQL database for storing and
 analyzing massive amounts of data in near real-time, even with complex queries.
 It is PostgreSQL-compatible, and based on Lucene.
 
-Customers are operating CrateDB clusters that store information in the range of
+Users are operating CrateDB clusters that store information in the range of
 billions of records, and terabytes of data, equally accessible without any
 retrieval penalty on data point age.
 
@@ -23,6 +23,10 @@ in the resources and tutorials below.
 
 
 ## Manage
+
+CrateDB Cloud is fully-managed in day-to-day operations. For interacting with
+your clusters using high-level commands, and to monitor their status, there is
+a web-based control center, a HTTP API, and a command-line program.
 
 ::::{grid} 1 2 2 3
 :margin: 4 4 0 0
@@ -83,6 +87,10 @@ A command-line based terminal program to operate your managed clusters.
 
 
 ## Connect
+
+Learn about a diverse set of integration and connectivity options
+to data wrangling and visualization tools (Java/JDBC,
+Python/SQLAlchemy/pandas/Dask, ETL, BI, etc.).
 
 ::::{grid} 1 2 2 3
 :margin: 4 4 0 0
