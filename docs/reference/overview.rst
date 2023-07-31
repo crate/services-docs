@@ -201,12 +201,12 @@ Overview
 
 * **Status**: Current status of your cluster:
    
-   - GREEN: Your cluster is healthy.
-   - YELLOW: Some of your tables have under-replicated shards. Please log in
-     to your cluster's Admin UI to check.
-   - RED: Some of your tables have missing shards. This can happen if you've
-     recently restarted a node. Our support team is already notified and
-     investigating the issue.
+ - GREEN: Your cluster is healthy.
+ - YELLOW: Some of your tables have under-replicated shards. Please log in
+   to your cluster's Admin UI to check.
+ - RED: Some of your tables have missing shards. This can happen if you've
+   recently restarted a node. Our support team is already notified and
+   investigating the issue.
 
 * **Region**: Name of the region where the cluster is deployed.
 
