@@ -9,8 +9,13 @@
 your clusters in the cloud – without needing to worry about database
 management.
 
-CrateDB is a distributed, open-source database that combines the performance of
-NoSQL with the power and simplicity of standard SQL.
+CrateDB is a distributed and scalable open-source SQL database for storing and
+analyzing massive amounts of data in near real-time, even with complex queries.
+It is PostgreSQL-compatible, and based on Lucene.
+
+Customers are operating CrateDB clusters that store information in the range of
+billions of records, and terabytes of data, equally accessible without any
+retrieval penalty on data point age.
 
 Learn how to get started and make the most of your CrateDB cloud subscription
 in the resources and tutorials below.
