@@ -180,7 +180,7 @@ deployment in the custom region. Apply the script in your local CLI and follow
 the prompts to proceed. A ``--help`` parameter is available within the script
 for further information.
 
-.. _overview-cluster-overview:
+.. _overview-cluster:
 
 Cluster
 =======
@@ -193,6 +193,8 @@ by clicking "View" on the desired cluster in the Clusters tab.
    :alt: Cloud Console cluster overview page
 
 Information visible on the Overview page includes:
+
+.. _overview-cluster-overview:
 
 Overview
 --------
