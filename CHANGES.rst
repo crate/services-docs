@@ -10,3 +10,5 @@ Unreleased
 - Adjust links to accompany renaming to ``cloud-docs``
 - Adjust intersphinx references to accompany consolidation into single repository
 - Rename top-level directories to `howtos`, `reference`, and `tutorials`
+- Refactored content about connectivity concerns to dedicated section at
+  ``crate-client-tools``
