@@ -88,38 +88,36 @@ A command-line based terminal program to operate your managed clusters.
 
 ## Connect
 
-Learn about a diverse set of integration and connectivity options
-to data wrangling and visualization tools (Java/JDBC,
-Python/SQLAlchemy/pandas/Dask, ETL, BI, etc.).
+This section introduces you to the canonical set of database drivers, client-
+and developer-applications, and how to configure them to connect to CrateDB.
+Just to name a few, it is about the CrateDB Admin UI, `crash`, `psql`,
+DataGrip, and DBeaver applications, the Java/JDBC/Python drivers, the SQLAlchemy
+and Flink dialects, and more.
 
-::::{grid} 1 2 2 3
+CrateDB integrates well with a diverse set of applications and tools concerned
+with analytics, visualization, and data wrangling, in the areas of ETL, BI, 
+metrics aggregation and monitoring, and more.
+
+
+::::{grid} 1 2 2 2
 :margin: 4 4 0 0
 :gutter: 1
 
 
-:::{grid-item-card} {octicon}`plug` Client libraries
-:link: connect-to-cluster-howto-index
+:::{grid-item-card} {material-outlined}`table_chart;2em` Admin UI
+:link: crate-admin-ui:index
 :link-type: ref
 
-Learn how to configure your favorite client library to connect to a
-CrateDB Cloud cluster.
+Each CrateDB Cloud cluster offers a dedicated Admin UI, which can be used to explore
+data, schema metadata, and cluster status information.
 :::
 
-
-:::{grid-item-card} {octicon}`paper-airplane` Integration tutorials
-:link: https://community.crate.io/t/overview-of-cratedb-integration-tutorials/1015
-:link-type: url
-
-Integration-focused tutorials about using  CrateDB
-with popular applications, frameworks, and tools.
-:::
-
-
-:::{grid-item-card} {octicon}`graph` Visualization options
-:link: visualize-data-with-grafana
+:::{grid-item-card} {material-outlined}`link;2em` Clients, Tools, and Integrations
+:link: crate-clients-tools:index
 :link-type: ref
 
-Visualize information in your CrateDB cluster.
+Learn about compatible client applications and tools, and how to configure
+your favorite client library to connect to a CrateDB cluster.
 :::
 
 
