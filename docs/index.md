@@ -76,6 +76,23 @@ clusters.
 A command-line based terminal program to operate your managed clusters.
 :::
 
+::::
+
+
+### Console
+
+If you are in a hurry.
+
+::::{grid} 1 2 2 3
+
+:::{grid-item-card} {octicon}`table` CrateDB Cloud Console
+:columns: 12
+:link: https://console.cratedb.cloud/
+:link-type: url
+
+Directly navigate to the CrateDB Cloud Console.
+https://console.cratedb.cloud/
+:::
 
 ::::
 
