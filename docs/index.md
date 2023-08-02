@@ -118,12 +118,9 @@ your favorite client library to connect to a CrateDB cluster.
 ::::
 
 
-
-```{rubric} Table of contents
-```
-
 ```{toctree}
 :maxdepth: 2
+:hidden:
 
 reference/index
 tutorials/index
