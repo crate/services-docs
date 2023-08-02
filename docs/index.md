@@ -145,9 +145,11 @@ Learn how to import data into your CrateDB Cloud clusters.
 ::::
 
 
+```{rubric} Table of contents
+```
+
 ```{toctree}
-:maxdepth: 2
-:hidden:
+:maxdepth: 1
 
 reference/index
 tutorials/index
