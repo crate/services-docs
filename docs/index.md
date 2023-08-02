@@ -2,9 +2,6 @@
 
 # CrateDB Cloud
 
-
-## About
-
 **CrateDB Cloud** is a fully-managed service, allowing you to deploy, monitor,
 back up, and scale your [CrateDB] clusters in the cloud without the need to do
 database management yourself. You can store and analyze massive amounts of data
