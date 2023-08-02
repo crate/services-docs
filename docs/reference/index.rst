@@ -19,14 +19,18 @@ NoSQL with the power and simplicity of standard SQL.
 .. rubric:: Table of contents
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 2
 
     overview
     subscription-plans
     user-roles
     billing
-    glossary
     api
+
+.. toctree::
+    :maxdepth: 1
+
+    glossary
 
 
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
