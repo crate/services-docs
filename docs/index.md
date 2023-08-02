@@ -76,13 +76,11 @@ A command-line based terminal program to operate your managed clusters.
 ::::
 
 
-### Console
-
-If you are in a hurry.
+Quick start.
 
 ::::{grid} 1 2 2 3
 
-:::{grid-item-card} {octicon}`table` CrateDB Cloud Console
+:::{grid-item-card} {octicon}`table;2em` CrateDB Cloud Console
 :columns: 12
 :link: https://console.cratedb.cloud/
 :link-type: url
@@ -128,6 +126,21 @@ Learn about compatible client applications and tools, and how to configure
 your favorite client library to connect to a CrateDB cluster.
 :::
 
+
+::::
+
+
+Quick start.
+
+::::{grid} 1 2 2 3
+
+:::{grid-item-card} {octicon}`file-code;2em` Import data
+:columns: 12
+:link: https://community.crate.io/t/importing-data-to-cratedb-cloud-clusters/1467
+:link-type: url
+
+Learn how to import data into your CrateDB Cloud clusters.
+:::
 
 ::::
 
