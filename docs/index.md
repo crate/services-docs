@@ -145,21 +145,35 @@ Learn how to import data into your CrateDB Cloud clusters.
 ::::
 
 
-```{rubric} Table of contents
+## More
+
+```{note}
+Like [CrateDB itself], this is an open source documentation project. [Suggestions
+for improvements], and [source code contributions], are always welcome. {fab}`github`
 ```
 
+
+```{rubric} Table of contents
+```
+```{toctree}
+:maxdepth: 1
+
+Get started <tutorials/promotions/free-trial-budget>
+Deploy <tutorials/cluster-deployment/index>
+Scale <howtos/reconfigure-cluster>
+Manage <howtos/index>
+Console <reference/overview>
+Croud <tutorials/cluster-deployment/croud>
+```
+
+```{rubric} Table of contents (legacy)
+```
 ```{toctree}
 :maxdepth: 1
 
 reference/index
 tutorials/index
 howtos/index
-```
-
-
-```{note}
-Like [CrateDB itself], this is an open source documentation project. [Suggestions
-for improvements], and [source code contributions], are always welcome. {fab}`github`
 ```
 
 
