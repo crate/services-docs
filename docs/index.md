@@ -5,21 +5,15 @@
 
 ## About
 
-**CrateDB Cloud** is the fully-managed database as a service offering by
-[CrateDB]. With CrateDB Cloud, you can deploy, monitor, back up, and scale
-your clusters in the cloud – without needing to worry about database
-management.
+**CrateDB Cloud** is a fully-managed service, allowing you to deploy, monitor,
+back up, and scale your [CrateDB] clusters in the cloud without the need to do
+database management yourself. You can store and analyze massive amounts of data
+in near real-time, even with complex queries.
 
-CrateDB is a distributed and scalable open-source SQL database for storing and
-analyzing massive amounts of data in near real-time, even with complex queries.
-It is PostgreSQL-compatible, and based on Lucene.
-
-Users are operating CrateDB clusters that store information in the range of
-billions of records, and terabytes of data, equally accessible without any
-retrieval penalty on data point age.
-
-Learn how to get started and make the most of your CrateDB cloud subscription
-in the resources and tutorials below.
+Users around the world rely on CrateDB Cloud clusters to store billions of records
+and terabytes of data, all accessible without delays. If you want to start using
+CrateDB Cloud, or make the most of your existing subscription, we are maintaining
+resources and tutorials to support you correspondingly.
 
 
 ## Manage
