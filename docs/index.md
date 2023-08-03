@@ -1,3 +1,4 @@
+(index)=
 (cloud-docs-index)=
 
 # CrateDB Cloud
