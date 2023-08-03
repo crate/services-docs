@@ -1,21 +1,16 @@
 .. _free-trial-budget:
+.. _free-trial-budget-signup:
 
-=================
-Free trial budget
-=================
+==========
+Free Trial
+==========
+
+
+Introduction
+============
 
 This section explains our Free trial budget mechanism. This feature gives $65
 to any new user. These credits can be used on any cluster configuration.
-
-.. rubric:: Table of contents
-
-.. contents::
-   :local:
-
-.. _free-trial-budget-signup:
-
-Sign up
-=======
 
 To be eligible for free credit, the first step is to sign up.  You can follow
 the process described in the  :ref:`signup tutorial <sign-up>` to do so.
