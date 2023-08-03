@@ -1,8 +1,8 @@
 .. _cloud-reference-index:
 
-=========
-Reference
-=========
+===============
+Cloud Reference
+===============
 
 `CrateDB Cloud`_ is the fully-managed cloud database as a service by
 `CrateDB`_. With CrateDB Cloud you can deploy, monitor, back up, and scale your
@@ -11,10 +11,6 @@ clusters in the cloud – without needing to worry about database management.
 CrateDB is a distributed, open-source database that combines the performance of
 NoSQL with the power and simplicity of standard SQL.
 
-.. SEEALSO::
-
-    This is an open source documentation project. We host the source code and
-    issue tracker on `GitHub`_.
 
 .. rubric:: Table of contents
 
@@ -31,6 +27,12 @@ NoSQL with the power and simplicity of standard SQL.
     :maxdepth: 1
 
     glossary
+
+
+.. SEEALSO::
+
+    This is an open source documentation project. We host the source code and
+    issue tracker on `GitHub`_.
 
 
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
