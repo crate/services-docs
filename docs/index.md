@@ -164,14 +164,6 @@ Console <reference/overview>
 Croud <tutorials/cluster-deployment/croud>
 ```
 
-```{toctree}
-:maxdepth: 1
-:hidden:
-
-reference/index
-tutorials/index
-howtos/index
-```
 
 
 [CrateDB]: https://crate.io/product/
