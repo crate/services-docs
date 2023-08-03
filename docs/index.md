@@ -156,14 +156,22 @@ for improvements], and [source code contributions], are always welcome. {fab}`gi
 :maxdepth: 1
 :hidden:
 
-Get started <tutorials/promotions/free-trial-budget>
+Sign Up <tutorials/sign-up>
+Free Trial <tutorials/promotions/free-trial-budget>
 Deploy <tutorials/cluster-deployment/index>
 Scale <howtos/reconfigure-cluster>
 Manage <howtos/index>
-Console <reference/overview>
-Croud <tutorials/cluster-deployment/croud>
+Web Console <reference/overview>
+Croud CLI <tutorials/cluster-deployment/croud>
 ```
 
+```{toctree}
+:maxdepth: 1
+:hidden:
+
+reference/index
+tutorials/edge/index
+```
 
 
 [CrateDB]: https://crate.io/product/
