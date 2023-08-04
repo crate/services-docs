@@ -10,8 +10,8 @@ such snapshots to restore data. A more detailed technical discussion of how
 CrateDB handles snapshots can be found in the CrateDB documentation about
 :ref:`snapshots <crate-reference:snapshot-restore>`.
 
-You may also want to read our reference on :ref:`the backup page on the 
-CrateDB Cloud Console <overview-cluster-backups>`.
+You may also want to read the reference documentation on :ref:`the backup page
+on the CrateDB Cloud Console <overview-cluster-backups>`.
 
 .. rubric:: Table of contents
 

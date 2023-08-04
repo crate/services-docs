@@ -5,44 +5,41 @@
 Free Trial
 ==========
 
+This section explains the free trial budget offering, assigning any new
+user free credits worth $65. The credits can be used on any cluster
+configuration.
 
-Introduction
-============
+.. _free-trial-budget-account:
 
-This section explains our Free trial budget mechanism. This feature gives $65
-to any new user. These credits can be used on any cluster configuration.
+Create an account
+=================
 
-To be eligible for free credit, the first step is to sign up.  You can follow
-the process described in the  :ref:`signup tutorial <sign-up>` to do so.
-
+To be eligible for free credits, the first step is to
+:ref:`sign up <sign-up>` for an account.
 
 .. _free-trial-budget-org:
 
 Create an organization
 ======================
 
-To get the credit, simply create an organization. For the detailed
-instructions, see  :ref:`Create a new organization how-to
-<create-org>`.
+To receive the free credits, first :ref:`create an organization <create-org>`.
 
-Enter the desired name for the organization in the field and click *Create
-organization*. Once this is done, you will be returned to the Clusters
-overview, where you will see that you have $65 of available credit. You can
-also see when the credits expire. Free credit is valid for 30 days after
-organization creation.
+Enter the name for the new organization, and select *Create organization*.
+Once this is done, you will be redirected to the "Clusters Overview" page,
+displaying your available credits.
+
+After that, you can follow the :ref:`cluster deployment tutorial
+<cluster-deployment-stripe>`, to get your first cluster running.
 
 .. image:: ../../_assets/img/free-trial-organization.png
    :alt: Create an organization
 
-Now you can follow the 
-:ref:`Cluster deployment tutorial <cluster-deployment-stripe>` and get you
-first cluster running.
-
 .. NOTE::
-    Notes on the free credit:
+
+    A few notes about the free credits.
      
-    - Credit can be spent on any cluster configuration
-    - Credit expires 30 days after organization is created
-    - Billing starts when the free credit is consumed or expired
-    - It is possible to deploy multiple clusters with the free credit
-    - It is possible to scale clusters with the free credit
+    - Credits can be spent on any cluster configuration
+    - Credits are valid for 30 days after creating the organization
+    - Billing starts when free credits are consumed or expired
+    - It is possible to deploy multiple clusters
+    - It is possible to scale clusters

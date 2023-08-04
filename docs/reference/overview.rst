@@ -1,17 +1,18 @@
 .. _overview:
 .. _console-overview:
 
-================
-Console overview
-================
+=====================
+CrateDB Cloud Console
+=====================
 
-The *CrateDB Cloud Console* is a hosted web administration interface for
-interacting with `CrateDB Cloud`_. This overview gives you all the basic
-information for using the CrateDB Cloud Console. If you ever want to find
-where and how to do something in the Console, start here. Refer to individual
-items in the current section of the documentation for more information on how
-to perform specific operations. You can also refer to our `glossary`_ for more
-information on CrateDB Cloud-related terminology.
+The **CrateDB Cloud Console** is a hosted web administration interface for
+interacting with `CrateDB Cloud`_.
+
+.. note::
+
+    Refer to individual items in the current section of the documentation for more
+    information on how to perform specific operations. You can also refer to the
+    :ref:`glossary <glossary>` for more information on CrateDB Cloud-related terminology.
 
 .. rubric:: Table of contents
 
@@ -109,7 +110,7 @@ you want to receive them or not.
 
 It also shows a list of users in your organization. You can add new users by
 clicking the "Add user" button. You can also choose the role of a new user. 
-To learn more about user roles and their meaning, see our documentation 
+To learn more about user roles and their meaning, see the documentation
 on `user roles`_.
 
 .. _overview-org-billing:
@@ -202,18 +203,17 @@ Overview
 
 * **Status**: Current status of your cluster:
    
- - GREEN: Your cluster is healthy.
- - YELLOW: Some of your tables have under-replicated shards. Please log in
-   to your cluster's Admin UI to check.
- - RED: Some of your tables have missing shards. This can happen if you've
-   recently restarted a node. Our support team is already notified and
-   investigating the issue.
+- GREEN: Your cluster is healthy.
+- YELLOW: Some of your tables have under-replicated shards. Please log in
+  to your cluster's Admin UI to check.
+- RED: Some of your tables have missing shards. This can happen if you've
+  recently restarted a node. The support team is already notified and
+  investigating the issue.
 
 * **Region**: Name of the region where the cluster is deployed.
 
-* **Plan**: This shows what subscription plan the cluster is running on. For
-  more information on our plans, see the documentation on
-  `subscription plans`_.
+* **Plan**: This shows which :ref:`subscription plan <subscription-plans>` the
+  cluster is running on.
 
 * **CPU metrics**: Average CPU utilization on average per node. The sparkline shows the trend for the last hour.
 
@@ -249,7 +249,7 @@ Admin UI
 Next Steps
 ~~~~~~~~~~
 
-* **Import Data**: Import some data into your cluster using our data import 
+* **Import Data**: Import some data into your cluster using the data import
   tool.
 
 * **See my backups**: The "see my backups" will take you to the Backups tab, where 
@@ -260,7 +260,7 @@ Next Steps
   endpoint for cluster metrics.
 
 For more information on the CrateDB concepts used here, refer to the `CrateDB
-architecture documentation`_ or the :ref:`glossary<glossary>`.
+architecture documentation`_ or the :ref:`glossary <glossary>`.
 
 .. _overview-connect-to-your-cluster:
 
@@ -317,8 +317,8 @@ Gzip compressed files are also supported.
 
 .. _overview-cluster-import-file:
 
-Import from a file
-~~~~~~~~~~~~~~~~~~
+Import from file
+~~~~~~~~~~~~~~~~
 
 Uploading directly from your computer offers more control over your data.
 From the security point of view, you don’t have to share the data on the 
@@ -408,7 +408,7 @@ History of your exports is also visible in the Export tab.
 
 .. NOTE::
 
-    Export limitations:
+   Export limitations:
 
    - Size limit for exporting is 1 GiB
    - Exports are held for 3 days, then automatically deleted
@@ -602,13 +602,6 @@ IP allowlist, private links, suspend cluster, and delete cluster options.
 * **Delete cluster**
   All cluster data will be lost on deletion. This action cannot be undone.
 
-.. _overview-docs:
-
-Documentation
-=============
-
-The Documentation link takes you directly to the CrateDB Cloud documentation,
-which you are reading right now!
 
 .. _overview-community:
 
@@ -637,14 +630,10 @@ about uncertainties or problems you are having when using our products.
 .. _Croud: https://crate.io/docs/cloud/cli/en/latest/
 .. _Croud clusters upgrade: https://crate.io/docs/cloud/cli/en/latest/commands/clusters.html#clusters-upgrade
 .. _deploy a trial cluster on the CrateDB Cloud Console for free: https://crate.io/lp-free-trial
-.. _glossary: https://crate.io/docs/cloud/reference/en/latest/glossary.html
 .. _HTTP: https://crate.io/docs/crate/reference/en/latest/interfaces/http.html
 .. _Microsoft Azure: https://azure.microsoft.com/en-us/
-.. _organization creation process: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
-.. _our tutorial on direct cluster deployment: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
 .. _PostgreSQL wire protocol: https://crate.io/docs/crate/reference/en/latest/interfaces/postgres.html
 .. _scaling the cluster: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
 .. _signup tutorial: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
-.. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html

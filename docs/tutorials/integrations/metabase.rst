@@ -100,12 +100,12 @@ Metabase offers a quick and intuitive way to make sense of your data with
 interactive dashboards, automated reporting, and more.
 
 If you'd like to see how the other questions were configured, feel free to
-check out our `video tutorial`_ on this topic.
+check out the `video tutorial`_ on this topic.
 
 If this integration could benefit you, feel free to head to `Cloud Console`_
 and get started!
 
-.. _Cloud Console: https://console.cratedb.cloud/?utm_campaign=2022-Q3-WS-Developer-Motion&utm_source=docs
+.. _Cloud Console: https://console.cratedb.cloud/
 .. _Metabase: https://www.metabase.com/
 .. _video tutorial: https://www.youtube.com/watch?v=veuR_76njCo
 .. _in this how-to: https://community.crate.io/t/importing-data-to-cratedb-cloud-clusters/1467

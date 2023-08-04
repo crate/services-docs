@@ -1,8 +1,8 @@
 .. _cluster-deployment-marketplace:
 
-===========================================
-Deploy a cluster via the Marketplace offers
-===========================================
+========================================
+Deploy cluster via Marketplace offerings
+========================================
 
 Here you can find the tutorials for subscribing to CrateDB Cloud via one of the
 two supported Marketplace SaaS offers.

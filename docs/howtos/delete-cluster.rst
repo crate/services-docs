@@ -1,8 +1,8 @@
 .. _delete-cluster:
 
-================
-Delete a cluster
-================
+==============
+Delete cluster
+==============
 
 This is a guide on how to delete a CrateDB Cloud cluster. It consists of two
 parts: one describes the process of deleting a cluster created through
@@ -31,12 +31,12 @@ transparent and easier to find and use.
 Microsoft Azure
 ===============
 
-If you have followed the steps of our :ref:`tutorial on how to set up a cluster
+If you followed the steps of the :ref:`tutorial on how to set up a cluster
 from scratch via Microsoft Azure <signup-azure-to-cluster>`,
-you should have one running. If you created your CrateDB Cloud cluster
+you should have a cluster running now. If you created your CrateDB Cloud cluster
 via the Microsoft Azure offering, you have two different ways to delete a
-cluster once it has been created. The first is through the CrateDB Cloud
-Console itself; the second is via the Microsoft Azure SaaS listing. We will
+cluster, once it has been created. The first is through the CrateDB Cloud
+Console itself, the second is via the Microsoft Azure SaaS listing. We will
 describe each process below.
 
 
@@ -48,7 +48,7 @@ Deleting a cluster via the CrateDB Cloud Console
 The easiest and preferred way to delete a cluster is via the CrateDB Cloud
 Console. Make sure you are logged in to the Console with a user that has
 admin access in the organization where your cluster is deployed. For more on
-what that means, please see our documentation on :ref:`user roles
+what that means, please see the documentation on :ref:`user roles
 <user-roles>`.
 
 First, you need to select the cluster in question. To do this, we need to
@@ -116,7 +116,7 @@ AWS
 Deleting a cluster via the AWS Marketplace
 ------------------------------------------
 
-You can deploy a cluster on CrateDB Cloud via AWS by subscribing to our offer
+You can deploy a cluster on CrateDB Cloud via AWS by subscribing to the offering
 on the `AWS Marketplace`_. The offer will refer you to the CrateDB Cloud wizard
 where you can configure your plan and cluster. Finally, this process will lead
 you to the CrateDB Cloud Console.

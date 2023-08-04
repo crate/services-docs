@@ -1,10 +1,13 @@
 .. _reconfigure-cluster:
 
-Reconfigure cluster
--------------------
+#############
+Scale cluster
+#############
 
-Reconfiguring or scaling your cluster can be done in the Scale tab.
-The page shows the current configuration of your cluster. You can
+Scaling or reconfiguring your cluster happens on the "Scale" tab
+of the CrateDB Cloud Console.
+
+The page displays the current configuration of your cluster. You can
 see your current plan, the resources of a single node, and the overall
 resources of the cluster.
 

@@ -2,7 +2,7 @@
 API
 ===
 
-Similar to Croud, we offer an API to allow programmatic access to our Cloud
+Similar to Croud, we offer an API to allow programmatic access to the Cloud
 products. The API can be accessed by generating a key and secret in your 
 account page:
 
@@ -32,7 +32,7 @@ This example will return details of the current user:
 Examples
 --------
 
-Our API is documented with `Swagger`_. It contains endpoints for:
+The API is documented with `Swagger`_. It contains endpoints for:
 
 - Organizations
 - Regions

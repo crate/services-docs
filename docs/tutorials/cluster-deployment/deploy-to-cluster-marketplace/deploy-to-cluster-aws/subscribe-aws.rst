@@ -13,7 +13,7 @@ As a SaaS service, the subscription payment is arranged through AWS. The
 cluster will be hosted in the region you select as part of the configuration
 process. If you are looking for a self-hosted CrateDB Cloud service, check out
 the :ref:`CrateDB Edge tutorial <edge>`. To pay directly for a hosted cluster
-by credit card, see our tutorial for :ref:`direct cluster deployment
+by credit card, see the tutorial for :ref:`direct cluster deployment
 <cluster-deployment-stripe>`.
 
 .. rubric:: Table of contents
@@ -72,7 +72,7 @@ Using the CrateDB Cloud Contract on AWS Marketplace
 ===================================================
 
 Alternatively, you can avail yourself of the possibility of an annual contract
-for our cloud service through the CrateDB Cloud Contract. On AWS Marketplace,
+for the cloud service through the CrateDB Cloud Contract. On AWS Marketplace,
 the contract is a separate product for subscription purposes. You can access it
 by going to the `CrateDB Cloud Contract landing page`_.
 
@@ -81,7 +81,7 @@ by going to the `CrateDB Cloud Contract landing page`_.
 
 Simply subscribe to it as you would to the CrateDB Cloud subscription. A screen
 will appear where you can confirm your subscription plan and review the prices
-once more. After confirmation, our Sales team will get in touch with you to
+once more. After confirmation, the sales team will get in touch with you to
 configure your plan according to your specific needs. If you plan to purchase
 large volumes, please contact `Sales`_ first to negotiate a private offer.
 

@@ -1,28 +1,25 @@
 .. _cluster-deployment-croud:
 
+=========================
+Deploy cluster with Croud
+=========================
 
-===========================
-Deploy a cluster with Croud
-===========================
+This tutorial will outline a step-by-step guide to deploying a cluster
+using the Cloud CLI application from scratch. The walkthrough assumes
+you have completed the :ref:`signup process <sign-up>` successfully,
+and that the ``croud`` program :ref:`is installed <cloud-cli:getting-started>`
+on your system.
 
-In this tutorial, we will provide a step-by-step guide to deploying a cluster
-from scratch using our CLI application - `Croud`_. Our recommended procedure
-assumes you have completed the :ref:`signup process <sign-up>`. The simplest
-way to then deploy a cluster is to subscribe to CrateDB Cloud using your
-credit card. For the purposes of this tutorial, it is assumed that you have
-already created subscription in the UI. Currently, it is not possible to 
-create new subscription using Croud. Our payment processing and billing are
-powered by Stripe. It is also possible to subscribe using Azure and AWS.
+Currently, it is not possible to create new subscriptions using Croud, so
+you will need to use the CrateDB Cloud Console UI.
 
-This tutorial also assumes that you have Croud installed in your
-system. If not, follow the Croud `Getting started`_ section.
-
-
+The payment processing and billing is powered by Stripe. It is also possible to
+subscribe using Azure and AWS.
 
 .. rubric:: Table of contents
 
 .. contents::
-   :local:
+    :local:
 
 .. warning::
     Because of the current implementation of subscriptions, it is NOT
@@ -75,8 +72,8 @@ that was created automatically, you can skip this step:
 
 This will create an organization called "samplecroudorganization".
 
-Create a project
-================
+Create project
+==============
 
 The next step is to create a project in your organization.
 To create a new project execute this command:
@@ -87,8 +84,8 @@ To create a new project execute this command:
 
 This will create a new project named `sampleproject`.
 
-Deploy a cluster
-================
+Deploy cluster
+==============
 
 When deploying a cluster, these are the required arguments:
 
@@ -172,8 +169,8 @@ Alternatively, you can deploy a cluster with an older version, like this:
 
    sh$ croud clusters deploy --product-name cr1 --tier default --cluster-name my-crate-cluster --project-id f76d96aa-f1a7-46aa-a89b-8cdd2b3cef15 --version 4.8.0 --username admin --password "as6da9ddasfaad7i902jcv780dmcba" --subscription-id 3a35974f-5319-47fb-9a1f-ab85dca75c86
 
-Scale a cluster
-===============
+Scale cluster
+=============
 
 After deploying, the next thing that you might want to do is scale your
 cluster. This allows you to either add more nodes or more storage to your

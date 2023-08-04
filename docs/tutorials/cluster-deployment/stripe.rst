@@ -1,8 +1,8 @@
 .. _cluster-deployment-stripe:
 
-=========================
-Deploy a cluster directly
-=========================
+=======================
+Deploy cluster directly
+=======================
 
 In this tutorial, we will provide a step-by-step guide to deploying a cluster
 from scratch. It is assumed you have completed the
@@ -127,7 +127,7 @@ Finish
 Your cluster should now be ready to use!
 
 .. _Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
-.. _Cloud Console: https://console.cratedb.cloud/?utm_campaign=2022-Q3-WS-Developer-Motion&utm_source=docs
+.. _Cloud Console: https://console.cratedb.cloud/
 .. _region: https://crate.io/docs/cloud/reference/en/latest/glossary.html#region
 .. _Stripe: https://stripe.com
 .. _subscription plan: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
