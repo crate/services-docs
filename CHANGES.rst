@@ -13,3 +13,4 @@ Unreleased
 - Refactored content about connectivity concerns to dedicated section at
   ``crate-client-tools``
 - Improve the appearance of the index/home page
+- Disable version chooser. This project is not versioned.
