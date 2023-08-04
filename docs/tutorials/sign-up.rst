@@ -1,19 +1,19 @@
 .. _sign-up:
 
 =======
-Sign up
+Sign Up
 =======
 
-Before you can start using :ref:`CrateDB Cloud <index>`, you must first sign up
+Before you can start using :ref:`CrateDB Cloud <index>`, you need to sign up
 for a user account.
 
 As a CrateDB Cloud user, you can create and manage organizations.
 As an organization administrator, you can also manage other CrateDB Cloud
-users as well as launch CrateDB Cloud clusters and other CrateDB Cloud
+users, and launch CrateDB Cloud clusters and other CrateDB Cloud
 products.
 
-We currently support four signup methods: using an account at Github, Google
-or Microsoft, and making a separate username and password supported by Amazon
+CrateDB Cloud supports four signup methods: Using an account at Github, Google,
+or Microsoft, or create a separate username and password supported by Amazon
 Cognito.
 
 Consequently, the signup screen will look as follows:
@@ -21,14 +21,16 @@ Consequently, the signup screen will look as follows:
 .. image:: ../_assets/img/cloud-signup.png
    :alt: CrateDB Cloud signup screen
 
-If you intend to subscribe and deploy a cluster using a credit card - our
+If you intend to subscribe and deploy a cluster using a credit card - the
 recommended procedure - any of these signup methods will work. When coming
 from the Software as a Service (SaaS) marketplaces, however, restrictions
-apply. Only the *Microsoft* option allows you to deploy clusters on CrateDB
+apply.
+
+Only the *Microsoft* option allows you to deploy clusters on CrateDB
 Cloud when coming from the Microsoft Azure Marketplace. Similarly, for cluster
-deployment through our other cloud provider, AWS, you should use the Amazon
-Cognito signup service. The Cognito authentication service is indicated in the
-UI as *Username & Password*. Both signup processes are described below.
+deployment through AWS, you should use the Amazon Cognito signup service. The
+Cognito authentication service is indicated in the UI as *Username & Password*.
+Both signup processes are described below.
 
 To go directly to the cluster deployment tutorials, see the
 :ref:`tutorial on deploying a cluster using a credit card
@@ -112,14 +114,14 @@ process, it will look like this:
 .. image:: ../_assets/img/cloud-signup-landing.png
    :alt: CrateDB Cloud Console landing page
 
-There's nothing much here yet. We suggest you turn to our `cluster direct
-deployment tutorial`_ for next steps. By the end of that tutorial, you will
+There is nothing much here yet. We suggest you turn to the `cluster direct
+deployment tutorial`_ for the next steps. By the end of that tutorial, you will
 have created your first CrateDB Cloud cluster and this CrateDB Cloud Console
 landing page will display an overview of your organization and its assets and
 attributes.
 
-For more information on how the CrateDB Cloud Console works, refer to `our
-Console documentation`_.
+For more information on how the CrateDB Cloud Console works, refer to the
+:ref:`console-overview` documentation.
 
 
 .. _sign-up-next:
@@ -134,4 +136,4 @@ your first cluster.
 
 .. _cluster direct deployment tutorial: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
 .. _CrateDB Cloud Console: https://console.cratedb.cloud/
-.. _our Console documentation: https://crate.io/docs/cloud/reference/en/latest/overview.html
+.. Console documentation: https://crate.io/docs/cloud/reference/en/latest/overview.html

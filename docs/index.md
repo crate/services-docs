@@ -14,6 +14,36 @@ CrateDB Cloud, or make the most of your existing subscription, we are maintainin
 resources and tutorials to support you correspondingly.
 
 
+## Get started
+
+Before you can start using CrateDB Cloud, you need to sign up for a user account.
+
+::::{grid} 1 2 2 3
+:margin: 4 4 0 0
+:gutter: 1
+
+
+:::{grid-item-card} {octicon}`person` Sign Up
+:link: sign-up
+:link-type: ref
+
+Sign up to create and manage CrateDB clusters and other
+CrateDB Cloud products. 
+:::
+
+
+:::{grid-item-card} {octicon}`rocket` Free Trial
+:link: free-trial-budget
+:link-type: ref
+
+Learn how to sign up to get started with free credits
+on the trial budget plan.
+:::
+
+
+::::
+
+
 ## Manage
 
 CrateDB Cloud is fully-managed in day-to-day operations. For interacting with
@@ -23,15 +53,6 @@ a web-based control center, a HTTP API, and a command-line program.
 ::::{grid} 1 2 2 3
 :margin: 4 4 0 0
 :gutter: 1
-
-
-:::{grid-item-card} {octicon}`rocket` Get started
-:link: free-trial-budget
-:link-type: ref
-
-Learn how to [sign up](#sign-up) to get started with free credits 
-on the trial budget plan.
-:::
 
 
 :::{grid-item-card} {octicon}`unfold` Deploy
@@ -58,7 +79,7 @@ Learn about general information how to manage your cluster.
 :::
 
 
-:::{grid-item-card} {octicon}`table` Console
+:::{grid-item-card} {octicon}`table` Web Console
 :link: console-overview
 :link-type: ref
 
@@ -67,12 +88,21 @@ clusters.
 :::
 
 
-:::{grid-item-card} {octicon}`terminal` Croud
+:::{grid-item-card} {octicon}`terminal` Croud CLI
 :link: cluster-deployment-croud
 :link-type: ref
 
 A command-line based terminal program to operate your managed clusters.
 :::
+
+
+:::{grid-item-card} {octicon}`container` CrateDB Edge
+:link: edge
+:link-type: ref
+
+Integrate the CrateDB Cloud software stack with on-premise infrastructure.
+:::
+
 
 ::::
 
@@ -163,6 +193,7 @@ Scale <howtos/reconfigure-cluster>
 Manage <howtos/index>
 Web Console <reference/overview>
 Croud CLI <tutorials/cluster-deployment/croud>
+tutorials/edge/index
 ```
 
 ```{toctree}
@@ -170,7 +201,6 @@ Croud CLI <tutorials/cluster-deployment/croud>
 :hidden:
 
 reference/index
-tutorials/edge/index
 ```
 
 

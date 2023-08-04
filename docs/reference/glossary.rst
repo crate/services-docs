@@ -4,17 +4,19 @@
 Glossary
 ========
 
-This reference article is a glossary. It is meant to provide a general
-overview of terms common to CrateDB Cloud. Because it forms a counterpart to
-the Glossary for CrateDB, we mainly cover terms here that are specific or
-primary to CrateDB Cloud; terms particular to the whole CrateDB architecture
-will appear in the CrateDB glossary instead. We hope this glossary will help
-you understand the basic meaning of concepts in the CrateDB Console,
-documentation, the Croud CLI, and other CrateDB Cloud-related sources. It is
-not meant to be a general guide to IT or IIoT terminology.
+This article is a glossary. It is meant to provide a general overview about
+the terminology used by CrateDB Cloud products.
 
-In entries, terms used that have entries of their own are cross-referenced
-through links. The entries are presented in alphabetical order.
+The glossary will support you understanding the basic meaning of concepts in
+the CrateDB Cloud Console and its documentation, the Croud CLI, and other
+resources related to CrateDB Cloud. The items are presented in alphabetical
+order.
+
+.. seealso::
+
+    While learning about CrateDB Cloud, please also visit the :ref:`CrateDB
+    glossary <crate-reference:appendix-glossary>`. It enumerates all terms
+    related to the CrateDB database in general.
 
 .. rubric:: Table of contents
 
@@ -75,7 +77,7 @@ second. Only actual cluster usage is billed.
 
 A cluster has a name, a unique ID, as well as a storage and processing 
 capacity and a number of nodes. Note that clusters are also versioned. For
-information on how to deploy a cluster, please see our `tutorial for deploying
+information on how to deploy a cluster, please see the `tutorial for deploying
 a CrateDB Cloud cluster from scratch`_.
 
 .. SEEALSO::
@@ -95,7 +97,7 @@ permissions <user-roles>`.) While CrateDB Cloud also supports a CLI for
 interacting with the service, we assume use of the Console by default. Only
 the Console allows deployment of a :ref:`cluster <gloss-cluster>`.
 
-For information on how to use specific elements of the Console, refer to our
+For information on how to use specific elements of the Console, refer to the
 :ref:`Console overview <overview>`.
 
 .. SEEALSO::
@@ -112,7 +114,7 @@ A consumer in the sense used for CrateDB Cloud architecture and documentation
 is an entity that reads event data from an IoT hub. It is possible to use a
 consumer, such as Azure IoT Hub, with CrateDB Cloud: you can store the data
 processed by the consumer on the Cloud :ref:`cluster <gloss-cluster>`. For a
-tutorial on how to do this, see `this article on our blog`_. Operations on
+tutorial on how to do this, see `this article on the blog`_. Operations on
 consumers are registered in the :ref:`Audit Log <gloss-audit-log>`.
 
 .. SEEALSO::
@@ -129,16 +131,17 @@ Croud
 
 Croud is the name of the CrateDB Cloud Command-Line Interface (CLI). You can
 use Croud to interact with the :ref:`organization <gloss-org>` and
-:ref:`products <gloss-product>` you have access to. Croud is intended for
+:ref:`products <gloss-product>` you have access to.
+
+Croud is intended for
 customers who prefer a CLI to the use of a hosted web interface
 such as the CrateDB Cloud :ref:`Console <gloss-console>`. Note however that
 the Console is the default way to interact with CrateDB Cloud, and currently
-clusters can only be deployed within the Console. The documentation for Croud
-can be found under `Croud CLI`_.
+clusters can only be deployed within the Console.
 
 .. SEEALSO::
 
-    `Croud CLI`_
+    The documentation for Croud can be found at :ref:`Croud CLI <cloud-cli:index>`.
 
 .. _gloss-edge:
 
@@ -151,8 +154,6 @@ provider or their own local servers, using the database software and
 maintenance support that CrateDB Cloud offers. It can be accessed through the
 :ref:`CrateDB Cloud Console <gloss-console>`.
 
-Currently, CrateDB Edge is available as a `public beta`_.
-
 
 .. _gloss-endpoint:
 
@@ -164,11 +165,11 @@ communicates with an endpoint via a defined method, which returns a defined
 set of data. In CrateDB Cloud, different :ref:`profiles <gloss-profile>` can
 be used to configure their own associated endpoints, which a user connects to
 via the :ref:`Croud <gloss-croud>` CLI. For information on how to do this, see
-the `Croud documentation`_.
+the :doc:`Croud configuration <cloud-cli:configuration>`.
 
 .. SEEALSO::
 
-    `Croud CLI`_
+   :ref:`Croud CLI <cloud-cli:index>`
 
 
 .. _gloss-offer:
@@ -196,19 +197,22 @@ which CrateDB Cloud :ref:`products <gloss-product>` are deployed. At the
 organization level there is always at least one organization administrator,
 who can in turn add organization members. Such organization admins and members
 have access to the clusters run by the organization. One account can be a
-member or admin of multiple organizations. (For more on user roles in CrateDB
-Cloud and how to manage them, see our :ref:`reference for user roles
-<user-roles>`.)
+member or admin of multiple organizations.
+
+.. note::
+
+    For more on user roles in CrateDB Cloud and how to manage them,
+    see the :ref:`reference for user roles <user-roles>`.
 
 Each organization has a name, a unique ID, and optionally an associated email
-address. For information on how to create an organization, please refer to our
-`guide to creating a new organization`_.
+address. For information on how to create an organization, please refer to the
+guide about :ref:`create-org`.
 
 .. SEEALSO::
 
     :ref:`Console overview <overview>`
 
-    `Create a new organization`_
+    :ref:`create-org`
 
     :ref:`User roles <user-roles>`
 
@@ -235,7 +239,7 @@ can create multiple profiles and switch between them as desired.
 
 .. SEEALSO::
 
-    `Croud CLI`_
+    :ref:`Croud CLI <cloud-cli:index>`
 
 .. _gloss-region:
 
@@ -295,8 +299,8 @@ Subscription
 
 A subscription is - for the purposes of CrateDB Cloud - a container in which
 the CrateDB Cloud service is created and managed. You can purchase a CrateDB
-Cloud subscription by following the steps in our `tutorial`_. In the case of
-our :ref:`SaaS <gloss-saas>` :ref:`offers <gloss-offer>` on the cloud provider
+Cloud subscription by following the steps in the `tutorial`_. In the case of
+using a :ref:`SaaS <gloss-saas>` :ref:`offers <gloss-offer>` on the cloud provider
 marketplaces, customers subscribe to CrateDB Cloud through that particular
 cloud provider.
 
@@ -326,11 +330,12 @@ CrateDB Cloud's service comes with several possible subscription plans. These
 plans are combinations of hardware specifications that are geared towards
 particular customer use cases: from trial and development plans to high-end
 production clusters. They can also be further adjusted for different
-:ref:`scale units <gloss-scale-unit>` per plan. Currently there are four
-subscription plans available for `direct deployment`_, as well as four plans
-and a separate contract option via our 
-Marketplace :ref:`offers <gloss-offer>`. For more information, refer to our
-documentation on `subscription plans`_.
+:ref:`scale units <gloss-scale-unit>` per plan.
+
+Currently, there are four subscription plans available for `direct deployment`_,
+and four plans and a separate contract option via the Marketplace
+:ref:`offers <gloss-offer>`. For more information, refer to the documentation
+on `subscription plans`_.
 
 .. SEEALSO::
 
@@ -355,7 +360,7 @@ In CrateDB Cloud, there are two distinct system :ref:`users <gloss-user>`:
   <gloss-scale-unit>` operations.
 
 - The other is the "system" user in the CrateDB backend. For more information
-  on this second user, refer to our :ref:`explanation <system-user>` in the
+  on this second user, refer to the :ref:`explanation <system-user>` in the
   CrateDB Cloud reference.
 
 .. SEEALSO::
@@ -382,7 +387,7 @@ User
 
 A user in CrateDB Cloud is any individual account authorized to interact with
 some part of an :ref:`organization's <gloss-org>` assets. Each user has a
-defined role within the organization (see our reference on :ref:`user roles
+defined role within the organization (see documentation on :ref:`user roles
 <user-roles>`) and is associated with a specific email address.
 
 .. SEEALSO::
@@ -402,33 +407,28 @@ Cloud service also refer to this CrateDB versioning system.
 A major version of CrateDB is a release that includes significant changes in
 features, performance, and/or supported operations that are not backwards
 compatible with any previous version. It is indicated by the first numeral in
-the versioning sequence, i.e. the 4 in 'version 4.6.7'.
+the versioning sequence, i.e. the 5 in 'version 5.3.4'.
 
 A minor version of CrateDB is a release that includes substantial changes in
 features, performance, and/or supported operations compared to the previous
 such version. It is indicated by the second numeral in the versioning
-sequence, e.g. the 6 in 'version 4.6.7'. 
+sequence, e.g. the 3 in 'version 5.3.4'.
 
 A patch version of CrateDB is a release that includes bug fixes and smaller
 quality of life improvements compared to the previous such version. It is
-indicated by the third numeral in the versioning sequence, e.g. the 7 in
-'version 4.6.7'. All available upgrades are visible in the :ref:`Manage
+indicated by the third numeral in the versioning sequence, e.g. the 4 in
+'version 5.3.4'. All available upgrades are visible in the :ref:`Manage
 Tab <overview-cluster-manage>` of the cluster detailed view.
 
 .. SEEALSO::
 
-    `CrateDB Release Notes`_
+    :ref:`CrateDB Release Notes <crate-reference:release_notes>`
 
 
 .. _Azure IoT tutorial: https://crate.io/blog/azure-iot-hub-cratedb-sensor-data
 .. _AWS Marketplace: https://aws.amazon.com/marketplace/pp/B089M4B1ND
 .. _Cluster deployment: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
-.. _CrateDB Release Notes: https://crate.io/docs/crate/reference/en/4.7/appendices/release-notes/index.html
-.. _Create a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
-.. _Croud CLI: https://crate.io/docs/cloud/cli/en/latest/
-.. _Croud documentation: https://crate.io/docs/cloud/cli/en/latest/configuration.html#manage-configuration-via-cli
 .. _direct deployment: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
-.. _guide to creating a new organization: https://crate.io/docs/cloud/howtos/en/latest/create-org.html
 .. _Microsoft Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
 .. _Microsoft documentation on Azure: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis
 .. _public beta: https://crate.io/a/announcing-cratedb-edge/
@@ -439,7 +439,7 @@ Tab <overview-cluster-manage>` of the cluster detailed view.
 .. _Subscribe via AWS Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-aws/subscribe-aws.html
 .. _Subscribe via Azure Marketplace: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-azure/subscribe-azure.html
 .. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
-.. _this article on our blog: https://crate.io/blog/azure-iot-hub-cratedb-sensor-data
+.. _this article on the blog: https://crate.io/blog/azure-iot-hub-cratedb-sensor-data
 .. _tutorial for deploying a CrateDB Cloud cluster from scratch: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html

@@ -27,8 +27,8 @@ Billing principles
 ==================
 
 CrateDB Cloud has three general principles for billing. Firstly, we only ever
-bill actual usage of any of our services. This means there are no flat fees or
-minimum payments.
+bill actual usage of any of the provided services. This means there are no flat
+fees or minimum payments.
 
 Secondly, we only bill for a given period. This means any usage costs are
 rounded up to the nearest hour of use for Marketplace customers and to the
@@ -114,7 +114,7 @@ Payment processing
 ==================
 
 For clusters deployed in the :ref:`regular way
-<cluster-deployment-stripe>`, using our CrateDB Console cluster
+<cluster-deployment-stripe>`, using the CrateDB Console cluster
 deployment route, payment processing is handled by `Stripe`_. For clusters
 deployed through the `Microsoft Azure Marketplace`_ and the `AWS Marketplace`_,
 payment is handled by Stripe on behalf of the respective marketplaces.

@@ -6,10 +6,9 @@ How-To Guides
 
 This is a collection of how-to guides for CrateDB Cloud. For the purposes of
 these guides, we assume you interact with CrateDB Cloud by using the CrateDB
-Cloud Console. This is the hosted user interface designed to make interacting
-with CrateDB Cloud easier and more accessible, without the need for a command
-line interface (CLI). If you do wish to use the CLI instead, see the
-documentation for :ref:`Croud <cloud-cli:index>`, the CLI for CrateDB Cloud.
+Cloud Console. Alternatively, you can use the command-line interface CrateDB
+Cloud CLI, aka. :ref:`Croud <cloud-cli:index>`.
+
 
 .. NOTE::
 

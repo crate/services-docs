@@ -6,8 +6,9 @@ Self-hosted options
 In this section, we outline installation instructions for some third-party
 supported self-hosted options, such as `MicroK8s`_ and `K3s`_. These are
 third-party tools and Crate.io is not responsible for those tools. That said,
-we have tested the instructions provided below for functionality. Users less
-familiar with customizing their Kubernetes stack on their own may find
+we have tested the instructions provided below for functionality.
+
+Users less familiar with customizing their Kubernetes stack on their own may find
 any of these approaches a practical solution for easier CrateDB Edge setup.
 
 .. rubric:: Table of contents
@@ -125,7 +126,7 @@ install.
 
 The ``<token>`` in question is the token you receive from the CrateDB Console
 Edge region field in the Regions tab of the Organization Overview. For more
-information on this section of the CrateDB Console, refer to our :ref:`CrateDB
+information on this section of the CrateDB Console, refer to the :ref:`CrateDB
 Cloud Console overview <overview-org-regions>`.
 
 With this, you should be ready to use CrateDB Edge via Microk8s.
@@ -245,7 +246,7 @@ install.
 
 The ``<token>`` in question is the token you receive from the CrateDB Console
 Edge region field in the Regions tab of the Organization Overview. For more
-information on this section of the CrateDB Console, refer to our :ref:`CrateDB
+information on this section of the CrateDB Console, refer to the :ref:`CrateDB
 Cloud Console overview <overview-org-regions>`.
 
 With this, you should be ready to use CrateDB Edge via K3S.

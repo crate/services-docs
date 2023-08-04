@@ -29,9 +29,12 @@ Add users to an organization
 
 New users can be added to an organization by going to the Users tab in the
 left-hand menu. To add and manage users of the organization, you must be the
-organization admin. (For more information on user roles and associated
-privileges, see our documentation on 
-:ref:`user roles <user-roles>`.)
+organization admin.
+
+.. note::
+
+    For more information on user roles and associated privileges, see the
+    documentation on :ref:`user roles <user-roles>`.
 
 .. image:: ../_assets/img/users-overview.png
    :alt: Cloud Console users overview
@@ -48,8 +51,8 @@ whether the user should have admin privileges.
 
 .. _add-users-edit:
 
-Edit and delete users from an organization
-==========================================
+Edit or delete users from an organization
+=========================================
 
 You can also edit user roles and delete users in the *Users* tab. To edit a
 user's role, simply click the pen icon corresponding to that user in the user
@@ -60,5 +63,5 @@ table. This will bring up a dropdown menu. To delete a user, use the bin icon.
 Restrictions
 ============
 
-- An organization needs to have at least one organization admin. It is
-  therefore not possible to remove the organization admin if there is only one.
+An organization needs to have at least one organization admin. It is
+therefore not possible to remove the organization admin if there is only one.

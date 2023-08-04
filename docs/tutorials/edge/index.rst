@@ -23,9 +23,8 @@ seamless scaling and easy cluster management.
 Details
 =======
 
-The process of getting CrateDB Edge running is far easier than it may seem,
-thanks to the support for Edge deployment built into the CrateDB Cloud 
-Console, our own web UI.
+The process of getting CrateDB Edge running is supported by the CrateDB Cloud
+Console.
 
 Even so, there are some steps involved, and some requirements have to be met in
 order for it to work. This section of the documentation intends to serve as an

@@ -1,8 +1,8 @@
 .. _suspend-cluster:
 
-=================
-Suspend a cluster
-=================
+===============
+Suspend cluster
+===============
 
 This guide will provide a quick overview of how to suspend your cluster using
 the CrateDB Cloud Console. For the purposes of this guide, it is assumed that

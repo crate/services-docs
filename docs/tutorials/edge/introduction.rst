@@ -15,7 +15,7 @@ Introduction
     conditions.
 
     Should you find any errors, bugs, or functionality problems while using the
-    CrateDB Edge Pre-Release, please let us know via `our contact page`_ or our
+    CrateDB Edge Pre-Release, please let us know using the `contact page`_ or
     `support email`_.
 
 .. rubric:: Table of contents
@@ -316,7 +316,7 @@ into the form.
 .. _Helm: https://helm.sh/docs/intro/quickstart/
 .. _jq: https://stedolan.github.io/jq/
 .. _MetalLB: https://metallb.universe.tf/
-.. _our contact page: https://crate.io/contact/
+.. _contact page: https://crate.io/contact/
 .. _Stripe: https://stripe.com
 .. _support email: support@crate.io
 .. _wget: https://www.gnu.org/software/wget/

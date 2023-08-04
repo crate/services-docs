@@ -94,4 +94,4 @@ This is a configuration that works out-of-the-box on CrateDB Cloud Cluster.
 For all the configuration options :ref:`see the full logical
 replication documentation. <administration-logical-replication>`
 
-.. _Cloud Console: https://console.cratedb.cloud/?utm_campaign=2022-Q3-WS-Developer-Motion&utm_source=docs
+.. _Cloud Console: https://console.cratedb.cloud/
