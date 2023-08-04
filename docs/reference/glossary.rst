@@ -332,8 +332,8 @@ particular customer use cases: from trial and development plans to high-end
 production clusters. They can also be further adjusted for different
 :ref:`scale units <gloss-scale-unit>` per plan.
 
-Currently, there are four subscription plans available for `direct deployment`_,
-and four plans and a separate contract option via the Marketplace
+Currently, there are multiple subscription plans available for `direct deployment`_,
+and also multiple plans and a separate contract option through the Marketplace
 :ref:`offers <gloss-offer>`. For more information, refer to the documentation
 on `subscription plans`_.
 

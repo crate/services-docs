@@ -172,8 +172,8 @@ Alternatively, you can deploy a cluster with an older version, like this:
 Scale cluster
 =============
 
-After deploying, the next thing that you might want to do is scale your
-cluster. This allows you to either add more nodes or more storage to your
+Clusters can be scaled at any time, this allows you to add more nodes
+or more storage to your
 cluster.
 
 Scaling
