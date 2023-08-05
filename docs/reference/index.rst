@@ -17,7 +17,6 @@ NoSQL with the power and simplicity of standard SQL.
 .. toctree::
     :maxdepth: 2
 
-    overview
     subscription-plans
     user-roles
     billing
