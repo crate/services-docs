@@ -69,17 +69,20 @@ Each plan has two dimensions: compute and storage.
     different subscription plans. You can combine CrateDB Edge with any
     suitable hardware configuration that works for your use case.
 
+.. _crfree:
 
 CRFREE
 ------
 
 This plan is aimed at new users who want to test and evaluate CrateDB Cloud
 and is perpetually free to use. Every user can deploy one free tier cluster 
-in their organization without adding a payment method. This plan
-also doesn't consume any 
-:ref:`Free Credit <free-trial-budget>` that you may have
-available. They are limited to one node with 2 CPUs, 2 GiB of memory, and 4
-GiB of storage.
+in their organization without adding a payment method.
+This plan also doesn't consume any :ref:`Free Credit <free-trial-budget>`
+that you may have available.
+
+The cluster resources are limited to one node with 2 CPUs, 2 GiB of memory,
+and 4 GiB of storage, which is suitable only for basic evaluation purposes.
+
 
 CRFREE was made for active testing and evaluation, which is why any CRFREE
 cluster is suspended after 7 days of inactivity. After another 7 days, the
