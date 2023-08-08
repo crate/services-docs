@@ -8,6 +8,16 @@ CrateDB Cloud. The first step is always to [](#sign-up).
 After you have signed up successfully, CrateDB Cloud offers two different
 methods to subscribe and get started with deploying a cluster.
 
+Quick start.
+
+:::{card} {octicon}`table;2em` CrateDB Cloud Console
+:link: https://console.cratedb.cloud/
+:link-type: url
+
+Directly navigate to the CrateDB Cloud Console.
+https://console.cratedb.cloud/
+:::
+
 
 ## Direct deployment
 
