@@ -95,8 +95,6 @@ For more information on how the CrateDB Cloud Console works, refer to the
    :alt: CrateDB Cloud Console landing page
 
 
-
-
 .. _sign-up-next:
 
 Next steps
@@ -105,6 +103,15 @@ Next steps
 Corresponding tutorials will guide you through the process of creating an
 organization and database cluster, see :ref:`cluster-deployment`.
 
+.. tip::
 
-.. _cluster direct deployment tutorial: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
+    To get started easily, there are two options:
+
+    - The :ref:`free-trial-budget` will give any new user free credits
+      worth $200, which can be used on any kind of cluster configuration.
+
+    - The :ref:`crfree` cluster subscription plan is aimed at new users
+      who want to test and evaluate CrateDB Cloud.
+
+
 .. _CrateDB Cloud Console: https://console.cratedb.cloud/
