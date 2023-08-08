@@ -16,7 +16,9 @@ CrateDB Cloud supports signing up using several authentication providers
 and methods: You can use an account at GitHub, Google, or Microsoft Azure,
 or create a separate username and password supported by Amazon Cognito.
 
-Quick start.
+
+Quick start
+===========
 
 .. card:: :octicon:`table;2em` CrateDB Cloud Console
     :link: https://console.cratedb.cloud/
@@ -25,10 +27,24 @@ Quick start.
     Directly navigate to the CrateDB Cloud Console.
     https://console.cratedb.cloud/
 
+.. seealso::
+
+    To go directly to the cluster deployment tutorials, see :ref:`cluster-deployment`.
 
 .. image:: ../_assets/img/cloud-signup.png
     :alt: CrateDB Cloud signup screen
     :target: https://console.cratedb.cloud/
+
+.. tip::
+    :class: hero
+
+    To get started easily, there are two options:
+
+    - The :ref:`free-trial-budget` will give any new user free credits
+      worth $200, which can be used on any kind of cluster configuration.
+
+    - The :ref:`crfree` cluster subscription plan is aimed at new users
+      who want to test and evaluate CrateDB Cloud.
 
 .. note::
 
@@ -37,23 +53,11 @@ Quick start.
     from the Software as a Service (SaaS) marketplaces, a few restrictions
     may apply.
 
-.. note::
-
     Only the *Microsoft* option allows you to deploy clusters on CrateDB
     Cloud when coming from the Microsoft Azure Marketplace. Similarly, for cluster
     deployment through AWS, you should use the Amazon Cognito signup service. The
     Cognito authentication service is indicated in the UI as *Username & Password*.
     Both signup processes are described below.
-
-.. seealso::
-
-    To go directly to the cluster deployment tutorials, see :ref:`cluster-deployment`.
-
-
-.. rubric:: Table of contents
-
-.. contents::
-   :local:
 
 
 .. _sign-up-github:
@@ -102,16 +106,6 @@ Next steps
 
 Corresponding tutorials will guide you through the process of creating an
 organization and database cluster, see :ref:`cluster-deployment`.
-
-.. tip::
-
-    To get started easily, there are two options:
-
-    - The :ref:`free-trial-budget` will give any new user free credits
-      worth $200, which can be used on any kind of cluster configuration.
-
-    - The :ref:`crfree` cluster subscription plan is aimed at new users
-      who want to test and evaluate CrateDB Cloud.
 
 
 .. _CrateDB Cloud Console: https://console.cratedb.cloud/
