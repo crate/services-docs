@@ -14,3 +14,4 @@ Unreleased
   ``crate-client-tools``
 - Improve the appearance of the index/home page
 - Disable version chooser. This project is not versioned.
+- Rework "deploy" index page
