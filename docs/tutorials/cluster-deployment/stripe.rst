@@ -8,9 +8,10 @@ In this tutorial, we will provide a step-by-step guide to deploying a cluster
 from scratch. It is assumed you have completed the
 :ref:`signup process <sign-up>`. If you're a first-time user, a new 
 organization will have been created for you as a part of the signup process.
-If not, you will need to create one manually to proceed. The simplest way to
-then deploy a cluster quickly is to subscribe to CrateDB Cloud using your
-credit card. Our payment processing and billing are powered 
+If not, you will need to create one manually to proceed.
+
+The simplest way to deploy a cluster is to subscribe to CrateDB Cloud using your
+credit card. The payment processing and billing is powered
 by `Stripe`_. It is also possible to use your AWS or Azure subscription as a
 payment. To follow these steps, go to the `Cloud Console`_.
 
@@ -82,10 +83,8 @@ total price per hour and month on the right side of the deployment screen.
 Provide billing information
 ===========================
 
-Next comes a payment method screen. Our credit card payment processing is
-powered by `Stripe`_. If you have an existing AWS or Azure subscription, you
-can also pay using that. You can choose the payment method right after you 
-configure your cluster and click **Next**.
+On the next screen, you will select the payment method. You can choose
+credit card payment, or use an existing AWS or Azure subscription.
 
 .. image:: ../../_assets/img/payment-method.png
    :alt: Payment method screen
