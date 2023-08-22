@@ -343,16 +343,7 @@ Import Limitations
 
 **CSV** files:
 
-1. CSV files must have a valid header to parse properly, for example:
-
-   .. code-block:: console
-
-       id,text
-       1,example
-       2,example2
-
-2. Column type inference for CSV files is limited when auto-creating tables. 
-   Please pre-create your table if you want the correct types to be used.
+1. Comma, tab and pipe delimiters are supported.
 
 **JSON** files:
 
@@ -364,7 +355,7 @@ The following formats are supported for JSON:
 
        {
          "id":1,
-         "text": "example
+         "text": "example"
        }
 
 2. JSON Arrays. Will insert as a row per array item.
