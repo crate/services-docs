@@ -2,20 +2,10 @@
 
 .. _integrations-index:
 
-============
-Integrations
-============
+========================
+Clients and Integrations
+========================
 
-This section of `CrateDB Cloud`_ documentation introduces various available and tested integrations.
+.. note::
 
-
-.. rubric:: Table of contents
-
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:
-
-    metabase
-
-
-.. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
+    This documentation section was relocated to :ref:`crate-clients-tools:index`.

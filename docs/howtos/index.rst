@@ -29,7 +29,6 @@ Cloud CLI, aka. :ref:`Croud <cloud-cli:index>`.
     delete-cluster
     snapshot
     connect-to-cluster/index
-    visualize-data-with-grafana
     logical-replication
     private-endpoints
 
