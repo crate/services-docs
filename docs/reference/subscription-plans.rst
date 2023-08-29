@@ -88,6 +88,8 @@ CRFREE was made for active testing and evaluation, which is why any CRFREE
 cluster is suspended after 7 days of inactivity. After another 7 days, the
 cluster is automatically deleted if left suspended.
 
+.. _cr0:
+
 CR0
 ---
 
@@ -97,6 +99,12 @@ storage resources with other clusters in this category. Because of this, they
 offer a more cost-effective solution for smaller teams and experimental 
 deployments of low-traffic applications. They are limited to one node with 2 
 CPUs, 2 GiB of memory, and 4 GiB of storage.
+
+.. _cr1:
+.. _cr2:
+.. _cr3:
+.. _cr4:
+.. _cr1-cr4:
 
 CR1-CR4
 -------

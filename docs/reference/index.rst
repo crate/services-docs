@@ -21,6 +21,7 @@ NoSQL with the power and simplicity of standard SQL.
     user-roles
     billing
     api
+    technical-details
 
 .. toctree::
     :maxdepth: 1
