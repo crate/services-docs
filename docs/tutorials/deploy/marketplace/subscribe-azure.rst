@@ -33,14 +33,14 @@ Cloud offer page. You can either search "CrateDB Cloud" in the search bar at
 the top of the Azure Marketplace front page or go directly to 
 `Azure marketplace`_.  The top of the offer page should look as follows:
 
-.. image:: ../../../../_assets/img/azure-portal-offer.png
-   :alt: Azure Portal CrateDB Cloud offer  
+.. image:: ../../../_assets/img/azure-portal-offer.png
+   :alt: Azure Portal CrateDB Cloud offer
 
 To create the subscription, click the *Get it now* button. A confirmation modal
 should pop up. Once you click confirm, you will be redirected to a new page,
 where you need to confirm once again.
 
-.. image:: ../../../../_assets/img/azure-confirm.png
+.. image:: ../../../_assets/img/azure-confirm.png
    :alt: Azure Portal CrateDB Cloud offer subscription
 
 Clicking the *Subscribe* button will start the process of creating a new
@@ -48,13 +48,13 @@ subscription. Here you can create a new resource group, specify the resource
 group's location and name this new subscription. You can also apply tags to
 your subscription.
 
-.. image:: ../../../../_assets/img/azure-create-subscription.png
+.. image:: ../../../_assets/img/azure-create-subscription.png
    :alt: Azure Portal CrateDB Cloud create subscription
 
 .. NOTE::
 
    A resource group is a set of resources with the same life cycle,
-   permissions, and policies. For more information on these, refer to the 
+   permissions, and policies. For more information on these, refer to the
    `Azure documentation on resource groups`_. Also, more information about tags
    can be found in the `Azure documentation on tags`_.
 
@@ -63,7 +63,7 @@ and accept the terms of use by clicking *Subscribe* again.
 
 After confirming, a screen similar to this should appear in a few moments:
 
-.. image:: ../../../../_assets/img/azure-subscribed.png
+.. image:: ../../../_assets/img/azure-subscribed.png
    :alt: Azure Portal CrateDB Cloud created subscription
 
 This means the process is done and the subscription was successfully created.

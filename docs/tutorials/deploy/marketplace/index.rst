@@ -17,5 +17,5 @@ marketplace, instead of directly in Cloud console.
 .. toctree::
    :maxdepth: 1
 
-   deploy-to-cluster-aws/subscribe-aws
-   deploy-to-cluster-azure/subscribe-azure
+   subscribe-aws
+   subscribe-azure
