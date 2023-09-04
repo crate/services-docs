@@ -188,11 +188,11 @@ for improvements], and [source code contributions], are always welcome. {fab}`gi
 
 Sign Up <tutorials/sign-up>
 Free Trial <tutorials/promotions/free-trial-budget>
-Deploy <tutorials/cluster-deployment/index>
+Deploy <tutorials/deploy/index>
 Scale <howtos/reconfigure-cluster>
 Manage <howtos/index>
 Web Console <reference/overview>
-Croud CLI <tutorials/cluster-deployment/croud>
+Croud CLI <tutorials/deploy/croud>
 tutorials/edge/index
 ```
 

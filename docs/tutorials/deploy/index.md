@@ -63,5 +63,5 @@ CrateDB clusters on Cloud provider marketplaces.
 :hidden:
 
 stripe
-deploy-to-cluster-marketplace/index
+marketplace/index
 ```
