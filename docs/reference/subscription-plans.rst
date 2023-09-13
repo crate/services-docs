@@ -81,7 +81,7 @@ This plan also doesn't consume any :ref:`Free Credit <free-trial-budget>`
 that you may have available.
 
 The cluster resources are limited to one node with 2 CPUs, 2 GiB of memory,
-and 4 GiB of storage, which is suitable only for basic evaluation purposes.
+and 8 GiB of storage, which is suitable for basic evaluation purposes.
 
 
 CRFREE was made for active testing and evaluation, which is why any CRFREE
@@ -96,7 +96,7 @@ that allows better utilization of resources. These clusters share compute and
 storage resources with other clusters in this category. Because of this, they 
 offer a more cost-effective solution for smaller teams and experimental 
 deployments of low-traffic applications. They are limited to one node with 2 
-CPUs, 2 GiB of memory, and 4 GiB of storage.
+CPUs, 2 GiB of memory, and 8 GiB of storage.
 
 CR1-CR4
 -------
