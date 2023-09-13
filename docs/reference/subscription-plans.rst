@@ -80,7 +80,7 @@ in their organization without adding a payment method.
 This plan also doesn't consume any :ref:`Free Credit <free-trial-budget>`
 that you may have available.
 
-The cluster resources are limited to one node with 2 CPUs, 2 GiB of memory,
+The cluster resources are limited to one node with up to 2 CPUs, 2 GiB of memory,
 and 8 GiB of storage, which is suitable for basic evaluation purposes.
 
 
@@ -95,7 +95,7 @@ The CR0 plan, or Shared-resource cluster, is a special category of cluster
 that allows better utilization of resources. These clusters share compute and
 storage resources with other clusters in this category. Because of this, they 
 offer a more cost-effective solution for smaller teams and experimental 
-deployments of low-traffic applications. They are limited to one node with 2 
+deployments of low-traffic applications. They are limited to one node with up to 2 
 CPUs, 2 GiB of memory, and 8 GiB of storage.
 
 CR1-CR4
