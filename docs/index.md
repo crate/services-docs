@@ -14,68 +14,33 @@ CrateDB Cloud, or make the most of your existing subscription, we are maintainin
 resources and tutorials to support you correspondingly.
 
 
-## Get started
-
-Before you can start using CrateDB Cloud, you need to sign up for a user account.
-
 ::::{grid} 1 2 2 3
 :margin: 4 4 0 0
 :gutter: 1
 
 
-:::{grid-item-card} {octicon}`person` Sign Up
-:link: sign-up
+:::{grid-item-card} {octicon}`rocket` Quick Start
+:link: quick-start
 :link-type: ref
 
-Sign up to create and manage CrateDB clusters and other
-CrateDB Cloud products. 
+Learn how to sign up and get started with a free cluster.
 :::
 
 
-:::{grid-item-card} {octicon}`rocket` Free Trial
-:link: free-trial-budget
+:::{grid-item-card} {octicon}`mortar-board` Tutorials
+:link: tutorials
 :link-type: ref
 
-Learn how to sign up to get started with free credits
-on the trial budget plan.
+Learn how to use some of the key features of CrateDB.
 :::
 
-
-::::
-
-
-## Manage
-
-CrateDB Cloud is fully-managed in day-to-day operations. For interacting with
-your clusters using high-level commands, and to monitor their status, there is
-a web-based control center, a HTTP API, and a command-line program.
-
-::::{grid} 1 2 2 3
-:margin: 4 4 0 0
-:gutter: 1
-
-
-:::{grid-item-card} {octicon}`unfold` Deploy
-:link: cluster-deployment
-:link-type: ref
-
-Deploy a CrateDB cluster.
-:::
-
-
-:::{grid-item-card} {octicon}`infinity` Scale
-:link: reconfigure-cluster
-:link-type: ref
-
-Learn about the available options to scale your clusters.
-:::
 
 
 :::{grid-item-card} {octicon}`tools` Manage
 :link: cloud-howtos-index
 :link-type: ref
 
-Learn about general information how to manage your cluster.
+Learn how to manage your cluster.
 :::
 
 
@@ -100,48 +65,25 @@ A command-line based terminal program to operate your managed clusters.
 :link: edge
 :link-type: ref
 
-Integrate the CrateDB Cloud software stack with on-premise infrastructure.
+Run your own CrateDB Cloud region using Kubernetes.
 :::
 
 
 ::::
 
 
-Quick start.
+Do you want to learn about key database drivers and client applications for 
+CrateDB, such as CrateDB Admin UI, crash, psql, DataGrip, and DBeaver? Discover
+how to configure these tools and explore CrateDB's compatibility with analytics,
+ETL, BI, and monitoring solutions.
+
 
 ::::{grid} 1 2 2 3
-
-:::{grid-item-card} {octicon}`table;2em` CrateDB Cloud Console
-:columns: 12
-:link: https://console.cratedb.cloud/
-:link-type: url
-
-Directly navigate to the CrateDB Cloud Console.
-https://console.cratedb.cloud/
-:::
-
-::::
-
-
-## Connect
-
-This section introduces you to the canonical set of database drivers, client-
-and developer-applications, and how to configure them to connect to CrateDB.
-Just to name a few, it is about the CrateDB Admin UI, `crash`, `psql`,
-DataGrip, and DBeaver applications, the Java/JDBC/Python drivers, the SQLAlchemy
-and Flink dialects, and more.
-
-CrateDB integrates well with a diverse set of applications and tools concerned
-with analytics, visualization, and data wrangling, in the areas of ETL, BI, 
-metrics aggregation and monitoring, and more.
-
-
-::::{grid} 1 2 2 2
 :margin: 4 4 0 0
 :gutter: 1
 
 
-:::{grid-item-card} {material-outlined}`table_chart;2em` Admin UI
+:::{grid-item-card} {material-outlined}`table_chart` Admin UI
 :link: crate-admin-ui:index
 :link-type: ref
 
@@ -149,7 +91,7 @@ Each CrateDB Cloud cluster offers a dedicated Admin UI, which can be used to exp
 data, schema metadata, and cluster status information.
 :::
 
-:::{grid-item-card} {material-outlined}`link;2em` Clients, Tools, and Integrations
+:::{grid-item-card} {material-outlined}`link` Clients, Tools, and Integrations
 :link: crate-clients-tools:index
 :link-type: ref
 
@@ -157,16 +99,7 @@ Learn about compatible client applications and tools, and how to configure
 your favorite client library to connect to a CrateDB cluster.
 :::
 
-
-::::
-
-
-Quick start.
-
-::::{grid} 1 2 2 3
-
-:::{grid-item-card} {octicon}`file-code;2em` Import data
-:columns: 12
+:::{grid-item-card} {octicon}`file-code` Import data
 :link: https://community.crate.io/t/importing-data-to-cratedb-cloud-clusters/1467
 :link-type: url
 
@@ -186,23 +119,14 @@ for improvements], and [source code contributions], are always welcome. {fab}`gi
 :maxdepth: 1
 :hidden:
 
-Sign Up <tutorials/sign-up>
-Free Trial <tutorials/promotions/free-trial-budget>
-Deploy <tutorials/deploy/index>
-Scale <howtos/reconfigure-cluster>
+Quick Start <tutorials/quick-start>
+Tutorials <tutorials/index>
 Manage <howtos/index>
 Web Console <reference/overview>
 Croud CLI <tutorials/deploy/croud>
 tutorials/edge/index
+Reference <reference/index>
 ```
-
-```{toctree}
-:maxdepth: 1
-:hidden:
-
-reference/index
-```
-
 
 [CrateDB]: https://crate.io/product/
 [Croud CLI]: https://crate.io/docs/cloud/cli/

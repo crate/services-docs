@@ -1,3 +1,5 @@
+:orphan:
+
 .. _free-trial-budget:
 .. _free-trial-budget-signup:
 .. _free-trial-budget-account:

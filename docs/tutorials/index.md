@@ -1,15 +1,55 @@
----
-orphan: true
----
+(tutorials)=
+# Tutorials
 
-# Tutorials about CrateDB Cloud
+Welcome to the tutorials section, the next step in your CrateDB Cloud journey!
+Here you'll find comprehensive guides designed to help you make the most of your
+newly set-up cluster. Whether you're just getting started or aiming to deepen
+your understanding, these tutorials will walk you through key features and
+efficient practices to optimize your CrateDB experience.
 
-## Connecting Azure IoT Hub and CrateDB Cloud
+::::{grid} 1 2 2 3
+:margin: 4 4 0 0
+:gutter: 1
 
-```{note}
-The previous article [Connecting Azure IoT Hub and CrateDB Cloud for the Ingestion of Sensor Data]
-redirected to this URL somehow, so we are keeping that page as a placeholder,
-and will use it to direct you to a reworked version of the same content soon.
+:::{grid-item-card} {octicon}`clock` Time-Series
+:link: time-series
+:link-type: ref
+Dive into the world of time-series data with CrateDB. This tutorial will guide
+you through the best ways to store, query, and analyze time-series data.
+It's perfect for those working with IoT devices, monitoring systems, or any
+application where time-oriented data is crucial.
+:::
+
+:::{grid-item-card} {octicon}`package` Objects
+:link: object
+:link-type: ref
+Managing JSON or other structured data? This tutorial on using the object data
+type in CrateDB is your go-to guide. Learn how to store nested data efficiently
+and how to query this data with ease. This tutorial is particularly useful
+for those dealing with semi-structured data formats like JSON.
+:::
+
+
+:::{grid-item-card} {octicon}`search` Full-Text Search
+:link: full-text
+:link-type: ref
+Unlock the potential of text-based data with CrateDB's Full-Text Search
+capabilities. This tutorial will teach you how to set up your database for text 
+search, how to create the relevant indices, and how to query your text data
+efficiently. A must-read for anyone looking to make sense of large volumes of
+unstructured text data.
+:::
+
+::::
+
+Feel free to dive into any of these tutorials to explore the features that are
+most relevant to your use case. Happy learning!
+
+```{toctree}
+:hidden:
+:maxdepth: 1
+
+Time-Series <time-series>
+Objects<object>
+Full-Text Search<full-text>
 ```
-
-[Connecting Azure IoT Hub and CrateDB Cloud for the Ingestion of Sensor Data]: https://web.archive.org/web/20220125094243/https://crate.io/blog/azure-iot-hub-cratedb-sensor-data
