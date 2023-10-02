@@ -108,11 +108,11 @@ in this tier are limited to once per day and are kept for 14 days.
 +============+==============+===========+
 | S2         | Up to 2 vCPU | 2 GiB     |
 +------------+--------------+-----------+
-| S4         | Up to 3 vCPU | 2 GiB     |
+| S4         | Up to 3 vCPU | 4 GiB     |
 +------------+--------------+-----------+
-| S6         | Up to 4 vCPU | 4 GiB     |
+| S6         | Up to 4 vCPU | 6 GiB     |
 +------------+--------------+-----------+
-| S12        | Up to 8 vCPU | 6 GiB     |
+| S12        | Up to 8 vCPU | 12 GiB    |
 +------------+--------------+-----------+
 
 .. _dedicated:
