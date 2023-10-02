@@ -281,10 +281,10 @@ Import
 The first thing you see in the "Import" tab is the history of your imports. 
 You can see whether you imported from a URL or from a file, file name, table
 into which you imported, date, and status. By clicking "Show details" you can
-display the size and the number of records imported.
+display details of a particular import.
 
-Clicking the "Import new data" button will bring up a choice between URL 
-import and file import.
+Clicking the "Import new data" button will bring up a choice between various
+import methods.
 
 .. image:: ../_assets/img/cluster-import-tab-choice.png
    :alt: Cloud Console cluster upload choice
@@ -314,6 +314,41 @@ Gzip compressed files are also supported.
 
 .. image:: ../_assets/img/cluster-import-tab-url.png
    :alt: Cloud Console cluster upload from URL
+
+.. _overview-cluster-import-s3:
+
+Import from private S3 bucket
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CrateDB Cloud allows convenient imports directly from a S3 storage. 
+To import a file form bucket, provide the name of your bucket, and path to
+file. The S3 Access Key ID, and S3 Secret Access Key are also needed. You can
+also specify the endpoint for non-AWS S3 buckets. Keep in mind that you may be
+charged for egress, depending on your provider. There is also a limit of 10 GiB
+for S3 imports. The usual file formats are supported.
+
+.. image:: ../_assets/img/cluster-import-tab-s3.png
+   :alt: Cloud Console cluster upload from S3
+
+.. NOTE::
+
+   It's important to make sure that you have the right permissions to access objects in the specified bucket. For AWS S3, your user should have a policy that allows GetObject access, for example:
+
+      .. code-block:: console
+
+       {
+        "Version": "2012-10-17",
+        "Statement": [
+        {
+            "Sid": "AllowGetObject",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "*"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::EXAMPLE-BUCKET-NAME/*"
+        }]
+        }
 
 .. _overview-cluster-import-file:
 
