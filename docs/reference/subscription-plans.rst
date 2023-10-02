@@ -5,8 +5,7 @@ Subscription Plans
 ==================
 
 When signing up for the CrateDB Cloud service, you have a choice of
-different subscription plans. Each plan is preconfigured for different use
-case, depending on what your storage, and computation needs are. At the same
+different subscription plans. Each plan is preconfigured for different use cases, depending on your storage and computation needs. At the same
 time, the plans also offer elasticity, to accompany use case changes.
 
 Within certain plans, you can horizontally scale the capacity of your
@@ -30,9 +29,8 @@ plans and billing options based on the Marketplace SaaS offerings.
 Overview
 ========
 
-The standard CrateDB Cloud offer consists of three products:
-
-- *Free*, *Shared*, and *Dedicated*
+The standard CrateDB Cloud offer consists of three products: *Free*, *Shared*,
+and *Dedicated*
 
 Each product/plan has two dimensions: compute and storage.
 
@@ -43,9 +41,9 @@ Each product/plan has two dimensions: compute and storage.
 
 :Storage:
 
-    Storage is configured separately. On deployment, you can set the desired storage
-    capacity for your cluster, within the range of storage capacity options provided
-    for that plan. Storage can also be scaled up, but cannot be lowered after that.
+    Storage is configured separately. On deployment, you can set the desired 
+    storage capacity for your cluster, within the range of storage capacity
+    options provided for that plan. Storage can be scaled up but cannot be scaled down afterward.
 
 .. seealso::
 
@@ -73,18 +71,18 @@ Each product/plan has two dimensions: compute and storage.
 Free
 -----
 
-This plan, also called CRFREE is aimed at new users who want to test and
-evaluate CrateDB Cloud and is perpetually free to use. Every user can deploy
-one free tier cluster in their organization without adding a payment method.
-This plan also doesn't consume any :ref:`Free Credit <free-trial-budget>`
-that you may have available.
+This plan, also known as CRFREE, is aimed at new users for testing and 
+evaluation of CrateDB Cloud. It is perpetually free to use. Every user can 
+deploy one free tier cluster in their organization without adding a payment
+method. This plan also doesn't consume 
+any :ref:`Free Credit <free-trial-budget>` that you may have available.
 
 The cluster resources are limited to one node with up to 2 CPUs, 2 GiB of 
 memory, and 8 GiB of storage, which is suitable for basic evaluation purposes.
 This plan doesn't offer any kind of scaling.
 
-The CRFREE was made for active testing and evaluation, which is why any CRFREE
-cluster is suspended after 7 days of inactivity. After another 7 days, the
+The CRFREE plan is designed for active testing and evaluation. Clusters under 
+this plan are suspended after 7 days of inactivity. After another 7 days, the
 cluster is automatically deleted if left suspended.
 
 .. _shared:
@@ -92,14 +90,14 @@ cluster is automatically deleted if left suspended.
 Shared
 ------
 
-The Shared-resource plans, are used to deploy clusters that allows better
-utilization of resources. These clusters share compute and storage resources
+Shared-resource plans are used to deploy clusters that allow for better 
+resource utilization. These clusters share compute and storage resources
 with other clusters in this category. Because of this, they offer a more
 cost-effective solution for smaller teams and experimental deployments of
 low-traffic applications. They are limited to one node with up to 8 CPUs, 12 
 GiB of memory, and 1 TiB of storage. 
 
-The vCPU displayed for each tier is an "up to" values and thus not a guarantee.
+The vCPU displayed for each tier is an 'up to' value and is not guaranteed.
 Memory and storage are guaranteed. Scaling within the Shared tier is supported.
 You can scale from S2 to S12 and vice versa. It is also possible to upgrade
 from Shared plans to Dedicated plans, but not the other way around. Snapshots
@@ -124,14 +122,14 @@ Dedicated
 
 These are the base plans that offer the best performance and the biggest
 flexibility. Their specs start from 1.75 CPU, 7 GiB RAM, and 32GiB storage all
-the way to 14 CPU, 55 GiB RAM, and 8 TiB storage per-node. These plans can 
-be scaled to up to 9 nodes. If you need more nodes than this, feel free to
-`contact us`_ at any time.
+the way to 14 CPU, 55 GiB RAM, and 8 TiB storage per-node. These plans can be 
+scaled up to a maximum of 9 nodes. If you need more nodes than this, feel free 
+to `contact us`_ at any time.
 
 .. WARNING::
 
     An even number of nodes can be used for testing and development without
-    issue, but is not recommended for production workloads, due to the risk of
+    issue, but is not recommended for production workloads due to the risk of
     `split-brain syndrome`_.
 
 .. _subscription-plans-regions:
