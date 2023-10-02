@@ -115,4 +115,4 @@ More information on CrateDB user privileges can be found in the :ref:`CrateDB
 documentation on privileges <crate-reference:administration-privileges>`.
 
 
-.. _AL privileges: https://crate.io/docs/crate/reference/en/latest/admin/privileges.html#al
+.. _AL privileges: https://cratedb.com/docs/crate/reference/en/latest/admin/privileges.html#al
