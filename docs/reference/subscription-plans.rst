@@ -104,7 +104,7 @@ from Shared plans to Dedicated plans, but not the other way around. Snapshots
 in this tier are limited to once per day and are kept for 14 days.
 
 +------------+--------------+-----------+
-| Size       | CPU          | Memory    |
+| Size/Name  | CPU          | Memory    |
 +============+==============+===========+
 | S2         | Up to 2 vCPU | 2 GiB     |
 +------------+--------------+-----------+
