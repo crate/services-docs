@@ -320,9 +320,9 @@ Gzip compressed files are also supported.
 Import from private S3 bucket
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CrateDB Cloud allows convenient imports directly from a S3 storage. 
+CrateDB Cloud allows convenient imports directly from S3-compatible storage. 
 To import a file form bucket, provide the name of your bucket, and path to
-file. The S3 Access Key ID, and S3 Secret Access Key are also needed. You can
+the file. The S3 Access Key ID, and S3 Secret Access Key are also needed. You can
 also specify the endpoint for non-AWS S3 buckets. Keep in mind that you may be
 charged for egress, depending on your provider. There is also a limit of 10 GiB
 for S3 imports. The usual file formats are supported.
