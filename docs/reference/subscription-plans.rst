@@ -90,8 +90,7 @@ cluster is automatically deleted if left suspended.
 Shared
 ------
 
-Shared-resource plans are used to deploy clusters that allow for better 
-resource utilization. These clusters share compute and storage resources
+Shared-resource plans are used to deploy clusters that share CPU resources with other clusters in this category. Memory and storage are allocated exclusively to each individual cluster.
 with other clusters in this category. Because of this, they offer a more
 cost-effective solution for smaller teams and experimental deployments of
 low-traffic applications. They are limited to one node with up to 8 CPUs, 12 
