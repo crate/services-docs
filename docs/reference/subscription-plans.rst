@@ -90,8 +90,9 @@ cluster is automatically deleted if left suspended.
 Shared
 ------
 
-Shared-resource plans are used to deploy clusters that share CPU resources with other clusters in this category. Memory and storage are allocated exclusively to each individual cluster.
-with other clusters in this category. Because of this, they offer a more
+Shared-resource plans are used to deploy clusters that share CPU resources 
+with other clusters in this category. Memory and storage are allocated 
+exclusively to each individual cluster. Because of this, they offer a more
 cost-effective solution for smaller teams and experimental deployments of
 low-traffic applications. They are limited to one node with up to 8 CPUs, 12 
 GiB of memory, and 1 TiB of storage. 
@@ -99,7 +100,7 @@ GiB of memory, and 1 TiB of storage.
 The vCPU displayed for each tier is an 'up to' value and is not guaranteed.
 Memory and storage are guaranteed. Scaling within the Shared tier is supported.
 You can scale from S2 to S12 and vice versa. It is also possible to upgrade
-from Shared plans to Dedicated plans, but not the other way around. Snapshots
+from Shared plans to Dedicated plans, but not the other way around. Backups
 in this tier are limited to once per day and are kept for 14 days.
 
 +------------+--------------+-----------+
