@@ -6,12 +6,12 @@ Subscription Plans
 
 When signing up for the CrateDB Cloud service, you have a choice of
 different subscription plans. Each plan is preconfigured for different use cases, depending on your storage and computation needs. At the same
-time, the plans also offer elasticity, to accompany use case changes.
+time, the plans also offer elasticity to accompany use case changes.
 
 Within certain plans, you can horizontally scale the capacity of your
 cluster up or down by adding or subtracting nodes. Limited vertical scaling is
 also possible with storage scaling (up only). For more information on how to
-do this, please refer to the `scaling guide`_.
+do this, please refer to the `scaling guide`_. You can change plans at any time.
 
 This documentation section first explains the plans for the recommended
 subscription method, `subscribing and deploying a cluster directly`_.
