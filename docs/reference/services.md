@@ -96,8 +96,8 @@ functional for everyone.
 
 :::{note}
 __*CRFREE__: This plan is aimed at new users who want to test and evaluate
-CrateDB Cloud and is perpetually free to use. Every user can deploy one free
-tier cluster in their organization without adding a payment method. Free tier
+CrateDB Cloud, and is perpetually free to use. Users can deploy one free
+tier cluster in their organization without needing to add a payment method. Free tier
 clusters will be suspended if they are not used for 7 days, and deleted after
 7 more days of idleness. They cannot be scaled or changed.
 :::
