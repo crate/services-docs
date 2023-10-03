@@ -70,18 +70,90 @@ principle of cost-effectiveness and is particularly well-suited for development,
 testing, or non-critical production environments.
 
 **Node sizes**
-:::{table}
-:width: 700px
-:widths: 200, 200, 100, 100
-:align: left
-| Plan | Size   | vCPUs     | RAM      |  Storage  |
-|----|--------|-----------|----------| ---- |
-| Shared | CRFREE* | up to 2 | 2 GiB    | 8 GiB |
-| Shared | S2     | up to 2 | 2 GiB    | 8 GiB to 1TiB |
-| Shared | S4     | up to 3 | 4 GiB    | 8 GiB to 1TiB |
-| Shared | S6     | up to 4 | 6 GiB    | 8 GiB to 1TiB |
-| Shared | S8     | up to 8 | 12 GiB   | 8 GiB to 1TiB |
+
+::::{sd-table}
+:widths: 2 2 2 2 2 
+:row-class: top-border
+
+:::{sd-row}
+```{sd-item} **Plan**
+```
+```{sd-item} **Size**
+```
+```{sd-item} **vCPUs**
+```
+```{sd-item} **RAM**
+```
+```{sd-item} **Storage**
+```
 :::
+
+:::{sd-row}
+```{sd-item} Shared
+```
+```{sd-item} CRFREE*
+```
+```{sd-item} up to 2
+```
+```{sd-item} 2 GiB
+```
+```{sd-item} 8 GiB
+```
+:::
+
+:::{sd-row}
+```{sd-item} Shared
+```
+```{sd-item} S2
+```
+```{sd-item} up to 2
+```
+```{sd-item} 2 GiB
+```
+```{sd-item} 8 GiB to 1 TiB
+```
+:::
+
+:::{sd-row}
+```{sd-item} Shared
+```
+```{sd-item} S4
+```
+```{sd-item} up to 3
+```
+```{sd-item} 4 GiB
+```
+```{sd-item} 8 GiB to 1 TiB
+```
+:::
+
+:::{sd-row}
+```{sd-item} Shared
+```
+```{sd-item} S6
+```
+```{sd-item} up to 4
+```
+```{sd-item} 6 GiB
+```
+```{sd-item} 8 GiB to 1 TiB
+```
+:::
+
+:::{sd-row}
+```{sd-item} Shared
+```
+```{sd-item} S8
+```
+```{sd-item} up to 8
+```
+```{sd-item} 12 GiB
+```
+```{sd-item} 8 GiB to 1 TiB
+```
+:::
+
+::::
 
 **Variable Performance** <br>
 Since your cluster will be sharing vCPUs with other clusters, the performance
