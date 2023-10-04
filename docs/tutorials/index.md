@@ -3,7 +3,7 @@
 
 Welcome to the tutorials section, the next step in your CrateDB Cloud journey!
 Here you'll find comprehensive guides designed to help you make the most of your
-newly set-up cluster. Whether you're just getting started or aiming to deepen
+newly set-up cluster. Whether you are just getting started, or aim to deepen
 your understanding, these tutorials will walk you through key features and
 efficient practices to optimize your CrateDB experience.
 
@@ -16,7 +16,8 @@ efficient practices to optimize your CrateDB experience.
 :link-type: ref
 Dive into the world of time-series data with CrateDB. This tutorial will guide
 you through the best ways to store, query, and analyze time-series data.
-It's perfect for those working with IoT devices, monitoring systems, or any
+
+It is perfect for those working with IoT devices, monitoring systems, or any
 application where time-oriented data is crucial.
 :::
 
@@ -24,7 +25,9 @@ application where time-oriented data is crucial.
 :link: object
 :link-type: ref
 Managing JSON or other structured data? This tutorial on using the object data
-type in CrateDB is your go-to guide. Learn how to store nested data efficiently
+type in CrateDB is your go-to guide.
+
+Learn how to store nested data efficiently
 and how to query this data with ease. This tutorial is particularly useful
 for those dealing with semi-structured data formats like JSON.
 :::
@@ -34,7 +37,9 @@ for those dealing with semi-structured data formats like JSON.
 :link: full-text
 :link-type: ref
 Unlock the potential of text-based data with CrateDB's Full-Text Search
-capabilities. This tutorial will teach you how to set up your database for text 
+capabilities.
+
+This tutorial will teach you how to set up your database for text
 search, how to create the relevant indices, and how to query your text data
 efficiently. A must-read for anyone looking to make sense of large volumes of
 unstructured text data.
@@ -43,7 +48,7 @@ unstructured text data.
 ::::
 
 Feel free to dive into any of these tutorials to explore the features that are
-most relevant to your use case. Happy learning!
+most relevant to your use case. We wish you a happy learning experience.
 
 ```{toctree}
 :hidden:

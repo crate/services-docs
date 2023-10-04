@@ -29,10 +29,10 @@ To begin, let's create the schema for this dataset:
 ## Creating the Table
 
 CrateDB uses SQL, a powerful and familiar language for database management. To
-store our weather data, we'll create a table with columns tailored to our
-dataset using the `CREATE TABLE` command. Importantly, we'll also take advantage
+store the data, create a table with columns tailored to the
+dataset using the `CREATE TABLE` command. Importantly, you will also take advantage
 of CrateDB's full-text search capabilities by setting up a full-text index on
-the description column. This will enable us to perform complex textual queries
+the description column. This will enable you to perform complex textual queries
 later on.
 
 ```sql
@@ -56,9 +56,9 @@ Run the above SQL command in CrateDB to set up your table. With the table ready,
 you’re now set to insert the dataset.
 
 ## Inserting Data
-With the table created we can now insert the data using the COPY FROM command by
-using the table we just created and the source for our movie data:
 
+Now, insert data into the table you just created, by using the `COPY FROM`
+SQL statement.
 ```sql
 COPY netflix_catalog
 FROM 'https://github.com/crate/cratedb-datasets/raw/main/cloud-tutorials/data_netflix.json.gz'
@@ -66,27 +66,22 @@ WITH (format = 'json', compression='gzip');
 ```
 
 Run the above SQL command in CrateDB to import the dataset. After this commands 
-finishes, we are now ready to start searching in our dataset.
+finishes, you are now ready to start querying the dataset.
 
 ## Using Full-text Search
 
-Let us start with a simple SELECT on all columns and limiting the output to 10 
-results by running the following:
-
+Start with a basic `SELECT` statement on all columns, and limit the output to
+display only 10 records, in order to quickly explore a few samples worth of data.
 ```sql
 SELECT *
 FROM netflix_catalog
 LIMIT 10;
 ```
 
-This gives us a glimpse into the kind of data we are dealing with.
-
-
 CrateDB Cloud’s full-text search can be leveraged to find specific entries based
-on text matching. In this query, we are using the `MATCH` function on the
+on text matching. In this query, you are using the `MATCH` function on the
 `description` field to find all movies or TV shows that contain the word "love".
-We then sort the results by relevance score, which is provided by the
-`_score` field.
+The results can be sorted by relevance score by using the synthetic `_score` column.
 
 ```sql
 SELECT title, description
@@ -107,7 +102,7 @@ WHERE director = 'Kirsten Johnson'
 ORDER BY release_year DESC;
 ```
 
-This query uses the conventional `WHERE` clause to filter entries directed by 
+This query uses the conventional `WHERE` clause to find movies directed by
 Kirsten Johnson, and the `ORDER BY` clause to sort them by their release year
 in descending order.
 

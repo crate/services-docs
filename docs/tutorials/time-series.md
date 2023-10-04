@@ -7,20 +7,19 @@ which is managing time series data. Time series data refers to collections of
 data points recorded at specific intervals over time, like the hourly
 temperature of a city or the daily sales of a store.
 
-In this tutorial, we'll dive into an imaginary dataset that captures weather
-readings from CrateDB offices across the globe. Each data entry in our set will
-include:
+For this tutorial, imagine a dataset that captures weather
+readings from CrateDB offices across the globe. Each record includes:
 
 - `ts`: The exact time of the recording.
 - `location`: The location of the weather station.
-- `temperature`: The temperature in Celsius.
+- `temperature`: The temperature in degrees Celsius.
 - `humidity`: The humidity in percentage.
 - `wind_speed`: The wind speed in km/h.
 
 ## Creating the Table
 
 CrateDB uses SQL, a powerful and familiar language for database management. To
-store our weather data, we'll create a table with columns tailored to our
+store the weather data, create a table with columns tailored to the
 dataset using the `CREATE TABLE` command:
 
 ```sql
@@ -34,35 +33,31 @@ CREATE TABLE "weather_data" (
 ```
 
 Run the above SQL command in CrateDB to set up your table. With the table ready,
-you're now set to insert the dataset.
+you are now set to insert the dataset.
 
 
 ## Inserting Data
-With the table created we can now insert the data using the `COPY FROM` command
-by using the table we just created and the source for our weather data:
 
+Insert the data using the `COPY FROM` SQL statement.
 ```sql
 COPY weather_data
 FROM 'https://github.com/crate/cratedb-datasets/raw/main/cloud-tutorials/data_weather.csv.gz'
 WITH (format='csv', compression='gzip', empty_string_as_null=true);
 ```
 
-Run the above SQL command in CrateDB to import the dataset. After this commands 
-finishes, we are now ready to analyse the weather data.
 
 ## Analyzing Data
 
-Let us start with a simple `SELECT` on all columns and limiting the output to 10
-results by running the following:
-
+Start with a basic `SELECT` statement on all columns, and limit the output to
+display only 10 records, in order to quickly explore a few samples worth of data.
 ```sql
 SELECT *
 FROM weather_data
 LIMIT 10;
 ```
 
-CrateDB is build for fast aggregation using the columnar storage to speed up
-queries. Let us calculate the average temperature for each location by using the
+CrateDB is built for fast aggregation using the columnar storage to speed up
+queries. For example, calculate the average temperature for each location by using the
 `AVG` aggregation function:
 
 ```sql
@@ -71,14 +66,16 @@ FROM weather_data
 GROUP BY location;
 ```
 
-Computing basic averages is easy, but what if we need to answer more detailed
-questions? For example, if we want to know the highest temperature for each
-place and when it occurred. Simple groupings might not be enough, but
-thankfully, CrateDB has enhanced tools for time series data. We can use the
-`max_by(returned_value, maximized_value)` function, which gives us a value (like
-the time) when another value (like the temperature) is at its highest. Let's put
-this to use with the following query:
+Computing basic averages is nothing special, but what if you need to answer more detailed
+questions? For example, if you want to know the highest temperature for each
+place and when it occurred.
 
+Simple groupings might not be enough, but
+thankfully, CrateDB has enhanced tools for time series data. You can use the
+`max_by(returned_value, maximized_value)` function, which gives you a value (like
+the time) when another value (like the temperature) is at its highest.
+
+Let's put this to use with the following query:
 ```sql
 SELECT location,
        max(temperature) AS highest_temp,
@@ -87,14 +84,12 @@ FROM weather_data
 GROUP BY location;
 ```
 
-We can see that the query returns the intended result.
-
-You've probably observed by now that there are gaps in our dataset for certain
+You have probably observed by now, that there are gaps in the dataset for certain
 metrics. Such occurrences are common, perhaps due to a sensor malfunction or
-disconnection. To address this, we need to fill in the missing values. We can
+disconnection. To address this, the missing values need to be filled in. You can
 employ another useful tool: window functions paired with the `IGNORE NULLS`
-feature. Within a CTE, we utilize window functions to spot the next and prior
-non-null temperature recordings, and then compute the mean to bridge the gap:
+feature. Within a CTE, utilize window functions to spot the next and prior
+non-null temperature recordings, and then compute the arithmetic mean to bridge the gap:
 
 ```sql
 WITH OrderedData AS (
