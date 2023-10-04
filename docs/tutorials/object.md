@@ -2,14 +2,13 @@
 
 # Objects: Analyzing Marketing Data
 
-As marketers, we often handle multi-structured data from different platforms.
+Marketers often need to handle multi-structured data from different platforms.
 CrateDB's dynamic `OBJECT` data type allows us to store and analyze this complex,
 nested data efficiently. In this tutorial, we'll explore how to leverage this
 feature in marketing data analysis, along with the use of generated columns to
 parse and manage URLs.
 
-Consider we have marketing data that captures details of various campaigns:
-
+Consider marketing data that captures details of various campaigns:
 ```json
 {
     "campaign_id": "c123",
@@ -28,7 +27,7 @@ To begin, let's create the schema for this dataset:
 ## Creating the Table
 
 CrateDB uses SQL, a powerful and familiar language for database management. To
-store our marketing data, we'll create a table with columns tailored to our
+store the marketing data, create a table with columns tailored to the
 dataset using the `CREATE TABLE` command:
 
 ```sql
@@ -59,9 +58,8 @@ providing a robust and flexible structure for storing your marketing data.
 
 
 ## Inserting Data
-With the table created we can now insert the data using the COPY FROM command by
-using the table we just created and the source for our marketing data:
 
+Now, insert the data using the `COPY FROM` SQL statement.
 ```sql
 COPY marketing_data
 FROM 'https://github.com/crate/cratedb-datasets/raw/main/cloud-tutorials/data_marketing.json.gz'
@@ -70,19 +68,18 @@ WITH (format = 'json', compression='gzip');
 
 ## Analyzing Data
 
-Let us start with a simple `SELECT` on the `metrics` column and limiting the
-output to 10 results by running the following:
-
+Start with a basic `SELECT` statement on the `metrics` column, and limit the
+output to display only 10 records, in order to quickly explore a few samples
+worth of data.
 ```sql
 SELECT metrics
 FROM marketing_data
 LIMIT 10;
 ```
 
-We can see that the `metrics` column returns an object in the form of a JSON.
-If we just want to return a single property of this object we can adjust the
+You can see that the `metrics` column returns an object in the form of a JSON.
+If you just want to return a single property of this object, you can adjust the
 query slightly by adding the property to the selection using bracket notation.
-
 ```sql
 SELECT metrics['clicks']
 FROM marketing_data
@@ -90,10 +87,9 @@ LIMIT 10;
 ```
 
 It's helpful to select individual properties from a nested object, but what if
-we also want to filter results based on these properties? For instance, to find
-`campaign_id` and `source` where `conversion_rate` exceeds `0.09`, we can employ
+you also want to filter results based on these properties? For instance, to find
+`campaign_id` and `source` where `conversion_rate` exceeds `0.09`, employ
 the same bracket notation for filtering as well.
-
 ```sql
 SELECT campaign_id, source
 FROM marketing_data
@@ -101,7 +97,7 @@ WHERE metrics['conversion_rate'] > 0.09
 LIMIT 50;
 ```
 
-This allows us to narrow down our query results while still leveraging CrateDB's
+This allows you to narrow down the query results while still leveraging CrateDB's
 ability to query nested objects effectively.
 
 Finally, let's explore data aggregation based on UTM source parameters. The
@@ -109,9 +105,9 @@ Finally, let's explore data aggregation based on UTM source parameters. The
 function, automatically splits the URL into its constituent parts upon data
 insertion.
 
-To analyze the UTM source, we can directly query these parsed parameters. The
+To analyze the UTM source, you can directly query these parsed parameters. The
 goal is to count the occurrences of each UTM source and sort them in descending
-order. This lets us easily gauge marketing effectiveness for different sources,
+order. This lets you easily gauge marketing effectiveness for different sources,
 all while taking advantage of CrateDB's powerful generated columns feature.
 
 
