@@ -80,7 +80,7 @@ testing, or non-critical production environments.
 | Shared | S2     | up to 2 | 2 GiB    | 8 GiB to 1TiB |
 | Shared | S4     | up to 3 | 4 GiB    | 8 GiB to 1TiB |
 | Shared | S6     | up to 4 | 6 GiB    | 8 GiB to 1TiB |
-| Shared | S8     | up to 8 | 12 GiB   | 8 GiB to 1TiB |
+| Shared | S12    | up to 8 | 12 GiB   | 8 GiB to 1TiB |
 :::
 
 **Variable Performance** <br>
