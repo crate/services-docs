@@ -10,7 +10,7 @@ temperature of a city or the daily sales of a store.
 For this tutorial, imagine a dataset that captures weather
 readings from CrateDB offices across the globe. Each record includes:
 
-- `ts`: The exact time of the recording.
+- `timestamp`: The exact time of the recording.
 - `location`: The location of the weather station.
 - `temperature`: The temperature in degrees Celsius.
 - `humidity`: The humidity in percentage.
@@ -88,8 +88,9 @@ You have probably observed by now, that there are gaps in the dataset for certai
 metrics. Such occurrences are common, perhaps due to a sensor malfunction or
 disconnection. To address this, the missing values need to be filled in. You can
 employ another useful tool: window functions paired with the `IGNORE NULLS`
-feature. Within a CTE, utilize window functions to spot the next and prior
-non-null temperature recordings, and then compute the arithmetic mean to bridge the gap:
+feature. Within a Common Table Expression (CTE), we utilize window functions to
+spot the next and prior non-null temperature recordings, and then compute the 
+arithmetic mean to bridge the gap:
 
 ```sql
 WITH OrderedData AS (
