@@ -32,7 +32,7 @@ This example will return details of the current user:
 Examples
 --------
 
-The API is documented with `Swagger`_. It contains endpoints for:
+The API is documented with `Swagger`_ (login required). It contains endpoints for:
 
 - Organizations
 - Regions
@@ -45,7 +45,7 @@ The API is documented with `Swagger`_. It contains endpoints for:
 - Audit logs
 
 It provides example requests with all the required parameters, expected
-responses, and all response codes. Access the API documentation `here`_.
+responses, and all response codes. Access the API documentation `here`_ (login required).
 
 .. _Swagger: https://console.cratedb.cloud/api/docs
 .. _here: https://console.cratedb.cloud/api/docs
