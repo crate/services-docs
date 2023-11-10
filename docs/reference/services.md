@@ -28,7 +28,7 @@ _non-critical workloads_
 _production workloads_
 
 - Up to 9 Nodes
-- Up to 126 vCPUs
+- Up to 144 vCPUs
 - Up to 495 GiB RAM
 - Up to 72 TiB storage
 - Backups (once per hour)
@@ -115,10 +115,10 @@ high-availability and high-throughput environments.
 :align: left
 | Plan | Size   | vCPUs     | RAM      |  Storage  |
 |----|--------|-----------|----------| ---- |
-| Dedicated | CR1    | 1.75  | 7 GiB    | 8 GiB  to 8 TiB |
-| Dedicated | CR2    | 3.5  | 14 GiB   | 8 GiB  to 8 TiB |
-| Dedicated | CR3    | 7  | 28 GiB   | 8 GiB  to 8 TiB |
-| Dedicated | CR4    | 14  | 55 GiB   | 8 GiB  to 8 TiB |
+| Dedicated | CR1    | 2  | 7 GiB    | 32 GiB  to 8 TiB |
+| Dedicated | CR2    | 4  | 14 GiB   | 32 GiB  to 8 TiB |
+| Dedicated | CR3    | 8  | 28 GiB   | 32 GiB  to 8 TiB |
+| Dedicated | CR4    | 16  | 55 GiB   | 32 GiB  to 8 TiB |
 :::
 
 
@@ -132,10 +132,10 @@ nodes, the overall cluster size can be scaled up to the following limits:
 :align: left
 | Plan | Size   | vCPUs     | RAM      |  Storage  |
 |----|--------|-----------|----------| ---- |
-| Dedicated | CR1    | up to 15.75  | up to 63 GiB    | up to 72 TiB |
-| Dedicated | CR2    | up to 31.5  | up to 126 GiB   | up to 72 TiB |
-| Dedicated | CR3    | up to 63  | up to 252 GiB   | up to 72 TiB |
-| Dedicated | CR4    | up to 126  | up to 495 GiB   | up to 72 TiB |
+| Dedicated | CR1    | up to 18  | up to 63 GiB    | up to 72 TiB |
+| Dedicated | CR2    | up to 36  | up to 126 GiB   | up to 72 TiB |
+| Dedicated | CR3    | up to 72  | up to 252 GiB   | up to 72 TiB |
+| Dedicated | CR4    | up to 144  | up to 495 GiB   | up to 72 TiB |
 :::
 
 **Recommended Setup for High Availability**<br>

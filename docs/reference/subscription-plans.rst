@@ -121,8 +121,8 @@ Dedicated
 ---------
 
 These are the base plans that offer the best performance and the biggest
-flexibility. Their specs start from 1.75 CPU, 7 GiB RAM, and 32GiB storage all
-the way to 14 CPU, 55 GiB RAM, and 8 TiB storage per-node. These plans can be 
+flexibility. Their specs start from 2 CPU, 7 GiB RAM, and 32GiB storage all
+the way to 16 CPU, 55 GiB RAM, and 8 TiB storage per-node. These plans can be 
 scaled up to a maximum of 9 nodes. If you need more nodes than this, feel free 
 to `contact us`_ at any time.
 
