@@ -21,6 +21,7 @@ It is perfect for those working with IoT devices, monitoring systems, or any
 application where time-oriented data is crucial.
 :::
 
+
 :::{grid-item-card} {octicon}`package` Objects
 :link: object
 :link-type: ref
@@ -45,6 +46,15 @@ efficiently. A must-read for anyone looking to make sense of large volumes of
 unstructured text data.
 :::
 
+:::{grid-item-card} {octicon}`clock` Advanced Time-Series
+:link: time-series-advanced
+:link-type: ref
+This tutorial demonstrates how to augment time-series data with the metadata to enable more comprehensive analysis.
+
+The techniques and queries allow for unlocking deeper insights and harnessing the
+full potential of time-series data in real-world applications.
+:::
+
 ::::
 
 Feel free to dive into any of these tutorials to explore the features that are
@@ -57,4 +67,5 @@ most relevant to your use case. We wish you a happy learning experience.
 Time-Series <time-series>
 Objects<object>
 Full-Text Search<full-text>
+Advanced Time-Series <time-series-advanced>
 ```
