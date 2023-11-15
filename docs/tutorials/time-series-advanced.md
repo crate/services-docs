@@ -142,7 +142,7 @@ max_timestamp AS (
     SELECT MAX(ts) AS max_ts
     FROM doc.devices_readings
 ),
-DeviceReadingsAgg AS (
+device_readings_agg AS (
     SELECT 
         r.device_id,
         AVG(r.battery['level']) AS avg_battery_level,
