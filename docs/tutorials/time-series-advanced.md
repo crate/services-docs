@@ -83,7 +83,7 @@ JOIN devices.info i ON r.device_id = i.device_id
 LIMIT 100;
 ```
 
-Next query illustrates the calculation of summaries for aggregate values. In particular, it finds average battery levels (`avg_battery_level`) for each day and shows the result in an ascending order.
+The next query illustrates the calculation of summaries for aggregate values. In particular, it finds average battery levels (`avg_battery_level`) for each day and shows the result in an ascending order.
 
 ```sql
 SELECT date_trunc('day', ts) AS "day", AVG(battery['level']) AS avg_battery_level
