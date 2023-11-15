@@ -74,7 +74,7 @@ RETURN SUMMARY;
 ```
 ## Time-series Analysis with Metadata
 
-To illustrate `JOIN` operation, the first query retrieves the 100 rows of combined data from two tables, `devices.readings` and `devices.info`, based on a matching `device_id` in both. It effectively merges the detailed readings and corresponding device information, providing a comprehensive view of each device's status and metrics.
+To illustrate `JOIN` operation, the first query retrieves the 30 rows of combined data from two tables, `devices.readings` and `devices.info`, based on a matching `device_id` in both. It effectively merges the detailed readings and corresponding device information, providing a comprehensive view of each device's status and metrics.
 
 ```sql
 SELECT *
@@ -102,8 +102,6 @@ SELECT r.device_id,
        MAX(battery['temperature']) OVER w AS "max temperature"
 FROM doc.devices_readings r
 JOIN doc.devices_info i ON r.device_id = i.device_id
-WHERE battery['temperature'] > 100
-    AND model = 'mustang'
 WINDOW w AS (ORDER BY "ts" DESC ROWS BETWEEN 100 PRECEDING AND CURRENT ROW);
 ```
 The next query shows how to extract the most recent reading for each device of the _mustang_ model. The query selects the latest timestamp (`MAX(r.ts)`), which represents the most recent reading time, and the corresponding latest readings for battery, CPU, and memory (`MAX_BY` for each respective component, using the timestamp as the determining factor). These results are grouped by `device_id`, `manufacturer`, and `model` to ensure that the latest readings for each unique device are included. This query is particularly useful for monitoring the most current status of specific devices in a fleet.
