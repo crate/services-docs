@@ -89,7 +89,7 @@ The next query illustrates the calculation of summaries for aggregate values. In
 SELECT date_trunc('day', ts) AS "day", AVG(battery['level']) AS avg_battery_level
 FROM doc.devices_readings
 GROUP BY "day"
-ORDER BY "day"
+ORDER BY "day";
 ```
 Rolling averages are crucial in time-series analysis because they help smooth out short-term fluctuations and reveal underlying trends by averaging data points over a specified period. This approach is particularly effective in mitigating the impact of outliers and noise in the data, allowing for a clearer understanding of the true patterns in the time series. 
 
