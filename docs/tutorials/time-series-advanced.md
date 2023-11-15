@@ -80,7 +80,7 @@ To illustrate `JOIN` operation, the first query retrieves the 100 rows of combin
 SELECT *
 FROM devices.readings r
 JOIN devices.info i ON r.device_id = i.device_id
-LIMIT 100;
+LIMIT 30;
 ```
 
 The next query illustrates the calculation of summaries for aggregate values. In particular, it finds average battery levels (`avg_battery_level`) for each day and shows the result in an ascending order.
