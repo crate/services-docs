@@ -51,7 +51,8 @@ unstructured text data.
 :link-type: ref
 This tutorial demonstrates how to augment time-series data with the metadata to enable more comprehensive analysis.
 
-The techniques and queries allow for unlocking deeper insights and harnessing the the full potential of time-series data in real-world applications.
+The techniques and queries allow for unlocking deeper insights and harnessing the
+full potential of time-series data in real-world applications.
 :::
 
 ::::
