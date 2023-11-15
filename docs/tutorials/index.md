@@ -46,7 +46,7 @@ efficiently. A must-read for anyone looking to make sense of large volumes of
 unstructured text data.
 :::
 
-:::{grid-item-card} {octicon}`clock` Time-Series: Advanced
+:::{grid-item-card} {octicon}`clock` Advanced Time-Series
 :link: time-series-advanced
 :link-type: ref
 This tutorial demonstrates how to augment time-series data with the metadata to enable more comprehensive analysis.
@@ -67,5 +67,5 @@ most relevant to your use case. We wish you a happy learning experience.
 Time-Series <time-series>
 Objects<object>
 Full-Text Search<full-text>
-Time-Series Advanced <time-series-advanced>
+Advanced Time-Series <time-series-advanced>
 ```
