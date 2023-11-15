@@ -175,7 +175,7 @@ SELECT
 FROM 
     DeviceReadingsAgg read
 JOIN 
-    DeviceModelInfo info 
+    device_model_info info 
 ON 
     read.device_id = info.device_id
 GROUP BY 
