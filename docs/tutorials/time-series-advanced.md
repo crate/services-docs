@@ -138,7 +138,7 @@ Overall, the query aims to provide a detailed analysis of the battery performanc
 
 ```sql
 WITH 
-MaxTimestamp AS (
+max_timestamp AS (
     SELECT MAX(ts) AS max_ts
     FROM doc.devices_readings
 ),
