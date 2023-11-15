@@ -173,7 +173,7 @@ SELECT
     AVG(read.avg_battery_temperature) AS model_avg_battery_temperature,
     COUNT(*) AS readings_count
 FROM 
-    DeviceReadingsAgg read
+    device_readings_agg read
 JOIN 
     device_model_info info 
 ON 
