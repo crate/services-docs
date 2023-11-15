@@ -174,7 +174,7 @@ SELECT
     COUNT(*) AS readings_count
 FROM 
     DeviceReadingsAgg read
-INNER JOIN 
+JOIN 
     DeviceModelInfo info 
 ON 
     read.device_id = info.device_id
