@@ -146,20 +146,20 @@ device_readings_agg AS (
         AVG(r.battery['level']) AS avg_battery_level,
         AVG(r.battery['temperature']) AS avg_battery_temperature
     FROM 
-        doc.devices_readings r, MaxTimestamp m
+        devices_readings r, max_timestamp m
     WHERE 
         r.ts >= m.max_ts - INTERVAL '1 week'
     GROUP BY 
         r.device_id
 ),
-DeviceModelInfo AS (
+device_model_info AS (
     SELECT 
         device_id,
         manufacturer,
         model,
         api_version
     FROM 
-        doc.devices_info
+        devices_info
     WHERE 
         api_version BETWEEN 21 AND 25
 )
