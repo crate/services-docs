@@ -322,10 +322,10 @@ Import from private S3 bucket
 
 CrateDB Cloud allows convenient imports directly from S3-compatible storage. 
 To import a file form bucket, provide the name of your bucket, and path to
-the file. The S3 Access Key ID, and S3 Secret Access Key are also needed. You can
-also specify the endpoint for non-AWS S3 buckets. Keep in mind that you may be
-charged for egress, depending on your provider. There is also a limit of 10 GiB
-for S3 imports. The usual file formats are supported.
+the file. The S3 Access Key ID, and S3 Secret Access Key are also needed. You 
+can also specify the endpoint for non-AWS S3 buckets. Keep in mind that you may
+be charged for egress, depending on your provider. There is also a limit of 10
+GiB for S3 imports. The usual file formats are supported.
 
 .. image:: ../_assets/img/cluster-import-tab-s3.png
    :alt: Cloud Console cluster upload from S3
@@ -349,6 +349,24 @@ for S3 imports. The usual file formats are supported.
             "Resource": "arn:aws:s3:::EXAMPLE-BUCKET-NAME/*"
         }]
         }
+
+.. _overview-cluster-import-globbing:
+
+Import globbing
+~~~~~~~~~~~~~~~
+
+Import globbing is supported in any s3-complatible blob storage. The steps are
+the same as if importing from S3, i.e. bucket name, path to the file and S3
+ID/Secret. 
+
+To use globbing, provide a wildcard pattern, e.g.:
+
+.. code-block:: console
+  
+  /somepath/AWSLogs/123456678899/CloudTrail/us-east-1/2023/11/12/*.json.gz
+
+.. image:: ../_assets/img/cluster-import-globbing.png
+   :alt: Cloud Console cluster import globbing
 
 .. _overview-cluster-import-file:
 
