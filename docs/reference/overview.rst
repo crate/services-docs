@@ -355,13 +355,7 @@ supported - CSV, JSON, and Parquet.
 Import from Azure Blob Storage Container
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Importing from Azure Storage Containers is also supported. In this case, the
-secret consists of a secret name, an Azure Storage Connection string or an
-Azure SAS Token URL.
-
-There is an option to import data from a private Azure Blob Storage container
-using a stored secret. Secret can be added by an admin user at the organization
-level.
+Importing data from private Azure Blob Storage containers is possible using a stored secret, which includes a secret name and either an Azure Storage Connection string or an Azure SAS Token URL. An admin user at the organization level can add this secret.
 
 You can specify a secret, a container, a table and a path in the form
 `/folder/my_file.parquet` 
