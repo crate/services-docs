@@ -352,8 +352,8 @@ supported - CSV, JSON, and Parquet.
 
 .. _overview-cluster-import-azure:
 
-Azure Container Storage
-^^^^^^^^^^^^^^^^^^^^^^^
+Import from Azure Blob Storage Container
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Importing from Azure Storage Containers is also supported. In this case, the
 secret consists of a secret name, an Azure Storage Connection string or an
