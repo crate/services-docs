@@ -325,7 +325,7 @@ the file. The S3 Access Key ID, and S3 Secret Access Key are also needed. You
 can also specify the endpoint for non-AWS S3 buckets. Keep in mind that you may
 be charged for egress traffic, depending on your provider. There is also a
 volume limit of 10 GiB per file for S3 imports. The usual file formats are
-supported - CSV, JSON, and Parquet.
+supported - CSV (all variants), JSON (JSON-Lines, JSON Arrays and JSON Documents), and Parquet.
 
 .. image:: ../_assets/img/cluster-import-tab-s3.png
    :alt: Cloud Console cluster upload from S3
