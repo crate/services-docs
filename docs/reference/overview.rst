@@ -1,4 +1,3 @@
-.. _overview:
 .. _console-overview:
 
 =====================
@@ -322,10 +321,11 @@ Import from private S3 bucket
 
 CrateDB Cloud allows convenient imports directly from S3-compatible storage. 
 To import a file form bucket, provide the name of your bucket, and path to
-the file. The S3 Access Key ID, and S3 Secret Access Key are also needed. You can
-also specify the endpoint for non-AWS S3 buckets. Keep in mind that you may be
-charged for egress, depending on your provider. There is also a limit of 10 GiB
-for S3 imports. The usual file formats are supported.
+the file. The S3 Access Key ID, and S3 Secret Access Key are also needed. You 
+can also specify the endpoint for non-AWS S3 buckets. Keep in mind that you may
+be charged for egress traffic, depending on your provider. There is also a
+volume limit of 10 GiB per file for S3 imports. The usual file formats are
+supported - CSV (all variants), JSON (JSON-Lines, JSON Arrays and JSON Documents), and Parquet.
 
 .. image:: ../_assets/img/cluster-import-tab-s3.png
    :alt: Cloud Console cluster upload from S3
@@ -349,6 +349,49 @@ for S3 imports. The usual file formats are supported.
             "Resource": "arn:aws:s3:::EXAMPLE-BUCKET-NAME/*"
         }]
         }
+
+.. _overview-cluster-import-azure:
+
+Import from Azure Blob Storage Container
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Importing data from private Azure Blob Storage containers is possible using a stored secret, which includes a secret name and either an Azure Storage Connection string or an Azure SAS Token URL. An admin user at the organization level can add this secret.
+
+You can specify a secret, a container, a table and a path in the form
+`/folder/my_file.parquet` 
+
+As with other imports Parquet, CSV, and JSON files are supported. File size
+limitation for imports is 10 GiB per file.
+
+.. image:: ../_assets/img/cluster-import-tab-azure.png
+   :alt: Cloud Console cluster upload from Azure Storage Container
+
+.. _overview-cluster-import-globbing:
+
+Importing multiple files
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Importing multiple files, also known as import globbing is supported in any
+s3-complatible blob storage. The steps are the same as if importing from S3,
+i.e. bucket name, path to the file and S3 ID/Secret.
+
+Importing multiple files from Azure Container/Blob Storage is also supported:
+`/folder/*.parquet`
+
+Files to be imported are specified by using the well-known `wildcard`_
+notation, also known as "globbing". In computer programming, `glob`_ patterns
+specify sets of filenames with wildcard characters. The following example would
+import all the files from the single specified day.
+
+.. code-block:: console
+  
+  /somepath/AWSLogs/123456678899/CloudTrail/us-east-1/2023/11/12/*.json.gz
+
+.. image:: ../_assets/img/cluster-import-globbing.png
+   :alt: Cloud Console cluster import globbing
+
+As with other imports, the supported file types are CSV, JSON,
+and Parquet.
 
 .. _overview-cluster-import-file:
 
@@ -422,8 +465,8 @@ Export
 
 The export tab allows users to download specific tables/views. When you first
 visit the Export tab, you can specify the name of a table/view, format (CSV,
-JSON, or Parquet) and whether you'd like your data to be gzip compressed (recommended
-for CSV and JSON files).
+JSON, or Parquet) and whether you'd like your data to be gzip compressed 
+(recommended for CSV and JSON files).
 
 .. NOTE::
 
@@ -668,6 +711,7 @@ about uncertainties or problems you are having when using our products.
 .. _Croud: https://crate.io/docs/cloud/cli/en/latest/
 .. _Croud clusters upgrade: https://crate.io/docs/cloud/cli/en/latest/commands/clusters.html#clusters-upgrade
 .. _deploy a trial cluster on the CrateDB Cloud Console for free: https://crate.io/lp-free-trial
+.. _glob: https://en.wikipedia.org/wiki/Glob_(programming)
 .. _HTTP: https://crate.io/docs/crate/reference/en/latest/interfaces/http.html
 .. _Microsoft Azure: https://azure.microsoft.com/en-us/
 .. _PostgreSQL wire protocol: https://crate.io/docs/crate/reference/en/latest/interfaces/postgres.html
@@ -675,3 +719,4 @@ about uncertainties or problems you are having when using our products.
 .. _signup tutorial: https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html
 .. _tutorial: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/index.html
 .. _user roles: https://crate.io/docs/cloud/reference/en/latest/user-roles.html
+.. _wildcard: https://en.wikipedia.org/wiki/Wildcard_character
