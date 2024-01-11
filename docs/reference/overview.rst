@@ -421,12 +421,17 @@ There is also a limit to file size, currently 1GB.
 Schema evolution
 ~~~~~~~~~~~~~~~~
 
-A feature called Schema Evolution is offered for all the different import
-types. When enabled, new columns can automatically be added to your existing
-tables when importing data. This feature helps eliminate the need for
-pre-defining the table schemas. This applies to both existing tables, and those
-created by import job. It can be enabled/disabled by "Schema evolution"
-checkbox on the import page.
+Schema Evolution, available for all import types, enables automatic addition 
+of new columns to existing tables during data import, eliminating the need to 
+pre-define table schemas. This feature is applicable to both pre-existing 
+tables and those created during the import process. It can be toggled via the 
+'Schema Evolution' checkbox on the import page.
+
+Note that Schema Evolution is limited to adding new columns; it does not 
+modify existing ones. For instance, if an existing table has an 'OrderID' 
+column of type `INTEGER`, and an import is attempted with  Schema Evolution
+enabled for data where 'OrderID' column is of type `STRING`, the import job 
+will fail due to type mismatch.
 
 .. _overview-cluster-import-limitations:
 
@@ -471,11 +476,6 @@ The following formats are supported for JSON:
 
       {"id":1, "text": "example"}
       {"id":2, "text": "example2"}
-
-4. Schema evolution only adds new columns, it does not modify existing ones.
-   This means that if you have a column "OrderID" of type `INTEGER` in your
-   existing table and you try to import data, with Schema Evolution turned on,
-   where there is a "OrderID" column of type `STRING`, the import job will fail.
 
 .. _overview-cluster-export:
 
