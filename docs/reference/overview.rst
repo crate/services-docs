@@ -473,9 +473,9 @@ The following formats are supported for JSON:
       {"id":2, "text": "example2"}
 
 4. Schema evolution only adds new columns, it does not modify existing ones.
-  This means that if you have a column "OrderID" of type `INTEGER` in your
-  existing table and you try to import data, with Schema Evolution turned on,
-  where there is a "OrderID" column of type `STRING`, the import job will fail.
+   This means that if you have a column "OrderID" of type `INTEGER` in your
+   existing table and you try to import data, with Schema Evolution turned on,
+   where there is a "OrderID" column of type `STRING`, the import job will fail.
 
 .. _overview-cluster-export:
 
