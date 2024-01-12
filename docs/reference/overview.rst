@@ -282,14 +282,12 @@ You can see whether you imported from a URL or from a file, file name, table
 into which you imported, date, and status. By clicking "Show details" you can
 display details of a particular import.
 
-Clicking the "Import new data" button will bring up a choice between various
-import methods.
+Clicking the "Import new data" button will bring up the Import page, where you
+can select the source of your data. 
 
-.. image:: ../_assets/img/cluster-import-tab-choice.png
-   :alt: Cloud Console cluster upload choice
-
-If you don't have a dataset prepared, we also provide an example. It's the New
-York City taxi trip dataset for July of 2019 (about 6.3M records).
+If you don't have a dataset prepared, we also provide an example in the URL
+import section. It's the New York City taxi trip dataset for July of 2019 
+(about 6.3M records).
 
 .. _overview-cluster-import-url:
 
@@ -300,13 +298,12 @@ To import data, fill out the URL, name of the table which will be created and
 populated with your data, data format, and whether it is compressed.
 
 If a table with the chosen name doesn’t exist, it will be automatically 
-created. Please note that in this case, the importer will attempt to guess 
-the data types of each column and might do so sub-optimally.
+created. 
 
 The following data formats are supported:
 
-- CSV
-- JSON
+- CSV (all variants)
+- JSON (JSON-Lines, JSON Arrays and JSON Documents)
 - Parquet
 
 Gzip compressed files are also supported.
@@ -411,8 +408,30 @@ time, with the oldest ones being automatically deleted if you upload more.
 .. image:: ../_assets/img/cluster-import-tab-file.png
    :alt: Cloud Console cluster upload from file
 
-As with the URL import, CSV, JSON, and Parquet files are supported. There is 
-also a limit to file size, currently 1GB.
+As with other import, the supported file formats are:
+
+- CSV (all variants)
+- JSON (JSON-Lines, JSON Arrays and JSON Documents)
+- Parquet 
+
+There is also a limit to file size, currently 1GB.
+
+.. _overview-cluster-import-schema-evolution:
+
+Schema evolution
+~~~~~~~~~~~~~~~~
+
+Schema Evolution, available for all import types, enables automatic addition 
+of new columns to existing tables during data import, eliminating the need to 
+pre-define table schemas. This feature is applicable to both pre-existing 
+tables and those created during the import process. It can be toggled via the 
+'Schema Evolution' checkbox on the import page.
+
+Note that Schema Evolution is limited to adding new columns; it does not 
+modify existing ones. For instance, if an existing table has an 'OrderID' 
+column of type `INTEGER`, and an import is attempted with  Schema Evolution
+enabled for data where 'OrderID' column is of type `STRING`, the import job 
+will fail due to type mismatch.
 
 .. _overview-cluster-import-limitations:
 

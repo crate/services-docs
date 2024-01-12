@@ -98,11 +98,11 @@ interacting with the service, we assume use of the Console by default. Only
 the Console allows deployment of a :ref:`cluster <gloss-cluster>`.
 
 For information on how to use specific elements of the Console, refer to the
-:ref:`Console overview <overview>`.
+:ref:`Console overview <console-overview>`.
 
 .. SEEALSO::
 
-    :ref:`Console overview <overview>`
+    :ref:`Console overview <console-overview>`
 
 
 .. _gloss-consumer:
@@ -210,7 +210,7 @@ guide about :ref:`create-org`.
 
 .. SEEALSO::
 
-    :ref:`Console overview <overview>`
+    :ref:`Console overview <console-overview>`
 
     :ref:`create-org`
 
