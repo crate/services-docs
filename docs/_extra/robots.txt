@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /
 
-Sitemap: https://crate.io/docs/cloud/reference/en/latest/site.xml
+Sitemap: https://cratedb.com/docs/cloud/en/latest/site.xml
