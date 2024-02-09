@@ -97,18 +97,16 @@ WITH OrderedData AS (
     SELECT timestamp,
            location,
            temperature,
-           LAG(temperature, 1) IGNORE NULLS OVER (ORDER BY timestamp) AS prev_temp,
-           LEAD(temperature, 1) IGNORE NULLS OVER (ORDER BY timestamp) AS next_temp
+           LAG(temperature, 1) IGNORE NULLS OVER w AS prev_temp,
+           LEAD(temperature, 1) IGNORE NULLS OVER w AS next_temp
     FROM weather_data
+    WINDOW w AS (PARTITION BY location ORDER BY timestamp)
 )
 SELECT timestamp,
        location,
        temperature,
-       (prev_temp + next_temp) / 2 AS interpolated_temperature
+       COALESCE(temperature, (prev_temp + next_temp) / 2) AS interpolated_temperature
 FROM OrderedData
-ORDER BY location, timestamp
-LIMIT 50;
+ORDER BY location, timestamp;
 ```
-
-This query retrieves the missing temperature values and interpolates them by
-averaging the previous and next available temperature readings.
+The `WINDOW` clause defines a window that partitions the data by location and orders it by timestamp. This ensures that the `LAG` and `LEAD` window functions operate within each location group chronologically. If the temperature value is defined as `NULL`, the query returns the interpolated value calculated as the average of the previous and next available temperature readings. Otherwise, it uses the original value.
