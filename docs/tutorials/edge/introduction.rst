@@ -309,8 +309,6 @@ into the form.
 
 .. image:: ../../_assets/img/cloud-edge-delete.png
    :alt: CrateDB Edge deletion confirmation screen
-   :scale: 50%
-
 
 .. _Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
 .. _Helm: https://helm.sh/docs/intro/quickstart/
