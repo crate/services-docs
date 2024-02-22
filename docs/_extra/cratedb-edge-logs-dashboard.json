@@ -107,7 +107,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "CrateDB Edge Logs Monitoring",
+  "title": "CrateDB Cloud on Kubernetes Logs Monitoring",
   "uid": "wvqz_CnVz",
   "version": 3
 }

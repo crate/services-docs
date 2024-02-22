@@ -1,9 +1,9 @@
 .. _edge-monitoring:
 
-Monitor CrateDB Edge
-====================
+Monitor CrateDB Cloud on Kubernetes
+===================================
 
-This tutorial introduces a way to set up monitoring of your CrateDB Edge cluster.
+This tutorial introduces a way to set up monitoring of your CrateDB Cloud on Kubernetes cluster.
 The visualization tool `Grafana`_ is used together with `Prometheus`_ and `Loki`_
 to monitor the cluster performance and browse logs, respectively.
 
@@ -17,7 +17,7 @@ to monitor the cluster performance and browse logs, respectively.
 Prerequisites
 -------------
 
-- The CrateDB Edge installation script requires Helm 3 to be present in the system.
+- The CrateDB Cloud on Kubernetes installation script requires Helm 3 to be present in the system.
 - For a deployment with Grafana, Loki, and Prometheus, we recommend at
   least 5 CPUs and 5 GiB of memory per CrateDB node for acceptable performance.
 
@@ -31,7 +31,7 @@ yet. After that, you can deploy your cluster.
 
 Deployment steps will depend on your :ref:`cloud provider <edge-providers>`,
 or on your local environment, if you choose the :ref:`self-hosted
-<edge-self-hosted>` variant of CrateDB Edge.
+<edge-self-hosted>` variant of CrateDB Cloud on Kubernetes.
 
 .. _edge-monitoring-grafana-install:
 
@@ -71,7 +71,7 @@ After successful installation, you will get the following output:
 
 .. NOTE::
 
-    If you already have a CrateDB Edge cluster deployed and didn't choose to
+    If you already have a CrateDB Cloud on Kubernetes cluster deployed and didn't choose to
     install Grafana and Loki initially, you can rerun the install script to get
     them when needed.
 
@@ -228,7 +228,7 @@ ability to search for strings in the logs.
 Conclusion
 ----------
 
-This tutorial should serve as an introduction to CrateDB Edge monitoring
+This tutorial should serve as an introduction to CrateDB Cloud on Kubernetes monitoring
 using Loki & Prometheus in Grafana. When you complete it, you should
 have two handy introductory dashboards to monitor your cluster's
 performance and operations.

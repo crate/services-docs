@@ -168,8 +168,8 @@ In this tab, you will see the available :ref:`regions <gloss-region>` for
 cluster deployment. It is possible to deploy clusters on this screen as well,
 by clicking the *Deploy cluster* button under each respective region field.
 
-For those with access to `CrateDB Edge`_, this tab also allows the deployment
-of :ref:`CrateDB Edge <gloss-edge>` clusters in a :ref:`custom region
+For those with access to `CrateDB Cloud on Kubernetes`_, this tab also allows the deployment
+of :ref:`CrateDB Cloud on Kubernetes <gloss-edge>` clusters in a :ref:`custom region
 <gloss-region>`. To do so, provide a name for the custom region and click the
 *Create edge region* button. Once created, the custom region will appear:
 
@@ -725,8 +725,8 @@ about uncertainties or problems you are having when using our products.
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
 .. _CrateDB Cloud Console: https://console.cratedb.cloud
 .. _CrateDB Cloud support: support@crate.io
-.. _CrateDB Edge: https://crate.io/products/cratedb-edge/
-.. _CrateDB Edge region: https://crate.io/docs/cloud/tutorials/en/latest/edge/index.html
+.. _CrateDB Cloud on Kubernetes: https://crate.io/products/cratedb-edge/
+.. _CrateDB Cloud on Kubernetes region: https://crate.io/docs/cloud/tutorials/en/latest/edge/index.html
 .. _Croud: https://crate.io/docs/cloud/cli/en/latest/
 .. _Croud clusters upgrade: https://crate.io/docs/cloud/cli/en/latest/commands/clusters.html#clusters-upgrade
 .. _deploy a trial cluster on the CrateDB Cloud Console for free: https://crate.io/lp-free-trial

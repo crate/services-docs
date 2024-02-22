@@ -10,12 +10,12 @@ Ocean`_ and `Google Cloud Platform`_.
 .. NOTE::
     These guides are provided as example scenarios only. Other managed
     Kubernetes providers or preconfigured Kubernetes distributions may also
-    work with CrateDB Edge.
+    work with CrateDB Cloud on Kubernetes.
 
 These are third-party tools and Crate.io is not responsible for those tools.
 That said, we have tested the instructions provided below for functionality.
 Users less familiar with customizing their Kubernetes stack on their own may
-find any of these approaches a practical solution for easier CrateDB Edge
+find any of these approaches a practical solution for easier CrateDB Cloud on Kubernetes
 setup.
 
 .. rubric:: Table of contents
@@ -30,9 +30,9 @@ Azure AKS
 ---------
 
 Below is a step-by-step guide to using Azure AKS as a managed Kubernetes
-provider in combination with CrateDB Edge. The steps are merely examples of a
+provider in combination with CrateDB Cloud on Kubernetes. The steps are merely examples of a
 process validated by us; other methods may work also. We provide this
-information for ease of use and to illustrate how to work with CrateDB Edge.
+information for ease of use and to illustrate how to work with CrateDB Cloud on Kubernetes.
 
 
 Sign up
@@ -63,7 +63,7 @@ a VM size that is at least 4 CPUs and 8GiB of RAM, for example the "D4s_v3"
 combination. Additionally, we recommend using at least 3 nodes for a
 production-grade high-availability setup. Other settings may be left on default
 or adjusted as desired depending on your production requirements. (The default
-settings should be fully functional for CrateDB Edge.) Then proceed with
+settings should be fully functional for CrateDB Cloud on Kubernetes.) Then proceed with
 creating the cluster. This process may take some time.
 
 If you have `kubectl`_ installed, you can check on the node status once it is
@@ -94,12 +94,12 @@ Sign up with, or log into, the `CrateDB Cloud Console`_. Go to the Regions tab
 in the Subscription overview and create a custom Edge region by clicking on
 *Create Edge region*. When the region has appeared in the regions list, it
 will show a script that you can copy into your CLI. Do so and confirm
-installation of CrateDB Edge on the correct cluster. The script will prompt you
+installation of CrateDB Cloud on Kubernetes on the correct cluster. The script will prompt you
 for installation of the prerequisite tools as needed. To configure the
 necessary storage classes, follow the instructions given in the script and then
 rerun the script command.
 
-The script, once run, will validate the installation of the CrateDB Edge stack.
+The script, once run, will validate the installation of the CrateDB Cloud on Kubernetes stack.
 You can also check that everything is operational by going to your Kubernetes
 service in the Azure portal and checking the tab Workloads, under Kubernetes
 Resources.
@@ -111,7 +111,7 @@ Deploy Edge cluster
 Finally, return to the CrateDB Cloud Console and click on *Deploy cluster* in
 the custom region you have created. Follow the :ref:`steps described above
 <edge-config>` to configure your CrateDB Cloud cluster. At the end of the
-process, you should have a working CrateDB Edge install on Azure AKS managed
+process, you should have a working CrateDB Cloud on Kubernetes install on Azure AKS managed
 Kubernetes.
 
 
@@ -122,9 +122,9 @@ Amazon EKS
 ----------
 
 Below is a step-by-step guide to using Amazon EKS as a managed Kubernetes
-provider in combination with CrateDB Edge. The steps are merely examples of a
+provider in combination with CrateDB Cloud on Kubernetes. The steps are merely examples of a
 process validated by us; other methods may work also. We provide this
-information for ease of use and to illustrate how to work with CrateDB Edge.
+information for ease of use and to illustrate how to work with CrateDB Cloud on Kubernetes.
 
 .. NOTE::
     Amazon EKS cluster configuration has some complexity relating to the
@@ -203,7 +203,7 @@ Sign up with, or log into, the `CrateDB Cloud Console`_. Go to the Regions tab
 in the Subscription overview and create a custom Edge region by clicking on
 *Create Edge region*. When the region has appeared in the regions list, it
 will show a script that you can copy into your CLI. Do so and confirm
-installation of CrateDB Edge on the correct cluster. The script will prompt you
+installation of CrateDB Cloud on Kubernetes on the correct cluster. The script will prompt you
 for installation of the prerequisite tools as needed. To configure the
 necessary storage classes, follow the instructions given in the script and then
 rerun the script command.
@@ -217,7 +217,7 @@ classes`_. You can find the relevant storage class name with kubectl:
 
     kubectl get sc
 
-The script, once run, will validate the installation of the CrateDB Edge stack.
+The script, once run, will validate the installation of the CrateDB Cloud on Kubernetes stack.
 You can check everything is running correctly in the EKS cluster interface.
 
 
@@ -227,7 +227,7 @@ Deploy Edge cluster
 Finally, return to the CrateDB Cloud Console and click on *Deploy cluster* in
 the custom region you have created. Follow the :ref:`steps described above
 <edge-config>` to configure your CrateDB Cloud cluster. At the end of the
-process, you should have a working CrateDB Edge install on AWS EKS managed
+process, you should have a working CrateDB Cloud on Kubernetes install on AWS EKS managed
 Kubernetes.
 
 
@@ -237,9 +237,9 @@ Digital Ocean
 -------------
 
 Below is a step-by-step guide to using Digital Ocean as a managed Kubernetes
-provider in combination with CrateDB Edge. The steps are merely examples of a
+provider in combination with CrateDB Cloud on Kubernetes. The steps are merely examples of a
 process validated by us; other methods may work also. We provide this
-information for ease of use and to illustrate how to work with CrateDB Edge.
+information for ease of use and to illustrate how to work with CrateDB Cloud on Kubernetes.
 
 
 Sign up
@@ -283,7 +283,7 @@ running as intended:
 Set up Edge region
 ''''''''''''''''''
 
-Now, go to the CrateDB Cloud Console and create a custom CrateDB Edge region.
+Now, go to the CrateDB Cloud Console and create a custom CrateDB Cloud on Kubernetes region.
 Follow the steps outlined :ref:`from the CrateDB sign up onwards <edge-signup>`
 to proceed. Run the script the CrateDB Cloud Console shows in the panel for the
 custom region you just created and install prerequisites as necessary.
@@ -310,15 +310,15 @@ Deploy Edge cluster
 Finally, return to the CrateDB Cloud Console and click on *Deploy cluster* in
 the custom region when it is available. Follow the :ref:`steps described above
 <edge-config>` to proceed. At the end of the process, you should have a working
-CrateDB Edge install on Digital Ocean managed Kubernetes.
+CrateDB Cloud on Kubernetes install on Digital Ocean managed Kubernetes.
 
 Google Cloud Platform
 ---------------------
 
-Below is a full walkthrough of how to get CrateDB Edge up and running on
+Below is a full walkthrough of how to get CrateDB Cloud on Kubernetes up and running on
 Google Cloud. The steps are merely examples of a process validated by us; other
 methods may work also. We provide this information for ease of use and to
-illustrate how to work with CrateDB Edge. In this example, we use Google
+illustrate how to work with CrateDB Cloud on Kubernetes. In this example, we use Google
 Cloud's Kubernetes Engine with a standard setup. 
 
 Sign up

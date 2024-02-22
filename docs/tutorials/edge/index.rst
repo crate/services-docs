@@ -1,17 +1,17 @@
 .. _edge:
 
-============
-CrateDB Edge
-============
+===========================
+CrateDB Cloud on Kubernetes
+===========================
 
-**CrateDB Edge** is the hybrid cloud database solution integrating CrateDB clusters
+**CrateDB Cloud on Kubernetes** is the hybrid cloud database solution integrating CrateDB clusters
 and the CrateDB Cloud software stack with on-premise or customer-controlled
 cloud infrastructure.
 
 Introduction
 ============
 
-The CrateDB Edge concept is simple. You bring your own Kubernetes
+The CrateDB Cloud on Kubernetes concept is simple. You bring your own Kubernetes
 infrastructure - whether in a production site, office, laboratory, or local
 setup, or in your existing managed cloud infrastructure on AWS, Azure, or GCP.
 
@@ -23,7 +23,7 @@ seamless scaling and easy cluster management.
 Details
 =======
 
-The process of getting CrateDB Edge running is supported by the CrateDB Cloud
+The process of getting CrateDB Cloud on Kubernetes running is supported by the CrateDB Cloud
 Console.
 
 Even so, there are some steps involved, and some requirements have to be met in
@@ -41,7 +41,7 @@ for some lightweight Kubernetes distributions, like K3s and Microk8s.
 Then, we explain how to set up a custom backup location, so you can keep full
 ownership of your data backups.
 
-We also introduce a way to monitor your CrateDB Edge cluster in the
+We also introduce a way to monitor your CrateDB Cloud on Kubernetes cluster in the
 visualization tool Grafana coupled with Loki and Prometheus.
 
 .. rubric:: Table of contents
