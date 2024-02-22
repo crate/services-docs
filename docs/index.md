@@ -61,7 +61,7 @@ A command-line based terminal program to operate your managed clusters.
 :::
 
 
-:::{grid-item-card} {octicon}`container` CrateDB Edge
+:::{grid-item-card} {octicon}`container` CrateDB Cloud on Kubernetes
 :link: edge
 :link-type: ref
 

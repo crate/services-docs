@@ -61,9 +61,9 @@ Each product/plan has two dimensions: compute and storage.
 
 .. note::
 
-    `CrateDB Edge`_ works differently. Since it allows hosting CrateDB Cloud
+    `CrateDB Cloud on Kubernetes`_ works differently. Since it allows hosting CrateDB Cloud
     on your local or self-service Kubernetes stack, there is no need for
-    different subscription plans. You can combine CrateDB Edge with any
+    different subscription plans. You can combine CrateDB Cloud on Kubernetes with any
     suitable hardware configuration that works for your use case.
 
 .. _crfree:
@@ -177,7 +177,7 @@ cloud providers on the SaaS Marketplaces. For more information, contact the
 .. _Azure offer page: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
 .. _contact us: sales@crate.io
 .. _Contract page on the AWS Marketplace: https://aws.amazon.com/marketplace/pp/B08KHK34RK
-.. _CrateDB Edge: https://crate.io/products/cratedb-edge/
+.. _CrateDB Cloud on Kubernetes: https://crate.io/products/cratedb-edge/
 .. _deployment tutorial: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
 .. _pricing page: https://crate.io/pricing
 .. _Sales department: sales@crate.io

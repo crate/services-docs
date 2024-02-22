@@ -145,10 +145,10 @@ clusters can only be deployed within the Console.
 
 .. _gloss-edge:
 
-Edge
-----
+CrateDB Cloud on Kubernetes
+---------------------------
 
-CrateDB Edge is a hybrid cloud database solution presented by Crate.io. It
+CrateDB Cloud on Kubernetes is a hybrid cloud database solution presented by Crate.io. It
 allows customers to deploy a Kubernetes cluster either on their own cloud
 provider or their own local servers, using the database software and
 maintenance support that CrateDB Cloud offers. It can be accessed through the
@@ -248,8 +248,8 @@ Region
 
 A region in the sense used for CrateDB Cloud is a set of data centers 
 (servers) grouped together on a geographic basis so as to not exceed a certain
-latency. CrateDB Edge also permits the creation of custom regions. These
-regions are designed to correspond to servers used by CrateDB Edge customers
+latency. CrateDB Cloud on Kubernetes also permits the creation of custom regions. These
+regions are designed to correspond to servers used by CrateDB Cloud on Kubernetes customers
 locally, on which they can deploy CrateDB Cloud clusters for use in plants and
 other production facilities.
 

@@ -3,9 +3,9 @@
 Custom backup location
 ======================
 
-This guide introduces a feature of CrateDB Edge that lets users specify their
+This guide introduces a feature of CrateDB Cloud on Kubernetes that lets users specify their
 backup location. This gives you full ownership and control of your data when
-using CrateDB Edge.
+using CrateDB Cloud on Kubernetes.
 
 .. rubric:: Table of contents
 
@@ -17,7 +17,7 @@ using CrateDB Edge.
 Prerequisites
 -------------
 
-- This guide describes only the final deployment stage of the CrateDB Edge
+- This guide describes only the final deployment stage of the CrateDB Cloud on Kubernetes
   cluster. For the full instructions, see either the :ref:`Self-hosted Edge
   <edge-self-hosted>`, or the :ref:`Managed Edge <edge-providers>` tutorials.
 

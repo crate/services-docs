@@ -6,16 +6,16 @@ Introduction
 .. NOTE::
 
     You must have `wget`_ and `jq`_ installed for the script to function.
-    CrateDB Edge is currently in Pre-Release. CrateDB Edge and related services
+    CrateDB Cloud on Kubernetes is currently in Pre-Release. CrateDB Cloud on Kubernetes and related services
     are provided on an "as is" basis and may change at any time. Crate.io
     provides no guarantees or warranty regarding the usability or performance
-    of CrateDB Edge. The CrateDB Cloud Service Level Agreement (SLA) is
-    expressly disclaimed for the use of CrateDB Edge and related services until
-    further notice. By using CrateDB Edge, you agree to these terms and
+    of CrateDB Cloud on Kubernetes. The CrateDB Cloud Service Level Agreement (SLA) is
+    expressly disclaimed for the use of CrateDB Cloud on Kubernetes and related services until
+    further notice. By using CrateDB Cloud on Kubernetes, you agree to these terms and
     conditions.
 
     Should you find any errors, bugs, or functionality problems while using the
-    CrateDB Edge Pre-Release, please let us know using the `contact page`_ or
+    CrateDB Cloud on Kubernetes Pre-Release, please let us know using the `contact page`_ or
     `support email`_.
 
 .. rubric:: Table of contents
@@ -29,7 +29,7 @@ Prerequisites
 -------------
 
 Certain hardware and software specifications must be met in order to make use
-of CrateDB Edge. The most important of these is that you must provide a working
+of CrateDB Cloud on Kubernetes. The most important of these is that you must provide a working
 Kubernetes cluster, one that meets the following requirements:
 
 .. rst-class:: open
@@ -41,21 +41,21 @@ Kubernetes cluster, one that meets the following requirements:
 
 * Sufficient CPU per node to run the CrateDB Cloud software stack as well as
   sufficient compute to run the CrateDB instances desired. We recommend the use
-  of a K8s autoscaler. For reference, the CrateDB Edge stack - without Grafana
+  of a K8s autoscaler. For reference, the CrateDB Cloud on Kubernetes stack - without Grafana
   or Loki - requires about 2 CPUs and 2500 Mi of memory. We recommend at least
   4 CPUs per node for reliable performance.
 
 * A Kubernetes version 1.20, 1.21, or 1.22;
 
 * A storage class for persisting your data (SSD recommended). As outlined in
-  the installation script, CrateDB Edge expects the storage classes
+  the installation script, CrateDB Cloud on Kubernetes expects the storage classes
   ``crate-premium`` (SSD) and ``crate-standard`` (SSD or Spindle). Also ensure
   that you are able to set the field ``allowVolumeExpansion`` to ``true``.
 
 * Unless you are experienced with operating Kubernetes clusters, we recommend
-  to start with a dedicated Kubernetes cluster for CrateDB Edge. If you use an
+  to start with a dedicated Kubernetes cluster for CrateDB Cloud on Kubernetes. If you use an
   existing Kubernetes setup, be aware that the following components will be
-  set up during installation of CrateDB Edge, which may interfere with your
+  set up during installation of CrateDB Cloud on Kubernetes, which may interfere with your
   existing configuration:
 
   * cert-manager (version 1.6.1)
@@ -69,13 +69,13 @@ Console in order to deploy the cluster itself, using the provided script. These
 steps will be explained below.
 
 Some Kubernetes knowledge, especially regarding networking and storage, is
-recommended when using CrateDB Edge, especially when using it as-is. If you're
-uncertain, you may benefit from using CrateDB Edge in combination with
+recommended when using CrateDB Cloud on Kubernetes, especially when using it as-is. If you're
+uncertain, you may benefit from using CrateDB Cloud on Kubernetes in combination with
 :ref:`cloud providers or third-party tools <edge-providers>` as described
 further down in this tutorial.
 
 .. NOTE::
-    A special note about bare metal Kubernetes clusters: CrateDB Edge should
+    A special note about bare metal Kubernetes clusters: CrateDB Cloud on Kubernetes should
     work on any bare metal cluster, but the CrateDB instances running within
     require a load balancer for outside access. If you do not have a load
     balancer (for example `MetalLB`_), you can still access the CrateDB
@@ -158,8 +158,8 @@ Manifest and verification
 '''''''''''''''''''''''''
 
 Once you satisfy the prerequisites, the script will ask for your confirmation
-to install CrateDB Edge. Type Y or y to continue. The script will then
-download the manifest files for the CrateDB Edge service and apply them.
+to install CrateDB Cloud on Kubernetes. Type Y or y to continue. The script will then
+download the manifest files for the CrateDB Cloud on Kubernetes service and apply them.
 
 In the final stage, the script will loop over the services and check their
 availability. It continues doing this until all required services have become
@@ -236,13 +236,13 @@ cluster configuration. Configure your desired hardware values for CPU,
 RAM, storage, and number of nodes.
 
 .. image:: ../../_assets/img/cloud-edge-config.png
-   :alt: Cluster configuration panels for CrateDB Edge
+   :alt: Cluster configuration panels for CrateDB Cloud on Kubernetes
 
 On the right the cluster scale overview shows the total hardware values for
 the cluster. This is simply the number of nodes you have chosen, multiplied by
 the values per node you have defined.
 
-You can also define the backup location of your CrateDB Edge cluster. You
+You can also define the backup location of your CrateDB Cloud on Kubernetes cluster. You
 have the option of either using the default backup location for CrateDB Cloud,
 which is managed by us, or use a custom backup location that is convenient to
 you. This has to be an S3 bucket or a location with an equivalent
@@ -301,14 +301,14 @@ region.
 Deleting a custom region does not delete the resources inside that region. To
 also delete the resources inside the region, run the script provided in the
 deletion confirmation screen in your local CLI before confirming the deletion
-in the console. This will uninstall CrateDB Edge from your local Kubernetes
+in the console. This will uninstall CrateDB Cloud on Kubernetes from your local Kubernetes
 cluster.
 
 To finalize the deletion of the custom region, enter the name of your region
 into the form.
 
 .. image:: ../../_assets/img/cloud-edge-delete.png
-   :alt: CrateDB Edge deletion confirmation screen
+   :alt: CrateDB Cloud on Kubernetes deletion confirmation screen
 
 .. _Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
 .. _Helm: https://helm.sh/docs/intro/quickstart/

@@ -9,7 +9,7 @@ third-party tools and Crate.io is not responsible for those tools. That said,
 we have tested the instructions provided below for functionality.
 
 Users less familiar with customizing their Kubernetes stack on their own may find
-any of these approaches a practical solution for easier CrateDB Edge setup.
+any of these approaches a practical solution for easier CrateDB Cloud on Kubernetes setup.
 
 .. rubric:: Table of contents
 
@@ -21,10 +21,10 @@ any of these approaches a practical solution for easier CrateDB Edge setup.
 MicroK8s
 --------
 
-Below is a full walkthrough of how to get CrateDB Edge up and running on
+Below is a full walkthrough of how to get CrateDB Cloud on Kubernetes up and running on
 MicroK8s. The steps are merely examples of a process validated by us; other
 methods may work also. We provide this information for ease of use and to
-illustrate how to work with CrateDB Edge.
+illustrate how to work with CrateDB Cloud on Kubernetes.
 
 
 Set up MicroK8s
@@ -129,7 +129,7 @@ Edge region field in the Regions tab of the Organization Overview. For more
 information on this section of the CrateDB Console, refer to the :ref:`CrateDB
 Cloud Console overview <overview-org-regions>`.
 
-With this, you should be ready to use CrateDB Edge via Microk8s.
+With this, you should be ready to use CrateDB Cloud on Kubernetes via Microk8s.
 
 
 .. _edge-tools-k3s:
@@ -137,10 +137,10 @@ With this, you should be ready to use CrateDB Edge via Microk8s.
 K3S
 ---
 
-Below is a full walkthrough of how to get CrateDB Edge up and running on K3S.
+Below is a full walkthrough of how to get CrateDB Cloud on Kubernetes up and running on K3S.
 The steps are merely examples of a process validated by us; other methods may
 work also. We provide this information for ease of use and to illustrate how to
-work with CrateDB Edge.
+work with CrateDB Cloud on Kubernetes.
 
 
 Set up K3S
@@ -197,7 +197,7 @@ If you need to uninstall, run:
 Use a storage solution
 ''''''''''''''''''''''
 
-The K3S setup for CrateDB Edge will require a storage solution. In this case,
+The K3S setup for CrateDB Cloud on Kubernetes will require a storage solution. In this case,
 the tutorial shows how to do so using `Longhorn`_, a distributed storage
 solution for Kubernetes. You can follow the `Longhorn installation
 instructions`_ as described below. (Other storage solutions for Kubernetes may
@@ -249,21 +249,21 @@ Edge region field in the Regions tab of the Organization Overview. For more
 information on this section of the CrateDB Console, refer to the :ref:`CrateDB
 Cloud Console overview <overview-org-regions>`.
 
-With this, you should be ready to use CrateDB Edge via K3S.
+With this, you should be ready to use CrateDB Cloud on Kubernetes via K3S.
 
 Custom TLS certificates
 -----------------------
 
-By default, CrateDB Edge will issue self-signed certificates for CrateDB
+By default, CrateDB Cloud on Kubernetes will issue self-signed certificates for CrateDB
 instances running in your Edge region. It is also possible to use "proper" TLS
 certificates if required. In the examples below, we will configure
-`letsencrypt`_ to issue certificates and use them with CrateDB Edge clusters.
+`letsencrypt`_ to issue certificates and use them with CrateDB Cloud on Kubernetes clusters.
 
 
 Create a ``ClusterIssuer``
 ''''''''''''''''''''''''''
 
-CrateDB Edge uses an industry standard app called `cert-manager`_ for managing
+CrateDB Cloud on Kubernetes uses an industry standard app called `cert-manager`_ for managing
 TLS certificates. To issue valid certificates, you would need to follow the
 cert-manager `tutorial for letsencrypt via the DNS solver`_. CrateDB clusters
 are provisioned behind a Load Balancer, and as such the only way to solve
@@ -337,7 +337,7 @@ create the CrateDB Cloud Project in this region.
 Replace the existing certificate used by your cluster
 '''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-As your CrateDB Edge cluster comes with a self-signed certificate, you will
+As your CrateDB Cloud on Kubernetes cluster comes with a self-signed certificate, you will
 need to replace it. Fortunately, this is fairly straightforward, and only
 requires a quick edit to the CrateDB Cluster's ``StatefulSet``, i.e.:
 
