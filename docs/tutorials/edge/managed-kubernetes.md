@@ -246,7 +246,7 @@ to work with CrateDB Edge.
 (edge-providers-do-sign-up)=
 ### Sign up
 
-First you must sign up with [Digital Ocean](https://cloud.digitalocean.com/registrations/new). On the
+First you must sign up with [Digital Ocean](https://cloud.digitalocean.com/registrations). On the
 Kubernetes page, click *Sign up* and make an account. Verify your email
 address to proceed. (Digital Ocean may also require a token
 pre-payment.)
