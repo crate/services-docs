@@ -42,6 +42,7 @@ Once you signed in, you will be redirected to the CrateDB Cloud Console.
   later via the "Settings".
 ```
 
+(deploy-cluster)=
 ## Deploy Cluster
 
 As next step, let's deploy the first CrateDB cluster. If you are still viewing the

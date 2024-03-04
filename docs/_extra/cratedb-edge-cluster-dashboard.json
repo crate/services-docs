@@ -859,7 +859,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "CrateDB Edge Cluster Monitoring",
+  "title": "CrateDB Cloud on Kubernetes Cluster Monitoring",
   "uid": "UYJt9qn4k",
   "version": 5
 }
