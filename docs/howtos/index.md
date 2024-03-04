@@ -30,7 +30,9 @@ Logical Replication <logical-replication>
 Private Endpoints <private-endpoints>
 ```
 
+:::
 ## Organization Management
+:::
 
 ::::{grid} 2 2 2 3
 :margin: 4 4 0 0
@@ -50,7 +52,9 @@ Learn how to add users to organizations and manage their privileges.
 
 ::::
 
+:::
 ## Cluster Management
+:::
 
 ::::{grid} 2 2 2 3
 :margin: 4 4 0 0
