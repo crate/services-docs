@@ -17,6 +17,7 @@ the :ref:`CrateDB Cloud on Kubernetes tutorial <edge>`. To pay directly for a
 hosted cluster by credit card, see the tutorial for :ref:`direct cluster 
 deployment <cluster-deployment-stripe>`.
 
+
 .. rubric:: Table of contents
 
 .. contents::
