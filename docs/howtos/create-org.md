@@ -1,5 +1,5 @@
 (create-org)=
-# Create organization 
+# Create Organization
 
 This is a guide on how to create a new organization in the CrateDB Cloud
 Console. If you follow the [cluster deployment

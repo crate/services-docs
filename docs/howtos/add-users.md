@@ -39,7 +39,7 @@ whether the user should have admin privileges.
 ## Edit or Delete Users from an Organization
 
 You can also edit user roles and delete users in the *Users* tab. 
-To edit a user's role, simply click the pen icon corresponding to 
+To edit a user's role, navigate to its details page using the pen icon corresponding to 
 that user in the user table. This will bring up a dropdown menu. 
 To delete a user, use the bin icon.
 
