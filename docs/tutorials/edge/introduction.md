@@ -1,7 +1,7 @@
 (edge-disclaimer)=
 # Introduction 
 
-````{note}
+:::{note}
 You must have [wget](https://www.gnu.org/software/wget/) and
 [jq](https://stedolan.github.io/jq/) installed for the script to
 function. CrateDB Edge is currently in Pre-Release. CrateDB Edge and
@@ -15,7 +15,8 @@ you agree to these terms and conditions.
 Should you find any errors, bugs, or functionality problems while using
 the CrateDB Edge Pre-Release, please let us know using the [contact
 page](https://crate.io/contact/) or *support@crate.io*.
-````
+:::
+
 (edge-prereqs)=
 ## Prerequisites 
 
@@ -62,14 +63,14 @@ combination with
 {ref}`cloud providers or third-party tools <edge-providers>`
 as described further down in this tutorial.
 
-```{note}
+:::{note}
 A special note about bare metal Kubernetes clusters: CrateDB Edge should
 work on any bare metal cluster, but the CrateDB instances running within
 require a load balancer for outside access. If you do not have a load
 balancer (for example [MetalLB](https://metallb.universe.tf/)), you can
 still access the CrateDB clusters within, but you will need to figure
 out the node ports to use.
-````
+:::
 
 (edge-signup)=
 ## Sign up
@@ -127,11 +128,11 @@ script will notify you of this, and you will have to install them to
 proceed. (We recommend [Helm](https://helm.sh/docs/intro/quickstart/)
 for tracking and installing dependencies on Kubernetes.)
 
-````{note}
+:::{note}
 You must have [wget](https://www.gnu.org/software/wget/) and
 [jq](https://stedolan.github.io/jq/) installed for the script to
 function.
-````
+:::
 
 (edge-manifest-verification)=
 ### Manifest and verification
@@ -154,7 +155,7 @@ parameters for the script.
 
 The parameters are defined as follows:
 
-``` console
+:::{code} console
 Usage:
 cratedb-cloud-edge.sh <token> [options]
 
@@ -170,7 +171,7 @@ Options:
   run
   --run-prerequisites: Will only run the prerequisites check
   --run-validation: Will only run the post-install validation
-```
+:::
 
 Once the services are up and running, the script will report:
 "Successfully validated installation". At this point, you can return
@@ -237,11 +238,11 @@ will not be retrievable past this point.
 You can use the Cluster overview page to access your cluster via the
 Admin UI (see, however, the note below).
 
-````{note}
+:::{note}
 If your Kubernetes cluster does not provide a load balancer with an
 external IP address, you will not be able to access your cluster from
 the CrateDB Cloud Console.
-````
+:::
 
 (edge-cloud-region)=
 ## Use a cloud provider region 

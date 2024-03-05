@@ -10,13 +10,13 @@ Cloud Console. Alternatively, you can use the command-line interface CrateDB
 Cloud CLI, aka. {ref}`Croud <cloud-cli:index>`.
 
 
-````{note}
+:::{note}
 Not all operations supported by the CrateDB Cloud Console are also
 available via Croud. Most importantly, clusters can only be deployed via
 the CrateDB Cloud Console.
-````
+:::
 
-```{toctree}
+:::{toctree}
 :hidden:
 :maxdepth: 1
 
@@ -28,7 +28,7 @@ Delete Cluster <delete-cluster>
 Restore Backups <restore-backups>
 Logical Replication <logical-replication>
 Private Endpoints <private-endpoints>
-```
+:::
 
 :::
 ## Organization Management
@@ -108,7 +108,7 @@ your favorite client library to connect to a CrateDB cluster.
 
 ::::
 
-````{note}
+:::{note}
 This is an open source documentation project. We host the source code and
 issue tracker on [GitHub](https://github.com/crate/cloud-docs/) .
-````
+:::

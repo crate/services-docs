@@ -5,12 +5,12 @@ The **CrateDB Cloud Console** is a hosted web administration interface
 for interacting 
 with [CrateDB Cloud](https://crate.io/products/cratedb-cloud/).
 
-````{note}
+:::{note}
 Refer to individual items in the current section of the documentation
 for more information on how to perform specific operations. You can also
 refer to the {ref}`glossary <glossary>` for
 more information on CrateDB Cloud-related terminology.
-````
+:::
 
 **Table of contents**
 
@@ -58,31 +58,31 @@ Here is a list of all currently available regions for CrateDB Cloud:
 :row-class: top-border
 
 :::{sd-row}
-```{sd-item} **Region**
-```
-```{sd-item} **URL**
-```
+:::{sd-item} **Region**
+:::
+:::{sd-item} **URL**
+:::
 :::
 
 :::{sd-row}
-```{sd-item} AWS West Europe
-```
-```{sd-item} [eks1.eu-west-1.aws.cratedb.cloud](https://eks1.eu-west-1.aws.cratedb.cloud)
-```
+:::{sd-item} AWS West Europe
+:::
+:::{sd-item} [eks1.eu-west-1.aws.cratedb.cloud](https://eks1.eu-west-1.aws.cratedb.cloud)
+:::
 :::
 
 :::{sd-row}
-```{sd-item} Azure East-US2
-```
-```{sd-item} [aks1.eastus2.azure.cratedb.cloud](https://eastus2.azure.cratedb.cloud/)
-```
+:::{sd-item} Azure East-US2
+:::
+:::{sd-item} [aks1.eastus2.azure.cratedb.cloud](https://eastus2.azure.cratedb.cloud/)
+:::
 :::
 
 :::{sd-row}
-```{sd-item} Azure West Europe
-```
-```{sd-item} [aks1.westeurope.azure.cratedb.cloud](https://aks1.westeurope.azure.cratedb.cloud/)
-```
+:::{sd-item} Azure West Europe
+:::
+:::{sd-item} [aks1.westeurope.azure.cratedb.cloud](https://aks1.westeurope.azure.cratedb.cloud/)
+:::
 :::
 
 ::::
@@ -163,10 +163,10 @@ information:
 
 ![Cloud Console billing meter](../_assets/img/billing-meter.png)
 
-````{note}
+:::{note}
 Subscriptions cannot be deleted in the billing tab. To delete a
 subscription, please contact support.
-````
+:::
 
 (overview-org-payment-methods)=
 ### Organization payment methods 
@@ -261,13 +261,13 @@ Information visible on the Overview page includes:
     [CrateDB Admin UI](https://crate.io/docs/clients/admin-ui/) for the
     cluster at its unique URL.
 
-````{note}
+:::{note}
 The Cluster URL points to a load balancer that distributes traffic
 internally to the whole CrateDB cluster. The load balancer closes idle
 connections after four minutes, therefore client applications that
 require stateful connections (e.g., JDBC) must be configured to send
 keep-alive heartbeat queries.
-````
+:::
 
 (overview-cluster-overview-next-steps)=
 #### Next Steps 
@@ -342,12 +342,12 @@ imports. The usual file formats are supported - CSV (all variants), JSON
 
 ![Cloud Console cluster upload from S3](../_assets/img/cluster-import-tab-s3.png)
 
-````{note}
+:::{note}
 It's important to make sure that you have the right permissions to
 access objects in the specified bucket. For AWS S3, your user should
 have a policy that allows GetObject access, for example:
 
- ````{code}
+ :::{code}
  {
    "Version": "2012-10-17",
    "Statement": [
@@ -361,8 +361,9 @@ have a policy that allows GetObject access, for example:
        "Resource": "arn:aws:s3:::EXAMPLE-BUCKET-NAME/*"
    }]
    }
- ````
-````
+ :::
+:::
+
 (overview-cluster-import-azure)=
 #### Import from Azure Blob Storage Container 
 
@@ -396,9 +397,9 @@ also known as "globbing". In computer programming,
 specify sets of filenames with wildcard characters. The following
 example would import all the files from the single specified day.
 
-``` console
+:::{code} console
 /somepath/AWSLogs/123456678899/CloudTrail/us-east-1/2023/11/12/*.json.gz
-```
+:::
 
 ![Cloud Console cluster import globbing](../_assets/img/cluster-import-globbing.png)
 
@@ -459,16 +460,16 @@ The following formats are supported for JSON:
 
 1.  JSON Documents. Will insert as a single row in the table.
 
-    ``` console
+    :::{code} console
     {
       "id":1,
       "text": "example"
     }
-    ```
+    :::
 
 2.  JSON Arrays. Will insert as a row per array item.
 
-    ``` console
+    :::{code} console
     [
       {
         "id":1,
@@ -479,14 +480,14 @@ The following formats are supported for JSON:
         "text": "example2"
       }
     ]
-    ```
+    :::
 
 3.  JSON-Lines. Each line will insert as a row.
 
-    ``` console
+    :::{code} console
     {"id":1, "text": "example"}
     {"id":2, "text": "example2"}
-    ```
+    :::
 
 (overview-cluster-export)=
 ### Export 
@@ -496,7 +497,7 @@ first visit the Export tab, you can specify the name of a table/view,
 format (CSV, JSON, or Parquet) and whether you'd like your data to be
 gzip compressed (recommended for CSV and JSON files).
 
-````{note}
+:::{note}
 Parquet is a highly compressed data format for very efficient storage of
 tabular data. Please note that for OBJECT and ARRAY columns in CrateDB,
 the exported data will be JSON encoded when saving to Parquet
@@ -504,7 +505,7 @@ the exported data will be JSON encoded when saving to Parquet
 encoding structs and lists in the Parquet format, where determining the
 exact schema might not be possible. When re-importing such a Parquet
 file, make sure you pre-create the table with the correct schema.
-````
+:::
 
 ![Cloud Console cluster export tab](../_assets/img/cluster-export.png)
 
@@ -512,12 +513,12 @@ History of your exports is also visible in the Export tab.
 
 ![Cloud Console cluster export tab history](../_assets/img/cluster-export-tab-history.png)
 
-````{note}
+:::{note}
 Export limitations:
 
 -   Size limit for exporting is 1 GiB
 -   Exports are held for 3 days, then automatically deleted
-````
+:::
 
 (overview-cluster-backups)=
 ### Backups 
@@ -570,12 +571,12 @@ specific tables.
 
 ![Cloud Console cluster clone popup](../_assets/img/cluster-clone-popup.png)
 
-````{note}
+:::{note}
 Keep in mind that the full cluster clone will include users, views,
 privileges and everything else. Cloning also doesn't distinguish
 between cluster plans, meaning you can clone from CR2 to CR1 or any
 other variation.
-````
+:::
 
 (overview-cluster-cloning-fail)=
 #### Failed cloning 
@@ -629,20 +630,20 @@ change plans and scale the number of nodes at the same time.
 The difference in price of the cluster can be seen on the bottom right,
 when choosing different configurations.
 
-````{note}
+:::{note}
 Any promotions or discounts applicable to your cluster will be applied
 for your organization as a whole at the end of the billing period. Due
 to technical limitations, they may not be directly visible in the
 cluster scale pricing shown here, but do not worry! This does not mean
 that your promotion or discount is not functioning.
-````
+:::
 
-````{warning}
+:::{warning}
 Storage capacity increases for a given cluster are irreversible. To
 reduce cluster storage capacity, reduce the cluster nodes instead (up to
 a minimum of 2, although we recommend maintaining a minimum of 3 for
 production use).
-````
+:::
 
 (overview-cluster-manage)=
 ### Manage 

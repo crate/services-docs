@@ -13,9 +13,9 @@ specifically within the Console, this tutorial provides a step-by-step
 guide for *all* methods of deleting a CrateDB Cloud cluster. This is to
 make the process more transparent and easier to find and use.
 
-````{Warning}
+:::{Warning}
 All cluster data will be lost on deletion. This action cannot be undone.
-````
+:::
 
 (delete-cluster-azure)=
 ## Microsoft Azure 

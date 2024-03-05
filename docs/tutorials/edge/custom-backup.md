@@ -33,8 +33,8 @@ Your cluster will now automatically backup to your storage every hour.
 You can also make a manual backup with [COPY TO
 statement](https://crate.io/docs/crate/reference/en/5.0/sql/statements/copy-to.html).
 
-````{note}
+:::{note}
 If you plan to do manual backups of certain files often, we encourage
 you to enable the bucket versioning. That way, you can access older
 revisions of the saved files.
-````
+:::

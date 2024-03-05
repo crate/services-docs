@@ -22,12 +22,12 @@ so you will need to use the CrateDB Cloud Console UI.
 The payment processing and billing is powered by Stripe. It is also
 possible to subscribe using Azure and AWS.
 
-````{warning}
+:::{warning}
 Because of the current implementation of subscriptions, it is NOT
 recommended to deploy your first cluster with Croud. You need to have an
 existing subscription to deploy a cluster using Croud. To create a
 subscription, [use UI](https://console.cratedb.cloud).
-````
+:::
 
 Deploy a CrateDB cluster using the CrateDB Cloud Web Console.
 :::
@@ -41,15 +41,15 @@ account.
 Croud, being a CLI application, is operated using commands. Commands
 should be issued using the following format:
 
-````{code}
+:::{code}
 sh$ croud [COMMAND] [OPTIONS]
-````
+:::
 
 To log in execute this command:
 
-````{code}
+:::{code}
 sh$ croud login
-````
+:::
 
 This will open a browser window where you will be prompted for your
 credentials. You can also log in using *azuread*,
@@ -61,10 +61,10 @@ for details.
 
 After successfully logging in, you will see this prompt in your browser:
 
-``` console
+:::{code} console
 You have successfully logged into CrateDB Cloud!
 This window can be closed.
-```
+:::
 
 (croud-create-organization)=
 ## Create organization
@@ -73,9 +73,9 @@ The first step of deployment is creating an organization which will
 contain your cluster. If you've registered recently, or didn't delete
 the organization that was created automatically, you can skip this step:
 
-``` console
+:::{code} console
 sh$ croud organizations create --name samplecroudorganization
-```
+:::
 
 This will create an organization called "samplecroudorganization".
 
@@ -85,9 +85,9 @@ This will create an organization called "samplecroudorganization".
 The next step is to create a project in your organization. To create a
 new project execute this command:
 
-``` console
+:::{code} console
 sh$ croud projects create --name sampleproject
-```
+:::
 
 This will create a new project named [sampleproject]{.title-ref}.
 
@@ -131,8 +131,16 @@ When deploying a cluster, these are the required arguments:
 (croud-deploy-example)=
 ### Example
 
-``` console
-sh$ croud clusters deploy --product-name cr1 --tier default --cluster-name my-crate-cluster --project-id 952cd102-91c1-4837-962a-12ecb71a6ba8 --version 4.8.1 --username admin --password "as6da9ddasfaad7i902jcv780dmcba" --subscription-id 782dfc00-7b25-4f48-8381-b1b096dd1619
+:::{code} console
+sh$ croud clusters deploy /
+  --product-name cr1 /
+  --tier default /
+  --cluster-name my-crate-cluster /
+  --project-id 952cd102-91c1-4837-962a-12ecb71a6ba8 /
+  --version 4.8.1 /
+  --username admin /
+  --password "as6da9ddasfaad7i902jcv780dmcba" /
+  --subscription-id 782dfc00-7b25-4f48-8381-b1b096dd1619
 
 
 +--------------------------------------+------------------------+----------+--------------+--------------------------------------+-------------+--------------------------------------------------+
@@ -149,9 +157,9 @@ sh$ croud clusters deploy --product-name cr1 --tier default --cluster-name my-cr
 |--------------------------------------+------------------------+----------+--------------+--------------------------------------+-------------+--------------------------------------------------|
 | 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 | my-crate-cluster |        1 | 4.8.1        | 952cd102-91c1-4837-962a-12ecb71a6ba8 | admin       | my-crate-cluster.eastus.azure.cratedb.net. |
 +--------------------------------------+------------------------+----------+--------------+--------------------------------------+-------------+--------------------------------------------------+
-```
+:::
 
-````{note}
+:::{note}
 
 **Parameters tips:**
 
@@ -162,13 +170,13 @@ The minimum length of a password is 24 characters.
   `croud projects list`.
 * To find out your *subscription-id* issue:
   `croud subscriptions list`.
-````
+:::
 
-````{note}
+:::{note}
 Complete documentation on clusters in Croud, including all the
 deployment arguments, can be found
 [here](https://crate.io/docs/cloud/cli/en/latest/commands/clusters.html).
-````
+:::
 
 (croud-deploy-specific-version)=
 ### Deploying a cluster with a specific version
@@ -180,18 +188,34 @@ You can do this using the `--version` parameter. Historical
 are all public and available to any user. To use the Nightly/Testing
 channels, you must use the `--channel` parameter.
 
-````{code}
-sh$ croud clusters deploy --product-name cr1 --tier default --cluster-name my-crate-cluster --project-id 3ac44505-1d6e-419c-ad23-5d0d572915ba --version 5.2.0 --username admin --password "as6da9ddasfaad7i902jcv780dmcba" --subscription-id 3a35974f-5319-47fb-9a1f-ab85dca75c86 --channel testing
-````
+:::{code}
+sh$ croud clusters deploy --product-name cr1 /
+  --tier default /
+  --cluster-name my-crate-cluster /
+  --project-id 3ac44505-1d6e-419c-ad23-5d0d572915ba /
+  --version 5.2.0 /
+  --username admin /
+  --password "as6da9ddasfaad7i902jcv780dmcba" /
+  --subscription-id 3a35974f-5319-47fb-9a1f-ab85dca75c86 /
+  --channel testing
+:::
 
 This command deploys a *5.2.0* version cluster.
 
 Alternatively, you can deploy a cluster with an older version, like
 this:
 
-````{code}
-sh$ croud clusters deploy --product-name cr1 --tier default --cluster-name my-crate-cluster --project-id f76d96aa-f1a7-46aa-a89b-8cdd2b3cef15 --version 4.8.0 --username admin --password "as6da9ddasfaad7i902jcv780dmcba" --subscription-id 3a35974f-5319-47fb-9a1f-ab85dca75c86
-````
+:::{code}
+sh$ croud clusters deploy /
+  --product-name cr1 /
+  --tier default /
+  --cluster-name my-crate-cluster /
+  --project-id f76d96aa-f1a7-46aa-a89b-8cdd2b3cef15 /
+  --version 4.8.0 /
+  --username admin /
+  --password "as6da9ddasfaad7i902jcv780dmcba" /
+  --subscription-id 3a35974f-5319-47fb-9a1f-ab85dca75c86
+:::
 
 (croud-scale-cluster)=
 ## Scale cluster
@@ -222,11 +246,12 @@ Required arguments:
 
 Example:
 
-``` console
+:::{code} console
 sh$ croud clusters scale \
-    --project-id 952cd102-91c1-4837-962a-12ecb71a6ba8 \
-    --cluster-id 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 \
-    --unit 1
+  --project-id 952cd102-91c1-4837-962a-12ecb71a6ba8 \
+  --cluster-id 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 \
+  --unit 1
+
 +--------------------------------------+------------------------+----------+
 | id                                   | name                   | numNodes |
 |--------------------------------------+------------------------+----------|
@@ -242,7 +267,7 @@ node(s) to be present.)
 |--------------------------------------+------------------------+----------|
 | 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 | my-crate-cluster |        2 |
 +--------------------------------------+------------------------+----------+
-```
+:::
 
 (croud-scaling-expansion)=
 ### Storage expansion
@@ -261,10 +286,10 @@ Required arguments:
 
 Example:
 
-``` console
+:::{code} console
 sh$ croud clusters expand-storage \
-    --cluster-id 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 \
-    --disk-size-gb 512
+  --cluster-id 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 \
+  --disk-size-gb 512
 +--------------------------------------+------------------------+------------------------------------+
 | id                                   | name                   | hardware_specs                     |
 |--------------------------------------+------------------------+------------------------------------|
@@ -281,17 +306,17 @@ sh$ croud clusters expand-storage \
 |--------------------------------------+------------------------+------------------------------------|
 | 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 | my-crate-cluster | Disk size: 512.0 GiB               |
 +--------------------------------------+------------------------+------------------------------------+
-```
+:::
 
-````{warning}
+:::{warning}
 When increasing storage size of a cluster, it is temporarily stopped,
 while the operation finishes.
-````
+:::
 
-````{note}
+:::{note}
 For all available arguments for the scaling command, see the [cluster
 scale](https://crate.io/docs/cloud/cli/en/latest/commands/clusters.html#clusters-scale)
 and [cluster storage
 expansion](https://crate.io/docs/cloud/cli/en/latest/commands/clusters.html#clusters-expand-storage)
 documentation.
-````
+:::

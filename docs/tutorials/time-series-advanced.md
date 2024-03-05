@@ -24,7 +24,7 @@ The second dataset in this tutorial contains metadata information about various 
 
 CrateDB uses SQL, a powerful and familiar language for database management. To store the device readings and the device info data, create two tables with columns tailored to the datasets using the `CREATE TABLE` command:
 
-```sql
+:::{code} sql
 CREATE TABLE IF NOT EXISTS doc.devices_readings (
    "ts" TIMESTAMP WITH TIME ZONE,
    "device_id" TEXT,
@@ -43,9 +43,9 @@ CREATE TABLE IF NOT EXISTS doc.devices_readings (
       "used" BIGINT
    )
 );
-```
+:::
 
-```sql
+:::{code} sql
 CREATE TABLE IF NOT EXISTS doc.devices_info (
    "device_id" TEXT,
    "api_version" TEXT,
@@ -53,49 +53,53 @@ CREATE TABLE IF NOT EXISTS doc.devices_info (
    "model" TEXT,
    "os_name" TEXT
 );
-```
+:::
+
 Using objects in the `devices_readings` dataset allows for the structured and efficient organization of complex, nested data, enhancing both data integrity and flexibility. 
 
 ## Inserting Data
 
 Now, insert the data using the `COPY FROM` SQL statement.
 
-```sql
+:::{code} sql
 COPY doc.devices_info
 FROM 'https://github.com/crate/cratedb-datasets/raw/main/cloud-tutorials/devices_info.json.gz'
 WITH (compression='gzip', empty_string_as_null=true)
 RETURN SUMMARY;
-```
-```sql
+:::
+
+:::{code} sql
 COPY doc.devices_readings
 FROM 'https://github.com/crate/cratedb-datasets/raw/main/cloud-tutorials/devices_readings.json.gz'
 WITH (compression='gzip', empty_string_as_null=true)
 RETURN SUMMARY;
-```
+:::
+
 ## Time-series Analysis with Metadata
 
 To illustrate `JOIN` operation, the first query retrieves the 30 rows of combined data from two tables, `devices.readings` and `devices.info`, based on a matching `device_id` in both. It effectively merges the detailed readings and corresponding device information, providing a comprehensive view of each device's status and metrics.
 
-```sql
+:::{code} sql
 SELECT *
 FROM devices.readings r
 JOIN devices.info i ON r.device_id = i.device_id
 LIMIT 30;
-```
+:::
 
 The next query illustrates the calculation of summaries for aggregate values. In particular, it finds average battery levels (`avg_battery_level`) for each day and shows the result in an ascending order.
 
-```sql
+:::{code} sql
 SELECT date_trunc('day', ts) AS "day", AVG(battery['level']) AS avg_battery_level
 FROM doc.devices_readings
 GROUP BY "day"
 ORDER BY "day";
-```
+:::
+
 Rolling averages are crucial in time-series analysis because they help smooth out short-term fluctuations and reveal underlying trends by averaging data points over a specified period. This approach is particularly effective in mitigating the impact of outliers and noise in the data, allowing for a clearer understanding of the true patterns in the time series. 
 
 The following example illustrates the average (`AVG`), minimum (`MIN`), and maximum (`MAX`) battery temperature over a window of the last 100 temperature readings (`ROWS BETWEEN 100 PRECEDING AND CURRENT ROW`). The window is defined in descending order by timestamp (`ts`) and can be adapted to support different use cases. 
 
-```sql
+:::{code} sql
 SELECT r.device_id,
        AVG(battery['temperature']) OVER w AS "last 100 temperatures",
        MIN(battery['temperature']) OVER w AS "min temperature",
@@ -103,10 +107,11 @@ SELECT r.device_id,
 FROM doc.devices_readings r
 JOIN doc.devices_info i ON r.device_id = i.device_id
 WINDOW w AS (ORDER BY "ts" DESC ROWS BETWEEN 100 PRECEDING AND CURRENT ROW);
-```
+:::
+
 The next query shows how to extract the most recent reading for each device of the _mustang_ model. The query selects the latest timestamp (`MAX(r.ts)`), which represents the most recent reading time, and the corresponding latest readings for battery, CPU, and memory (`MAX_BY` for each respective component, using the timestamp as the determining factor). These results are grouped by `device_id`, `manufacturer`, and `model` to ensure that the latest readings for each unique device are included. This query is particularly useful for monitoring the most current status of specific devices in a fleet.
 
-```sql
+:::{code} sql
 SELECT 
     MAX(r.ts) as time,
     r.device_id,
@@ -123,7 +128,8 @@ WHERE
     i.model = 'mustang'
 GROUP BY 
     r.device_id, i.manufacturer, i.model;
-```
+:::
+
 Finally, we demonstrate the complex query that illustrates the usage of Common Table Expressions (CTEs) to aggregate and analyze device readings and information. The query relies on three CTEs to temporarily capture data:
 
 - **MaxTimestamp CTE**: This CTE finds the most recent timestamp (`MAX(ts)`) in the `doc.devices_readings` table. It's used to focus the analysis on recent data.
@@ -134,7 +140,7 @@ The main `SELECT` statement joins the `DeviceReadingsAgg` and `DeviceModelInfo` 
 
 Overall, the query aims to provide a detailed analysis of the battery performance (both level and temperature) for devices with specific API versions, while focusing only on recent data. It allows for a better understanding of how different models and manufacturers are performing in terms of battery efficiency within a specified API range and time frame.
 
-```sql
+:::{code} sql
 WITH 
 max_timestamp AS (
     SELECT MAX(ts) AS max_ts
@@ -182,6 +188,6 @@ GROUP BY
     info.api_version
 ORDER BY 
     model_avg_battery_level DESC;
-```
+:::
 
 In conclusion, this tutorial has guided you through the process of querying and analyzing time-series data with CrateDB, demonstrating how to effectively merge device metrics with relevant metadata. These techniques and queries are important for unlocking deeper insights into device performance, equipping you with the skills needed to harness the full potential of time-series data in real-world applications.

@@ -6,11 +6,11 @@ some managed Kubernetes providers, such as [Azure AKS](edge-providers-aks),
 [Amazon EKS](edge-providers-eks), [Digital Ocean](edge-providers-do) 
 and  [Google Cloud Platform](edge-providers-gc).
 
-```{note}
+:::{note}
 These guides are provided as example scenarios only. Other managed
 Kubernetes providers or preconfigured Kubernetes distributions may also
 work with CrateDB Edge.
-```
+:::
 
 These are third-party tools and CrateDB is not responsible for those
 tools. That said, we have tested the instructions provided below for
@@ -66,15 +66,15 @@ running in the [Azure
 CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) the
 command
 
-``` console
+:::{code} console
 az aks get-credentials --resource-group <resource group name> --name <cluster name>
-```
+:::
 
 followed by
 
-``` console
+:::{code} console
 kubectl get nodes
-```
+:::
 
 which will show you all nodes. When all nodes are set to 'Ready', the
 cluster is functioning properly. (Make sure you are in the right
@@ -120,7 +120,7 @@ merely examples of a process validated by us; other methods may work
 also. We provide this information for ease of use and to illustrate how
 to work with CrateDB Edge.
 
-```{note}
+:::{note}
 Amazon EKS cluster configuration has some complexity relating to the
 structure of AWS security management. The steps below try to provide a
 step-by-step guide, but may become outdated as AWS changes its
@@ -129,7 +129,7 @@ we cannot guarantee this documentation remains fully in line with the
 latest AWS user flow. You can find current details on the [EKS cluster
 creation
 docs](https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html).
-```
+:::
 
 (edge-providers-eks-sign-up)=
 ### Sign up
@@ -186,16 +186,16 @@ settings. Hit *Create* to create the node group.
 In the [AWS CLI](https://aws.amazon.com/cli/), enter the following
 command (make sure you are logged in properly):
 
-``` console
+:::{code} console
 aws eks update-kubeconfig --region <region code> --name <cluster name>
-```
+:::
 
 You can check everything is working correctly with
 [kubectl](https://kubernetes.io/docs/tasks/tools/):
 
-``` console
+:::{code} console
 kubectl get nodes
-```
+:::
 
 (edge-providers-eks-cok-setup)=
 ### Set up CrateDB Cloud on Kubernetes region
@@ -217,9 +217,9 @@ storage
 classes](https://kubernetes.io/docs/concepts/storage/storage-classes/#aws-ebs).
 You can find the relevant storage class name with kubectl:
 
-``` console
+:::{code} console
 kubectl get sc
-```
+:::
 
 The script, once run, will validate the installation of the CrateDB Edge
 stack. You can check everything is running correctly in the EKS cluster
@@ -269,16 +269,17 @@ of the file. Install [kubectl](https://kubernetes.io/docs/tasks/tools/)
 if you have not done so already. Then point the Kubeconfig configuration
 path to where you stored the YAML file:
 
-``` console
+:::{code} console
 export KUBECONFIG=~<file source>
-```
+:::
 
 Subsequently, wait for the install to finish and check that the nodes
 are running as intended:
 
-``` console
+:::{code} console
 kubectl get nodes
-```
+:::
+
 (edge-providers-do-setup)=
 ### Set up Edge region
 
@@ -297,9 +298,9 @@ the default storage class Digital Ocean provides, then change the the
 `name` to `crate-premium` in the copied file. For example, using kubectl
 and Vim:
 
-``` console
+:::{code} console
 kubectl get sc do-block-storage -o yaml | grep -vi is-default-class | sed -e 's/name: do-block-storage/name: crate-premium/' | kubectl create -f -
-```
+:::
 
 Then re-run the script until it is successful.
 
@@ -354,16 +355,16 @@ To connect to your cluster from your console, use the command that
 appears after clicking the **CONNECT** button in the Google Cloud
 console. It will look similar to this:
 
-``` console
+:::{code} console
 gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project key-decorator-356217
-```
+:::
 
 After successfully connecting, a message similar to this should be
 displayed:
 
-``` console
+:::{code} console
 kubeconfig entry generated for cluster-1.
-```
+:::
 
 Now that you are connected, you can configure the cluster using
 *kubectl*.
@@ -372,22 +373,22 @@ One thing that the CrateDB Cloud Edge deployment script can't currently
 do is create a storage class for Kubernetes, you need to create them
 yourself. A good way is to start by displaying existing storage classes:
 
-``` console
+:::{code} console
 kubectl get sc
-```
+:::
 
 There should be one called `standard (default)`. You can edit the
 storage class by redirecting its yaml code to a new file. Do that with
 this command:
 
-``` console
+:::{code} console
 kubectl get sc standard -o yaml > sc.yaml
-```
+:::
 
 This will write create a new .yaml file called **sc.yaml**. Initially,
 it should look something like this:
 
-```{code} yaml
+:::{code} yaml
 allowVolumeExpansion: true
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
@@ -405,14 +406,14 @@ parameters:
 provisioner: kubernetes.io/gce-pd
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
-```
+:::
 
 From this default storage class, you need to create two new classes:
 `crate-standard` and `crate-premium`
 
 The yaml file for those should look like this:
 
-```{code} yaml
+:::{code} yaml
 allowVolumeExpansion: true
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
@@ -423,19 +424,19 @@ parameters:
 provisioner: kubernetes.io/gce-pd
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
-```
+:::
 
 Once you edit the `sc.yaml` file, save it and apply it with this
 command:
 
-``` console
+:::{code} console
 kubectl create -f sc.yaml
-```
+:::
 
 This will create the new `crate-standard` storage class. Repeat the
 steps for the `crate-premium` class:
 
-```{code} yaml
+:::{code} yaml
 allowVolumeExpansion: true
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
@@ -446,20 +447,20 @@ parameters:
 provisioner: kubernetes.io/gce-pd
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
-```
+:::
 
-```{code} yaml
+:::{code} yaml
 kubectl create -f sc.yaml
-```
+:::
 
 The only difference between them is the `name` parameter. After issuing
 `kubectl get sc` you should now be able to see the new classes:
 
-``` console
+:::{code} console
 NAME                 PROVISIONER             RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
 crate-premium        kubernetes.io/gce-pd    Delete          Immediate              true                   44s
 crate-standard       kubernetes.io/gce-pd    Delete          Immediate              true                   7s
-```
+:::
 
 For a basic installation, this is all that is needed in terms of
 configuration.
@@ -470,8 +471,8 @@ configuration.
 All that remains now is to use the command that is generated after
 creating an edge region in the CrateDB Cloud console. E.g.:
 
-``` console
+:::{code} console
 bash <(wget -qO- https://console.cratedb-dev.cloud/edge/cratedb-cloud-edge.sh) gAAAAABi2O81bYA8_qWQUU8svABjDdh0qNo1ZainUxDwx6MocxKJjBZ0X7Gw15QRj4LNIXZgoe7pig1fCJc_YC7UTnGacyi6Jn1-geiMBm1AGUOzXAjUIVUeCUV7jQCEtZjo4bWXaQzg7cr0bzkiLARK029M9PVTbtZbUJtO1HsFqUgnyP1-7exnylPkJ67NVwqD-ixKNdr_Ie6o5SxYlmhhjIge9fnAvQhtcURy-z4H0jBXhA7vURIL2CFXX4yWd30E-Wd1tnvP
-```
+:::
 
 Now you can {ref}`deploy the cluster <edge-config>`.

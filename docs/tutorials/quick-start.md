@@ -10,7 +10,7 @@ cluster in CrateDB Cloud. You can get started by following these simple steps:
 To create your user account, you can either set up username and password, or use
 one of the supported authentication providers:
 
-````{tab} Username & Password
+:::{tab} Username & Password
 <br>
 
 1. Register for an account on the [CrateDB Cloud sign-in page](https://console.cratedb.cloud/).
@@ -18,9 +18,9 @@ one of the supported authentication providers:
 3. At the bottom press **"Sign up"** and create a new user.
 4. Verify your email address by navigating to the link in the confirmation email.
 5. Log in using the username and password you just set up.
-````
+:::
 
-````{tab} Authentication Provider
+:::{tab} Authentication Provider
 <br>
 
 1. Register for an account on the [CrateDB Cloud sign-in page](https://console.cratedb.cloud/).
@@ -28,11 +28,11 @@ one of the supported authentication providers:
     - Microsoft
     - Google
     - GitHub
-````
+:::
 
 Once you signed in, you will be redirected to the CrateDB Cloud Console.
 
-```{note}
+:::{note}
 - If you sign in through an external authentication provider, a CrateDB Cloud
   user account will be auto-generated for you.
 
@@ -40,7 +40,7 @@ Once you signed in, you will be redirected to the CrateDB Cloud Console.
   CrateDB Cloud organization, a default organization named "My Organization"
   will be created automatically on your behalf. You can rename this organization
   later via the "Settings".
-```
+:::
 
 (deploy-cluster)=
 ## Deploy Cluster
@@ -66,12 +66,12 @@ might take a few minutes. Hold on until the deployment is finished, which will b
 a corresponding "Healthy as of a few seconds ago" message on the top left, before continuing
 with the next step.
 
-```{note}
+:::{note}
 - The **"FREE"** cluster can be started without providing payment details.
   You can use one free cluster per organization.
 - The cluster will be suspended if not used for 7 consecutive days, and will be deleted
   after an additional 7 days of inactivity.
-```
+:::
 
 ## Connect
 
@@ -83,11 +83,11 @@ by selecting the blue **"Open Admin UI"** button. Alternatively, explore the
 1. Click on **"Open Admin UI"**, and provide authentication credentials.
 2. In the newly opened page click on **"</>"** to open the query console.
 3. Run your first query:
-  ```sql
+  :::{code} sql
   SELECT *
   FROM sys.summits 
   LIMIT 20;
-  ```
+  :::
 
 While the integrated `sys.summits` table can be used to run your first queries, you
 probably want to import your own data or start with one of our sample datasets.
@@ -98,7 +98,7 @@ To import data in a CrateDB Cloud cluster, you can make use of the provided
 import mechanism in the cloud console, which can be found next to the cluster 
 overview page in the **"Import"** tab.
 
-````{tab} Own Data
+::::{tab} Own Data
 <br>
 
 1. Click on **"Import"** tab on the top menu.
@@ -113,14 +113,14 @@ overview page in the **"Import"** tab.
 Using your preferred method (e.g. Admin UI) run the following query to display 
 the first 100 records of your imported data.
 
-```sql
+:::{code} sql
 SELECT *
 FROM my_table
 LIMIT 100;
-```
-````
+:::
+::::
 
-````{tab} Sample Dataset
+::::{tab} Sample Dataset
 <br>
 
 1. Click on **"Import"** tab on the top menu.
@@ -132,9 +132,9 @@ LIMIT 100;
 Using your preferred method (e.g. Admin UI) run the following query to display 
 the first 100 records of the imported NYC taxi sample dataset:
 
-```sql
+:::{code} sql
 SELECT *
 FROM nyc_taxi
 LIMIT 100;
-```
-````
+:::
+::::

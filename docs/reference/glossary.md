@@ -9,11 +9,12 @@ concepts in the CrateDB Cloud Console and its documentation, the Croud
 CLI, and other resources related to CrateDB Cloud. The items are
 presented in alphabetical order.
 
-````{note}
+:::{note}
 While learning about CrateDB Cloud, please also visit the {ref}`CrateDB
 glossary <crate-reference:appendix-glossary>`It enumerates 
 all terms related to the CrateDB database in general.
-````
+:::
+
 **Table of contents**
 
 -   [Audit log](#gloss-audit-log)
@@ -119,9 +120,9 @@ web interface such as the CrateDB Cloud
 is the default way to interact with CrateDB Cloud, and currently 
 clusters can only be deployed within the Console.
 
-````{note}
+:::{note}
 See also: Croud CLI {ref}`documentation <cluster-deployment-croud>`.
-````
+:::
 
 (gloss-cloud-on-kubernetes)=
 ## CrateDB Cloud on Kubernetes 
@@ -165,10 +166,10 @@ members. Such organization admins and members have access to the
 clusters run by the organization. One account can be a member or admin
 of multiple organizations.
 
-````{note}
+:::{note}
 For more on user roles in CrateDB Cloud and how to manage them, see the
 {ref}`reference for user roles <user-roles>`.
-````
+:::
 
 Each organization has a name, a unique ID, and optionally an associated
 email address. For information on how to create an organization, please
@@ -221,10 +222,10 @@ of different scale units. Each scale unit represents an (additional)
 unit multiplying the specific combination of hardware capacity 
 that applies to that plan.
 
-````{note}
+:::{note}
 See also [Scale your
 cluster guide](https://crate.io/docs/cloud/howtos/en/latest/reconfigure-cluster.html)
-````
+:::
 
 (gloss-subscription)=
 ## Subscription
@@ -243,7 +244,7 @@ multiple subscriptions. This can be practical in case that customer
 wants to separate different instances of using the CrateDB Cloud service
 into different billing accounts.
 
-````{note}
+:::{note}
 [Subscribe to CrateDB
 Cloud](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html)
 
@@ -254,7 +255,7 @@ Marketplace](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/
 Marketplace](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-azure/subscribe-azure.html)
 
 {ref}`Services <services>`  
-````
+:::
 
 (gloss-subscription-plan)=
 ## Subscription plan
@@ -270,7 +271,7 @@ deployment <deploy-cluster>`, and also multiple plans and a separate contract op
 through the Marketplace {ref}`offers <gloss-offer>`. For more information, 
 refer to the documentation on {ref}` services we offer <services>`.
 
-````{note}
+:::{note}
 See also:
 
 [Subscribe to CrateDB
@@ -283,7 +284,7 @@ Marketplace](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/
 Marketplace](https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/deploy-to-cluster-marketplace/deploy-to-cluster-azure/subscribe-azure.html)
 
 {ref}`Deployment <cluster-deployment>`
-````
+:::
 
 (gloss-system-user)=
 ## System user
@@ -300,9 +301,9 @@ In CrateDB Cloud, there are two distinct system
     {ref}`explanation <system-user>` in the
     CrateDB Cloud reference.
 
-````{note}
+:::{note}
 See also {ref}`Audit Log <overview-org-audit>`
-````
+:::
 
 (gloss-tier)=
 ## Tier
@@ -324,9 +325,9 @@ a defined role within the organization (see documentation on {ref}`user roles
 <user-roles>`) and is associated with a
 specific email address.
 
-````{note}
+:::{note}
 See also: {ref}`User roles <user-roles>`
-````
+:::
 
 (gloss-version)=
 ## Versions
@@ -355,6 +356,6 @@ sequence, e.g. the 4 in 'version 5.3.4'. All available upgrades are
 visible in the {ref}`Manage Tab <overview-cluster-manage>` of the
 cluster detailed view.
 
-````{note}
+:::{note}
 See also: {ref}`CrateDB Release Notes <crate-reference:release_notes>`
-````
+:::

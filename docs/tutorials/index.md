@@ -60,7 +60,7 @@ full potential of time-series data in real-world applications.
 Feel free to dive into any of these tutorials to explore the features that are
 most relevant to your use case. We wish you a happy learning experience.
 
-```{toctree}
+:::{toctree}
 :hidden:
 :maxdepth: 1
 
@@ -68,4 +68,4 @@ Time-Series <time-series>
 Objects<object>
 Full-Text Search<full-text>
 Advanced Time-Series <time-series-advanced>
-```
+:::

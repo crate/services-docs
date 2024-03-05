@@ -19,10 +19,10 @@ New users can be added to an organization by going to the Users tab in the
 left-hand menu. To add and manage users of the organization, you must be the 
 organization admin.
 
-````{note}
+:::{note}
 For more information on user roles and associated privileges, see the 
 documentation on {ref}`user roles <user-roles>`.
-````
+:::
 
 ![Cloud Console users overview](../_assets/img/users-overview.png)
 

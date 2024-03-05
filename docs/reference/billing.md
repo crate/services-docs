@@ -84,14 +84,14 @@ created directly with Crate.
 
 ![Custom contract payment option](../_assets/img/custom-contract.png)
 
-````{note}
+:::{note}
 This type of payment method does not show up in your Cloud console
 automatically as it needs to be configured specifically for every
 customer.
 
 If you're interested in this option, don't hesitate and contact us at
 **sales@crate.io**
-````
+:::
 
 ## Payment processing {#billing-processing}
 

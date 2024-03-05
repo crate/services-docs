@@ -37,15 +37,15 @@ The first important step comes after the successful installation of
 CrateDB into your chosen system. Right after you get the following
 console prompt:
 
-``` console
+:::{code} console
 ✓ Region is connected to CrateDB Cloud.
 ✓ Successfully validated installation
-```
+:::
 
 This means that base installation is done. You will now be asked if you
 want to have Grafana installed in the system. Press `Y` to opt-in:
 
-``` console
+:::{code} console
 Optional installation of Loki and Grafana
 -----------------------
 ! Loki and Grafana not detected.
@@ -56,20 +56,20 @@ Would you like to install Loki and Grafana?
 
 =============================================================================
 Install? [Yy] y
-```
+:::
 
 After successful installation, you will get the following output:
 
-``` console
+:::{code} console
 ✓ Installed.
 Loki and Grafana successfully installed.
-```
+:::
 
-```{note}
+:::{note}
 If you already have a CrateDB Edge cluster deployed and didn't choose
 to install Grafana and Loki initially, you can rerun the install script
 to get them when needed.
-```
+:::
 
 (edge-monitoring-accessing-grafana)=
 ## Accessing Grafana UI 
@@ -85,15 +85,15 @@ As a part of the installation process, a user account is created for
 Grafana. The username is `admin` and the password can be retrieved with
 the following command:
 
-``` console
+:::{code} console
 kubectl get secret --namespace crate-loki crate-grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
-```
+:::
 
 You will get a response with a password:
 
-``` console
+:::{code} console
 rpz654Q2k8D5vgcvvrRgQMZAC2gKxZJH4oQf09fB
-```
+:::
 
 (edge-monitoring-port-forwarding)=
 ### Port-forwarding to get the Grafana URL 
@@ -101,11 +101,11 @@ rpz654Q2k8D5vgcvvrRgQMZAC2gKxZJH4oQf09fB
 To get the URL of your Grafana UI, you need to issue the following
 commands:
 
-``` console
+:::{code} console
 export POD_NAME=$(kubectl get pods --namespace crate-loki -l "app.kubernetes.io/name=grafana,app.kubernetes.io/instance=crate-grafana" -o jsonpath="{.items[0].metadata.name}")
 
 kubectl --namespace crate-loki port-forward $POD_NAME 3000
-```
+:::
 
 This will forward your running Grafana instance to port `3000`. You can
 then view it on that port. For this tutorial, we used Google Cloud
@@ -114,25 +114,25 @@ Grafana UI on port 3000.
 
 ![Google Cloud web preview](../../_assets/img/edge-monitoring-forwarding.png)
 
-````{note}
+:::{note}
   Depending on your environment, it is possible that port 3000 will
   already be occupied. If that's the case, you will see following
   response:
 
-  ```{code} console
+  :::{code} console
   Unable to listen on port 3000: Listeners failed to create with the following errors: 
   [unable to create listener: Error listen tcp4 127.0.0.1:3000: bind: address already in use unable to create listener: 
   Error listen tcp6 [::1]:3000: bind: cannot assign requested address]
   error: unable to listen on any of the requested ports: [{3000 3000}
-  ```
+  :::
 
   When that happens, reissue the port-forwarding command with a different
   port. E.g.
 
-  ```{code} console
+  :::{code} console
   kubectl --namespace crate-loki port-forward $POD_NAME 3001
-  ```
-````
+  :::
+:::
 
 (edge-monitoring-prometheus-datasource)=
 ## Adding the Prometheus data source 
@@ -158,9 +158,9 @@ options. You will be brought to the data source configuration page.
 The only field that you need to fill out is "URL". The URL for
 Prometheus is always:
 
-``` console
+:::{code} console
 http://cluster-monitoring-prometheus.monitoring.svc.cluster.local:9090
-```
+:::
 
 After that, click "Save & test" at the bottom of the page. You should
 get a response "Data source is working"

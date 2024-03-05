@@ -27,17 +27,17 @@ change plans and scale the number of nodes at the same time.
 The difference in the price of the cluster can be seen on the bottom
 right, when choosing different configurations.
 
-````{note}
+:::{note}
 Any promotions or discounts applicable to your cluster will be applied
 to your organization as a whole at the end of the billing period. Due to
 technical limitations, they may not be directly visible in the cluster
 scale pricing shown here, but do not worry! This does not mean that your
 promotion or discount is not functioning.
-````
+:::
 
-````{warning}
+:::{warning}
 Storage capacity increases for a given cluster are irreversible. To
 reduce cluster storage capacity, reduce the cluster nodes instead (up to
 a minimum of 2, although we recommend maintaining a minimum of 3 for
 production use).
-````
+:::

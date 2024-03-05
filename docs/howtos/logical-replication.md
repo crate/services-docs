@@ -26,28 +26,28 @@ subscription is created on a cluster where the data should be copied to.
 
 Example publication:
 
-``` sql
+:::{code} sql
 CREATE PUBLICATION mypublication
 FOR ALL TABLES
-```
+:::
 
 (logical-replication-create-subscription)=
 ### Create a subscription on Cluster 2
 
 Example subscription:
 
-``` sql
+:::{code} sql
 CREATE SUBSCRIPTION mysubscription 
 CONNECTION 'crate://your-cluster-url.cratedb.net?mode=pg_tunnel&user=your_user&password=your_password' 
 PUBLICATION mypublication;
-```
+:::
 
-````{note}
+:::{note}
 By default, CrateDB uses the transport protocol (on port 4300) for
 logical replication. If the port is not available (such as with CrateDB
 Cloud), the `mode=pg_tunnel` can be used to tunnel over the Postgres
 protocol (port 5432).
-`````
+:::
 
 That's it in terms of configuration. Data from Cluster 1 will now be
 automatically replicated on Cluster 2. This feature can also be
@@ -66,18 +66,18 @@ the cluster that serves as the target.
 
 Example publication:
 
-``` sql
+:::{code} sql
 DROP PUBLICATION mypublication
-```
+:::
 
 (logical-replication-remove-subscription)=
 ### Remove a subscription from Cluster 2
 
 Example subscription:
 
-``` sql
+:::{code} sql
 DROP SUBSCRIPTION mysubscription 
-```
+:::
 
 (logical-replication-conclusion)=
 ## Conclusion

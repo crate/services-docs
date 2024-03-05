@@ -20,8 +20,8 @@ bottom. In order to request a private link, select *Request Private
 Link*. Fill out the requested information and select *OK*. We will get
 back to you as soon as possible.
 
-````{note}
+:::{note}
 Private endpoints do not work across providers, meaning that if you want
 to securely access your AWS cluster, you must do so from within the AWS
 environment.
-````
+:::

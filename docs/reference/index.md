@@ -8,7 +8,7 @@ clusters in the cloud – without needing to worry about database management.
 CrateDB is a distributed, open-source database that combines the performance of
 NoSQL with the power and simplicity of standard SQL.
 
-```{toctree}
+:::{toctree}
 :hidden:
 :maxdepth: 1
 
@@ -16,9 +16,9 @@ User Roles <user-roles>
 Billing <billing>
 API <api>
 Glossary <glossary>
-```
+:::
 
-````{note}
+:::{note}
 This is an open source documentation project. We host the source code and
 issue tracker on [GitHub](https://github.com/crate/cloud-docs/).
-`````
+:::

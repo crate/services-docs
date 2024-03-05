@@ -85,7 +85,7 @@ Loki, and Grafana.
 
 ::::
 
-```{toctree}
+:::{toctree}
 :hidden:
 :maxdepth: 1
 
@@ -94,4 +94,4 @@ Managed Kubernetes options <managed-kubernetes>
 Self-hosted Kubernetes <self-hosted-edge>
 Custom backup location <custom-backup>
 Monitor CrateDB Cloud on Kubernetes <monitoring>
-```
+:::

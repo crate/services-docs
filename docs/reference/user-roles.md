@@ -48,14 +48,14 @@ In CrateDB Cloud, the backend uses a user called `system` in order to
 perform Cloud cluster upgrades, backups and scaling functions, among
 other things.
 
-````{warning}
+:::{warning}
 The user `system` is essential for CrateDB Cloud to function as
 intended. While it is not normally accessible through the CrateDB Cloud
 Console or the Croud CLI, it can be accessed through the CrateDB admin
 UI or any other SQL client. It is important not to edit or delete this
 user in any way. Otherwise, the functioning of Cloud clusters may be
 compromised.
-````
+:::
 
 (crate-user)=
 ### `Crate` user
@@ -78,7 +78,7 @@ privileges](https://cratedb.com/docs/crate/reference/en/latest/admin/privileges.
 there are certain operations that they cannot perform. As of CrateDB
 4.2.1, the list of such operations is as follows:
 
-````sql
+:::{code} sql
 | `ALTER CLUSTER`
 | `ANALYZE`
 | `DISCARD`
@@ -87,7 +87,7 @@ there are certain operations that they cannot perform. As of CrateDB
 | `OPTIMIZE`
 | `SET LICENSE`
 | `SET TRANSACTION`
-````
+:::
 
 More information on CrateDB user privileges can be found in the CrateDB
 documentation on 
