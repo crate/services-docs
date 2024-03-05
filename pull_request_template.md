@@ -6,5 +6,5 @@
 
 ## Checklist
 
- - [] Link to issue this PR refers to (if applicable): https://github.com/crate/tech-writing/issues/402
+ - [] Link to issue this PR refers to (if applicable):
  - [] [CLA](https://crate.io/community/contribute/cla/) is signed
