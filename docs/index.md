@@ -3,11 +3,54 @@
 
 # CrateDB Cloud
 
-**CrateDB Cloud** is a fully-managed service, allowing you to deploy, monitor,
-back up, and scale your [CrateDB] clusters in the cloud without the need to do
-database management yourself. You can store and analyze massive amounts of data
-in near real-time, even with complex queries.
+CrateDB Cloud is a fully managed, petabyte-scale, and cost-effective
+analytics database that lets you run analytics over vast amounts of
+data in near real time, even with complex queries.
 
+It is an SQL database service for enterprise data warehouse workloads,
+that works across clouds and scales with your data. Use built-in ML/AI
+and BI for insights at scale, on top of a rich data model.
+
+
+:::::{grid}
+:padding: 0
+
+::::{grid-item}
+:class: rubric-slimmer
+:columns: 6
+
+:::{rubric} Database Features
+:::
+CrateDB Cloud helps you manage and analyze your data with built-in features
+like machine learning, geospatial analysis, and business intelligence.
+
+CrateDB Cloud's scalable, distributed analysis engine lets you query terabytes
+in seconds and petabytes in minutes.
+
+CrateDB provides a rich data model including container-, geospatial-, and
+vector-data types, and capabilities for full-text search.
+::::
+
+::::{grid-item}
+:class: rubric-slimmer
+:columns: 6
+
+:::{rubric} Operational Benefits
+:::
+CrateDB Cloud is a fully managed enterprise service, allowing you to deploy,
+monitor, back up, and scale your CrateDB clusters in the cloud without the
+need to do database management yourself.
+
+With CrateDB Cloud, there's no infrastructure to set up or manage, letting you
+focus on finding meaningful insights using plain SQL, and taking advantage of
+flexible pricing models across on-demand and flat-rate options.
+::::
+
+:::::
+
+
+:::{rubric} Learn
+:::
 Users around the world rely on CrateDB Cloud clusters to store billions of records
 and terabytes of data, all accessible without delays. If you want to start using
 CrateDB Cloud, or make the most of your existing subscription, we are maintaining
