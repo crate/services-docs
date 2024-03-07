@@ -109,13 +109,13 @@ Learn how to import data into your CrateDB Cloud clusters.
 ::::
 
 
-```{note}
+:::{note}
 Like [CrateDB itself], this is an open source documentation project. [Suggestions
 for improvements], and [source code contributions], are always welcome. {fab}`github`
-```
+:::
 
 
-```{toctree}
+:::{toctree}
 :maxdepth: 1
 :hidden:
 
@@ -127,7 +127,7 @@ Web Console <reference/overview>
 Croud CLI <tutorials/deploy/croud>
 tutorials/edge/index
 Reference <reference/index>
-```
+:::
 
 [CrateDB]: https://crate.io/product/
 [Croud CLI]: https://crate.io/docs/cloud/cli/
