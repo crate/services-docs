@@ -62,8 +62,8 @@ payment methods tab, in Organization section:
 
 Invoicing is handled variously depending on which deployment method you
 use. If you deploy your cluster directly via the CrateDB Cloud Console,
-you will be invoiced at the email address you provided on
-{ref}`signing up with CrateDB Cloud. <sign-up>`
+you will be invoiced at the email address you provided when
+{ref}`signing up with CrateDB Cloud. <quick-start>`
 
 If you use one of the marketplace offers, the invoicing is handled by
 the marketplace provider in question and will be part of your general

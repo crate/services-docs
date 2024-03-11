@@ -97,8 +97,7 @@ or Microsoft Azure account or by creating a separate username and
 password.
 
 If you don't have a Cloud Console account yet, follow the steps in the
-[signup
-tutorial](https://crate.io/docs/cloud/tutorials/en/latest/sign-up.html).
+{ref}`signup tutorial <quick-start>`.
 Select the authentication method you wish to use. From there, you will
 be given the option to sign up.
 
