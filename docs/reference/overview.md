@@ -626,8 +626,8 @@ them as needed.
 
 :::{note}
 - The SQL Scheduler is automatically available for all newly deployed clusters.
-- For existing clusters, the feature can be enabled on demand. (Contactsupport 
-  for activation.)
+- For existing clusters, the feature can be enabled on demand. 
+  (Contact support for activation.)
 :::
 
 ### Accessing and Using the SQL Scheduler
@@ -662,8 +662,9 @@ specific job.
 ::::{tab} Cleanup of old files
 <br>
 
-Cleanup is one of good examples for these kind of automated jobs. This example
-deletes records older than 30 days, from a specified table once a day:
+Cleanup tasks represent a common use case for these types of automated jobs. 
+This example deletes records older than 30 days, from a specified table once a 
+day:
 
 :::{code} sql
 DELETE FROM "sample_data"
@@ -672,7 +673,7 @@ WHERE
 :::
 
 How often you run it of course depends on you, but once a day is common for
-clean up. This expression runs every thay at 2:30 PM UTC:
+clean up. This expression runs every day at 2:30 PM UTC:
 
 Schedule: `30 14 * * *`
   
