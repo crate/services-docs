@@ -241,7 +241,7 @@ Information visible on the Overview page includes:
     notified and investigating the issue.
 -   **Region**: Name of the region where the cluster is deployed.
 -   **Plan**: This shows which
-    {ref}`subscription plan <subscription-plans>` 
+    {ref}`subscription plan <services>` 
     the cluster is running on.
 -   **CPU metrics**: Average CPU utilization on average per node. The
     sparkline shows the trend for the last hour.
@@ -388,7 +388,7 @@ any s3-complatible blob storage. The steps are the same as if importing
 from S3, i.e. bucket name, path to the file and S3 ID/Secret.
 
 Importing multiple files from Azure Container/Blob Storage is also
-supported: [/folder/*.parquet]
+supported: `/folder/*.parquet`
 
 Files to be imported are specified by using the well-known
 [wildcard](https://en.wikipedia.org/wiki/Wildcard_character) notation,
