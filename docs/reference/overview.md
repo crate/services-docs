@@ -38,6 +38,7 @@ more information on CrateDB Cloud-related terminology.
      - [Backups](#overview-cluster-backups)
          - [Cluster Cloning](#overview-cluster-cloning)
          - [Failed cloning](#overview-cluster-cloning-fail)
+     - [SQL Scheduler](#overview-sql-scheduler)
      - [Scale](#overview-cluster-settings-scale)
      - [Manage](#overview-cluster-manage)
 - [Community](#overview-community)
@@ -241,7 +242,7 @@ Information visible on the Overview page includes:
     notified and investigating the issue.
 -   **Region**: Name of the region where the cluster is deployed.
 -   **Plan**: This shows which
-    {ref}`subscription plan <subscription-plans>` 
+    {ref}`subscription plan <services>` 
     the cluster is running on.
 -   **CPU metrics**: Average CPU utilization on average per node. The
     sparkline shows the trend for the last hour.
@@ -388,7 +389,7 @@ any s3-complatible blob storage. The steps are the same as if importing
 from S3, i.e. bucket name, path to the file and S3 ID/Secret.
 
 Importing multiple files from Azure Container/Blob Storage is also
-supported: [/folder/*.parquet]
+supported: /folder/*.parquet
 
 Files to be imported are specified by using the well-known
 [wildcard](https://en.wikipedia.org/wiki/Wildcard_character) notation,
@@ -603,6 +604,126 @@ When cloning fails, it is indicated by a banner in the cluster overview
 screen.
 
 ![Cloud Console cluster failed cloning](../_assets/img/cluster-clone-failed.png)
+
+(overview-sql-scheduler)=
+:::
+## SQL Scheduler
+:::
+
+The SQL Scheduler is designed to automate routine database tasks by scheduling 
+SQL queries to run at specific times, in UTC time. This feature
+supports creating job descriptions with valid 
+[cron patterns](https://www.ibm.com/docs/en/db2oc?topic=task-unix-cron-format) 
+and SQL statements, enabling a wide range of tasks. Users can manage these jobs
+through the Cloud UI, adding, removing, editing, activating, and deactivating
+them as needed.
+
+### Use Cases
+
+- Deleting old/redundant data to maintain database efficiency.
+- Regularly updating or aggregating table data.
+- Automating export and import of data.
+
+:::{note}
+- The SQL Scheduler is automatically available for all newly deployed clusters.
+- For existing clusters, the feature can be enabled on demand. (Contactsupport 
+  for activation.)
+:::
+
+### Accessing and Using the SQL Scheduler
+
+SQL Scheduler can be found in "SQL Scheduler" tab in the left-hand navigation
+menu. There are 2 tabs on the SQL Scheduler page:
+
+:::{tab} Overview
+<br>
+
+**Overview** shows a list of your existing jobs. In the list you can
+activate/deactivate each job with a toggle in the "Active" column. You can
+also edit and delete jobs with buttons on the right side of the list.
+  
+![SQL Scheduler overview](../_assets/img/cluster-sql-scheduler-overview.png)
+:::
+
+:::{tab} Logs
+<br>
+
+**Logs** shows a list of *scheduled* job runs, whether they failed or
+succeeded, execution time, run time, and the error in case they were
+unsuccessful. In case of an error, more details can be viewed showing the
+executed query and a stack trace. You can filter the logs by status, or by
+specific job.
+
+![SQL Scheduler overview](../_assets/img/cluster-sql-scheduler-logs.png)
+:::
+
+### Examples
+
+::::{tab} Cleanup of old files
+<br>
+
+Cleanup is one of good examples for these kind of automated jobs. This example
+deletes records older than 30 days, from a specified table once a day:
+
+:::{code} sql
+DELETE FROM "sample_data"
+WHERE
+  "timestamp_column" < NOW() - INTERVAL '30 days';
+:::
+
+How often you run it of course depends on you, but once a day is common for
+clean up. This expression runs every thay at 2:30 PM UTC:
+
+Schedule: `30 14 * * *`
+  
+![SQL Scheduler overview](../_assets/img/cluster-sql-scheduler-example-cleanup.png)
+::::
+
+::::{tab} Copying logs into persistent table
+<br>
+
+Another useful example might be copying data to another table for archival 
+purposes. This specifically copies from system logs table into one of our
+own tables.
+
+:::{code} sql
+CREATE TABLE IF NOT EXISTS "logs"."persistent_jobs_log" (
+  "classification" OBJECT (DYNAMIC),
+  "ended" TIMESTAMP WITH TIME ZONE,
+  "error" TEXT,
+  "id" TEXT,
+  "node" OBJECT (DYNAMIC),
+  "started" TIMESTAMP WITH TIME ZONE,
+  "stmt" TEXT,
+  "username" TEXT,
+  PRIMARY KEY (id)
+) CLUSTERED INTO 1 SHARDS;
+
+INSERT INTO
+  "logs"."persistent_jobs_log"
+SELECT
+  *
+FROM
+  sys.jobs_log
+ON CONFLICT ("id") DO NOTHING;
+:::
+
+In this example, we schedule the job to run every hour:
+
+Schedule: `0 * * * *`
+
+
+![SQL Scheduler overview](../_assets/img/cluster-sql-scheduler-example-copying.png)
+::::
+
+:::{note}
+Limitations and Known Issues:
+
+* Only one job can run at a time; subsequent jobs will be queued until the 
+  current one completes.
+* Long-running jobs may block the execution of queued jobs, leading to
+  potential delays.
+:::
 
 (overview-cluster-settings-scale)=
 ### Scale 
