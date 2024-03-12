@@ -2,27 +2,76 @@
 
 # Analyzing Device Readings with Metadata Integration
 
-CrateDB is highly regarded as an optimal database solution for managing time-series data thanks to its unique blend of features. It is particularly effective when you need to combine time-series data with metadata, for instance, in scenarios where data like sensor readings or log entries, need to be augmented with additional context for more insightful analysis. CrateDB supports effective time-series analysis with fast aggregations, a rich set of built-in functions, and `JOIN` operations.
+CrateDB is highly regarded as an optimal database solution for managing
+time-series data thanks to its unique blend of features. It is particularly
+effective when you need to combine time-series data with metadata, for
+instance, in scenarios where data like sensor readings or log entries, need
+to be augmented with additional context for more insightful analysis.
 
-In this tutorial, we will illustrate how to augment time-series data with the metadata to enable more comprehensive analysis. To get started let’s use a time-series dataset that captures various device readings, such as battery, CPU, and memory information. Each record includes:
 
-- `ts` - timestamp when each reading was taken.
-- `device_id` - identifier of the device.
-- `battery` - object containing battery level, status, and temperature.
-- `cpu` -  object containing average CPU loads over the last 1, 5, and 15 minutes.
-- `memory` - object containing information about the device's free and used memory.
+:::::{grid}
+:padding: 0
 
-The second dataset in this tutorial contains metadata information about various devices. Each record includes:
+::::{grid-item}
+:class: rubric-slimmer
+:columns: auto 6 6 6
 
-- `device_id` - identifier of the device.
-- `api_version` - version of the API that the device supports.
-- `manufacturer` - name of the manufacturer of the device.
-- `model` - model name of the device.
-- `os_name` - the name of the operating system running on the device.
+:::{rubric} About
+:::
 
-## Creating the Table
+CrateDB supports effective time-series analysis with enhanced features
+for fast aggregations.
 
-CrateDB uses SQL, a powerful and familiar language for database management. To store the device readings and the device info data, create two tables with columns tailored to the datasets using the `CREATE TABLE` command:
+- Rich data types for storing structured nested data (OBJECT) alongside
+  time series data.
+- A rich set of built-in functions for aggregations.
+- Relational JOIN operations.
+- Common table expressions (CTEs).
+
+::::
+
+::::{grid-item}
+:class: rubric-slimmer
+:columns: auto 6 6 6
+
+:::{rubric} Data
+:::
+This tutorial illustrates how to effectively query time-series data with
+metadata, in order to conduct comprehensive data analysis.
+
+It uses a time-series dataset that includes telemetry readings from appliances,
+such as battery, CPU, and memory information, as well as metadata information
+like manufacturer, model, and firmware version.
+::::
+
+:::::
+
+
+## Creating the Tables
+
+CrateDB uses SQL, the most popular query language for database management. To
+store the device readings and the device info data, define two tables with
+columns tailored to the datasets.
+
+To get started, let’s use a time-series dataset that captures various device
+readings, such as battery, CPU, and memory information. Each record includes:
+
+:ts: Timestamp when each reading was taken.
+:device_id: Identifier of the device.
+:battery: Object containing battery level, status, and temperature.
+:cpu: Object containing average CPU loads over the last 1, 5, and 15 minutes.
+:memory: Object containing information about the device's free and used memory.
+
+The second dataset in this tutorial contains metadata information about various
+devices. Each record includes:
+
+:device_id: Identifier of the device.
+:api_version: Version of the API that the device supports.
+:manufacturer: Name of the manufacturer of the device.
+:model: Model name of the device.
+:os_name: Name of the operating system running on the device.
+
+Create the tables using the `CREATE TABLE` command:
 
 :::{code} sql
 CREATE TABLE IF NOT EXISTS doc.devices_readings (

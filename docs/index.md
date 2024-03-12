@@ -31,7 +31,7 @@ Learn how to sign up and get started with a free cluster.
 :link: tutorials
 :link-type: ref
 
-Learn how to use some of the key features of CrateDB.
+Learn how to use key features of CrateDB.
 :::
 
 
