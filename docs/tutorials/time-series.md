@@ -98,6 +98,8 @@ FROM weather_data
 GROUP BY location;
 :::
 
+:::{rubric} MAX_BY Aggregate Functions
+:::
 Computing basic averages is nothing special, but what if you need to answer more detailed
 questions? For example, if you want to know the highest temperature for each
 place and when it occurred.
@@ -117,13 +119,16 @@ FROM weather_data
 GROUP BY location;
 :::
 
+:::{rubric} Gap Filling
+:::
 You have probably observed by now, that there are gaps in the dataset for certain
 metrics. Such occurrences are common, perhaps due to a sensor malfunction or
-disconnection. To address this, the missing values need to be filled in. You can
-employ another useful tool: window functions paired with the `IGNORE NULLS`
-feature. Within a Common Table Expression (CTE), we utilize window functions to
+disconnection. To address this, the missing values need to be filled in.
+
+Window functions paired with the `IGNORE NULLS` feature will solve your needs.
+Within a Common Table Expression (CTE), we utilize window functions to
 spot the next and prior non-null temperature recordings, and then compute the 
-arithmetic mean to bridge the gap:
+arithmetic mean to fill the gap.
 
 :::{code} sql
 WITH OrderedData AS (
@@ -143,4 +148,11 @@ FROM OrderedData
 ORDER BY location, timestamp;
 :::
 
-The `WINDOW` clause defines a window that partitions the data by location and orders it by timestamp. This ensures that the `LAG` and `LEAD` window functions operate within each location group chronologically. If the temperature value is defined as `NULL`, the query returns the interpolated value calculated as the average of the previous and next available temperature readings. Otherwise, it uses the original value.
+The `WINDOW` clause defines a window that partitions the data by location and
+orders it by timestamp.
+
+This ensures that the `LAG` and `LEAD` window functions operate within each
+location group chronologically. If the temperature value is defined as `NULL`,
+the query returns the interpolated value calculated as the average of the
+previous and next available temperature readings. Otherwise, it uses the
+original value.

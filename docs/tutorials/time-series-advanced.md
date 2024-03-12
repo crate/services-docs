@@ -126,7 +126,10 @@ RETURN SUMMARY;
 
 ## Time Series Analysis with Metadata
 
-To illustrate `JOIN` operation, the first query retrieves the 30 rows of combined data from two tables, `devices.readings` and `devices.info`, based on a matching `device_id` in both. It effectively merges the detailed readings and corresponding device information, providing a comprehensive view of each device's status and metrics.
+
+:::{rubric} JOIN Operations
+:::
+To illustrate `JOIN` operations, the first query retrieves the 30 rows of combined data from two tables, `devices.readings` and `devices.info`, based on a matching `device_id` in both. It effectively merges the detailed readings and corresponding device information, providing a comprehensive view of each device's status and metrics.
 
 :::{code} sql
 SELECT *
@@ -135,6 +138,9 @@ JOIN devices.info i ON r.device_id = i.device_id
 LIMIT 30;
 :::
 
+
+:::{rubric} Aggregate Values
+:::
 The next query illustrates the calculation of summaries for aggregate values. In particular, it finds average battery levels (`avg_battery_level`) for each day and shows the result in an ascending order.
 
 :::{code} sql
@@ -144,6 +150,9 @@ GROUP BY "day"
 ORDER BY "day";
 :::
 
+
+:::{rubric} Rolling Averages and Window Functions
+:::
 Rolling averages are crucial in time series analysis because they help smooth out short-term fluctuations and reveal underlying trends by averaging data points over a specified period. This approach is particularly effective in mitigating the impact of outliers and noise in the data, allowing for a clearer understanding of the true patterns in the time series. 
 
 The following example illustrates the average (`AVG`), minimum (`MIN`), and maximum (`MAX`) battery temperature over a window of the last 100 temperature readings (`ROWS BETWEEN 100 PRECEDING AND CURRENT ROW`). The window is defined in descending order by timestamp (`ts`) and can be adapted to support different use cases. 
@@ -158,7 +167,19 @@ JOIN doc.devices_info i ON r.device_id = i.device_id
 WINDOW w AS (ORDER BY "ts" DESC ROWS BETWEEN 100 PRECEDING AND CURRENT ROW);
 :::
 
-The next query shows how to extract the most recent reading for each device of the _mustang_ model. The query selects the latest timestamp (`MAX(r.ts)`), which represents the most recent reading time, and the corresponding latest readings for battery, CPU, and memory (`MAX_BY` for each respective component, using the timestamp as the determining factor). These results are grouped by `device_id`, `manufacturer`, and `model` to ensure that the latest readings for each unique device are included. This query is particularly useful for monitoring the most current status of specific devices in a fleet.
+
+:::{rubric} Most Recent Observation
+:::
+The next query shows how to extract the most recent reading for each device of
+the _mustang_ model. The query selects the latest timestamp (`MAX(r.ts)`),
+which represents the most recent reading time, and the corresponding latest
+readings for battery, CPU, and memory. It uses `MAX_BY` for each respective
+component, using the timestamp as the determining factor.
+
+These results are grouped by `device_id`, `manufacturer`, and `model` to ensure
+that the latest readings for each unique device are included. This query is
+particularly useful for monitoring the most current status of specific devices
+in a fleet.
 
 :::{code} sql
 SELECT 
@@ -179,15 +200,34 @@ GROUP BY
     r.device_id, i.manufacturer, i.model;
 :::
 
-Finally, we demonstrate the complex query that illustrates the usage of Common Table Expressions (CTEs) to aggregate and analyze device readings and information. The query relies on three CTEs to temporarily capture data:
 
-- **MaxTimestamp CTE**: This CTE finds the most recent timestamp (`MAX(ts)`) in the `doc.devices_readings` table. It's used to focus the analysis on recent data.
-- **DeviceReadingsAgg CTE**: This CTE calculates the average battery level and temperature for each device, but only for readings taken within the last week (as defined by `r.ts >= m.max_ts - INTERVAL '1 week'`). 
-- **DeviceModelInfo CTE**: This CTE selects details from the `doc.devices_info` table, specifically the `device_id`, `manufacturer`, `model`, and `api_version`, but only for devices with an API version between 21 and 25.
+:::{rubric} Common Table Expressions (CTEs)
+:::
+Finally, we illustrate the use of Common Table Expressions (CTEs) on behalf of
+a complex query to aggregate and analyze device readings and metadata information.
+The query relies on three CTEs to temporarily capture data.
 
-The main `SELECT` statement joins the `DeviceReadingsAgg` and `DeviceModelInfo` CTEs, and aggregates data to provide the average battery level and temperature for each combination of manufacturer, model, and API version. It also proivdes the number of readings (`COUNT(*)`) for each grouping.
+:max_timestamp:
+    Find the most recent timestamp (`MAX(ts)`) in the
+    `doc.devices_readings` table. This CTE is used to focus the analysis
+    on recent data.
 
-Overall, the query aims to provide a detailed analysis of the battery performance (both level and temperature) for devices with specific API versions, while focusing only on recent data. It allows for a better understanding of how different models and manufacturers are performing in terms of battery efficiency within a specified API range and time frame.
+:device_readings_agg:
+    Calculate the average battery level and temperature for each
+    device, but only for readings taken within the last week, as defined by
+    `r.ts >= m.max_ts - INTERVAL '1 week'`. 
+
+:device_model_info:
+    Select details from the `doc.devices_info` table, specifically
+    the `device_id`, `manufacturer`, `model`, and `api_version`, but only for
+    devices with an API version between 21 and 25.
+
+The main `SELECT` statement joins the `device_readings_agg` and `device_model_info`
+CTEs, and aggregates data to provide the average battery level and temperature
+for each combination of manufacturer, model, and API version.
+It also provides the number of readings (`COUNT(*)`) for each grouping.
+
+The query aims to provide a detailed analysis of the battery performance (both level and temperature) for devices with specific API versions, while focusing only on recent data. It allows for a better understanding of how different models and manufacturers are performing in terms of battery efficiency within a specified API range and time frame.
 
 :::{code} sql
 WITH 
@@ -239,4 +279,14 @@ ORDER BY
     model_avg_battery_level DESC;
 :::
 
-In conclusion, this tutorial has guided you through the process of querying and analyzing time series data with CrateDB, demonstrating how to effectively merge device metrics with relevant metadata. These techniques and queries are important for unlocking deeper insights into device performance, equipping you with the skills needed to harness the full potential of time series data in real-world applications.
+
+:::{rubric} Conclusion
+:::
+
+This tutorial has guided you through the process of querying and
+analyzing time series data with CrateDB, demonstrating how to effectively merge
+device metrics with relevant metadata.
+
+These techniques and queries are important for unlocking deeper insights into
+device performance, equipping you with the skills needed to harness the full
+potential of time series data in real-world applications.
