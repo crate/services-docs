@@ -3,8 +3,8 @@
 # Analyzing Device Readings with Metadata Integration
 
 CrateDB is highly regarded as an optimal database solution for managing
-time-series data thanks to its unique blend of features. It is particularly
-effective when you need to combine time-series data with metadata, for
+time series data thanks to its unique blend of features. It is particularly
+effective when you need to combine time series data with metadata, for
 instance, in scenarios where data like sensor readings or log entries, need
 to be augmented with additional context for more insightful analysis.
 
@@ -19,7 +19,7 @@ to be augmented with additional context for more insightful analysis.
 :::{rubric} About
 :::
 
-CrateDB supports effective time-series analysis with enhanced features
+CrateDB supports effective time series analysis with enhanced features
 for fast aggregations.
 
 - Rich data types for storing structured nested data (OBJECT) alongside
@@ -36,10 +36,10 @@ for fast aggregations.
 
 :::{rubric} Data
 :::
-This tutorial illustrates how to effectively query time-series data with
+This tutorial illustrates how to effectively query time series data with
 metadata, in order to conduct comprehensive data analysis.
 
-It uses a time-series dataset that includes telemetry readings from appliances,
+It uses a time series dataset that includes telemetry readings from appliances,
 such as battery, CPU, and memory information, as well as metadata information
 like manufacturer, model, and firmware version.
 ::::
@@ -53,7 +53,7 @@ CrateDB uses SQL, the most popular query language for database management. To
 store the device readings and the device info data, define two tables with
 columns tailored to the datasets.
 
-To get started, let’s use a time-series dataset that captures various device
+To get started, let’s use a time series dataset that captures various device
 readings, such as battery, CPU, and memory information. Each record includes:
 
 :ts: Timestamp when each reading was taken.
@@ -124,7 +124,7 @@ WITH (compression='gzip', empty_string_as_null=true)
 RETURN SUMMARY;
 :::
 
-## Time-series Analysis with Metadata
+## Time Series Analysis with Metadata
 
 To illustrate `JOIN` operation, the first query retrieves the 30 rows of combined data from two tables, `devices.readings` and `devices.info`, based on a matching `device_id` in both. It effectively merges the detailed readings and corresponding device information, providing a comprehensive view of each device's status and metrics.
 
@@ -144,7 +144,7 @@ GROUP BY "day"
 ORDER BY "day";
 :::
 
-Rolling averages are crucial in time-series analysis because they help smooth out short-term fluctuations and reveal underlying trends by averaging data points over a specified period. This approach is particularly effective in mitigating the impact of outliers and noise in the data, allowing for a clearer understanding of the true patterns in the time series. 
+Rolling averages are crucial in time series analysis because they help smooth out short-term fluctuations and reveal underlying trends by averaging data points over a specified period. This approach is particularly effective in mitigating the impact of outliers and noise in the data, allowing for a clearer understanding of the true patterns in the time series. 
 
 The following example illustrates the average (`AVG`), minimum (`MIN`), and maximum (`MAX`) battery temperature over a window of the last 100 temperature readings (`ROWS BETWEEN 100 PRECEDING AND CURRENT ROW`). The window is defined in descending order by timestamp (`ts`) and can be adapted to support different use cases. 
 
@@ -239,4 +239,4 @@ ORDER BY
     model_avg_battery_level DESC;
 :::
 
-In conclusion, this tutorial has guided you through the process of querying and analyzing time-series data with CrateDB, demonstrating how to effectively merge device metrics with relevant metadata. These techniques and queries are important for unlocking deeper insights into device performance, equipping you with the skills needed to harness the full potential of time-series data in real-world applications.
+In conclusion, this tutorial has guided you through the process of querying and analyzing time series data with CrateDB, demonstrating how to effectively merge device metrics with relevant metadata. These techniques and queries are important for unlocking deeper insights into device performance, equipping you with the skills needed to harness the full potential of time series data in real-world applications.

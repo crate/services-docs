@@ -1,6 +1,6 @@
 (time-series)=
 
-# Time-Series: Analyzing Weather Data
+# Time Series: Analyzing Weather Data
 
 CrateDB is a powerful database designed to handle various use cases, one of
 which is managing time series data. Time series data refers to collections of
