@@ -3,7 +3,7 @@
 
 This tutorial will outline a step-by-step guide to deploying a cluster
 using the Cloud CLI application from scratch. The walkthrough assumes
-you have completed the {ref}`signup process <sign-up>` successfully, 
+you have completed the {ref}`signup process <quick-start>` successfully, 
 and that the `croud` program {ref}`is installed <cloud-cli:getting-started>`
 on your system.
 
