@@ -7,18 +7,48 @@ which is managing time series data. Time series data refers to collections of
 data points recorded at specific intervals over time, like the hourly
 temperature of a city or the daily sales of a store.
 
+:::::{grid}
+:padding: 0
+
+::::{grid-item}
+:class: rubric-slimmer
+:columns: auto 6 6 6
+
+:::{rubric} About
+:::
+
+Effectively query observations using enhanced features for time series data.
+
+Run aggregations with gap filling / interpolation, using common
+table expressions (CTEs) and LAG / LEAD window functions.
+
+Find maximum values using the MAX_BY aggregate function, returning
+the value from one column based on the maximum or minimum value of another
+column within a group.
+::::
+
+::::{grid-item}
+:class: rubric-slimmer
+:columns: auto 6 6 6
+
+:::{rubric} Data
+:::
 For this tutorial, imagine a dataset that captures weather
 readings from CrateDB offices across the globe. Each record includes:
 
-- `timestamp`: The exact time of the recording.
-- `location`: The location of the weather station.
-- `temperature`: The temperature in degrees Celsius.
-- `humidity`: The humidity in percentage.
-- `wind_speed`: The wind speed in km/h.
+:timestamp: The exact time of the recording.
+:location: The location of the weather station.
+:temperature: The temperature in degrees Celsius.
+:humidity: The humidity in percentage.
+:wind_speed: The wind speed in km/h.
+::::
+
+:::::
+
 
 ## Creating the Table
 
-CrateDB uses SQL, a powerful and familiar language for database management. To
+CrateDB uses SQL, the most popular query language for database management. To
 store the weather data, create a table with columns tailored to the
 dataset using the `CREATE TABLE` command:
 
