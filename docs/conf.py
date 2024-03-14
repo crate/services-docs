@@ -13,6 +13,7 @@ linkcheck_ignore = [
     "https://portal.azure.com/",
     "https://azuremarketplace.microsoft.com/",
     "https://azure.microsoft.com/",
+    "https://hub.docker.com/",
 ]
 
 linkcheck_timeout = 5
