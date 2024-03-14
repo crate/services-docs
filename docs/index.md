@@ -3,13 +3,12 @@
 
 # CrateDB Cloud
 
-CrateDB Cloud is a fully managed, petabyte-scale, and cost-effective
+CrateDB Cloud is a fully managed, terabyte-scale, and cost-effective
 analytics database that lets you run analytics over vast amounts of
 data in near real time, even with complex queries.
 
 It is an SQL database service for enterprise data warehouse workloads,
-that works across clouds and scales with your data. Use built-in ML/AI
-and BI for insights at scale, on top of a rich data model.
+that works across clouds and scales with your data.
 
 
 :::::{grid}
@@ -21,11 +20,11 @@ and BI for insights at scale, on top of a rich data model.
 
 :::{rubric} Database Features
 :::
-CrateDB Cloud helps you manage and analyze your data with built-in features
+CrateDB Cloud helps you manage and analyze your data with procedures
 like machine learning, geospatial analysis, and business intelligence.
 
-CrateDB Cloud's scalable, distributed analysis engine lets you query terabytes
-in seconds and petabytes in minutes.
+CrateDB Cloud's scalable, distributed analysis engine lets you query
+terabytes worth of data efficiently.
 
 CrateDB provides a rich data model including container-, geospatial-, and
 vector-data types, and capabilities for full-text search.
