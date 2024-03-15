@@ -11,11 +11,11 @@ efficient practices to optimize your CrateDB experience.
 :margin: 4 4 0 0
 :gutter: 1
 
-:::{grid-item-card} {octicon}`clock` Time-Series
+:::{grid-item-card} {octicon}`clock` Time Series
 :link: time-series
 :link-type: ref
-Dive into the world of time-series data with CrateDB. This tutorial will guide
-you through the best ways to store, query, and analyze time-series data.
+Dive into the world of time series data with CrateDB. This tutorial will guide
+you through the best ways to store, query, and analyze time series data.
 
 It is perfect for those working with IoT devices, monitoring systems, or any
 application where time-oriented data is crucial.
@@ -46,13 +46,13 @@ efficiently. A must-read for anyone looking to make sense of large volumes of
 unstructured text data.
 :::
 
-:::{grid-item-card} {octicon}`clock` Advanced Time-Series
+:::{grid-item-card} {octicon}`clock` Advanced Time Series
 :link: time-series-advanced
 :link-type: ref
-This tutorial demonstrates how to augment time-series data with the metadata to enable more comprehensive analysis.
+This tutorial demonstrates how to augment time series data with the metadata to enable more comprehensive analysis.
 
 The techniques and queries allow for unlocking deeper insights and harnessing the
-full potential of time-series data in real-world applications.
+full potential of time series data in real-world applications.
 :::
 
 ::::
@@ -64,8 +64,8 @@ most relevant to your use case. We wish you a happy learning experience.
 :hidden:
 :maxdepth: 1
 
-Time-Series <time-series>
+Time Series <time-series>
 Objects<object>
 Full-Text Search<full-text>
-Advanced Time-Series <time-series-advanced>
+Advanced Time Series <time-series-advanced>
 :::

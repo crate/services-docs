@@ -8,5 +8,5 @@ Visualize data with Grafana
 
 .. note::
 
-    This page was relocated to :ref:`crate-clients-tools:integrations-grafana`
+    This page was relocated to :ref:`crate-clients-tools:visualize`
     in the :ref:`crate-clients-tools:index` section of the documentation.

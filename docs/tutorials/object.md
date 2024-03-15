@@ -8,7 +8,7 @@ nested data efficiently. In this tutorial, we'll explore how to leverage this
 feature in marketing data analysis, along with the use of generated columns to
 parse and manage URLs.
 
-Consider marketing data that captures details of various campaigns:
+Consider marketing data that captures details of various campaigns.
 
 :::{code} json
 {
@@ -23,11 +23,11 @@ Consider marketing data that captures details of various campaigns:
 }
 :::
 
-To begin, let's create the schema for this dataset:
+To begin, let's create the schema for this dataset.
 
 ## Creating the Table
 
-CrateDB uses SQL, a powerful and familiar language for database management. To
+CrateDB uses SQL, the most popular query language for database management. To
 store the marketing data, create a table with columns tailored to the
 dataset using the `CREATE TABLE` command:
 
@@ -45,14 +45,14 @@ CREATE TABLE marketing_data (
 );
 :::
 
-In this table definition:
+Let's highlight two features in this table definition:
 
-- The `metrics` column is set up as an `OBJECT` featuring a dynamic structure.
-  This enables you to perform flexible queries on its nested attributes like
+:metrics: An `OBJECT` column featuring a dynamic structure for
+  performing flexible queries on its nested attributes like
   clicks, impressions, and conversion rate.
-- Additionally, a generated column named `url_parts` is configured to
-  automatically parse the `landing_page_url`. This makes it more convenient for
-  you to query specific components of the URL later on.
+:url_parts: A generated column to
+  decode an URL from the `landing_page_url` column. This is convenient
+  to query for specific components of the URL later on.
 
 The table is designed to accommodate both fixed and dynamic attributes,
 providing a robust and flexible structure for storing your marketing data.
