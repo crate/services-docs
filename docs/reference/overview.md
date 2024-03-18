@@ -316,7 +316,7 @@ bottom of the console. Here you can see all the executed queries and copy them
 or delete them from history.
 
 ```{note}
-Query Console is only available to organization admins.
+The Query Console is only available to organization admins.
 ```
 
 (overview-import-tab)=
