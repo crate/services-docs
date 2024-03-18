@@ -306,10 +306,14 @@ menu.
 
 ![Query Console](../_assets/img/cluster-query-console.png)
 
-To the left side of editor there is a table tree with overview of schemas/
-tables and columns within them. In the Console, multiple queries can be 
-run at once. Once you execute a query, the output can be formatted as CSV or 
-JSON. There is an option to show error traces if an error occurs.
+To the left side of the editor pane, there is a tree view that displays all
+schemas and tables with corresponding columns.
+The Query Console is able to run multiple queries at once.
+
+Once you execute a query, the result output can be formatted and exported as
+CSV or JSON.
+In order to support self-service query debugging, there is an option to show
+diagnostic output if an error occurs.
 
 History of used queries can be accessed via the "Show history" button on the
 bottom of the console. Here you can see all the executed queries and copy them 
