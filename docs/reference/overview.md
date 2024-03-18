@@ -26,7 +26,7 @@ more information on CrateDB Cloud-related terminology.
          - [Admin UI](#overview-cluster-overview-admin-ui)
          - [Next Steps](#overview-cluster-overview-next-steps)
          - [Connecting to your cluster](#overview-connect-to-your-cluster)
-     - [SQL Query Console](#overview-cluster-sql-console)
+     - [Query Console](#overview-cluster-sql-console)
      - [Import](#overview-import-tab)
          - [Import from URL](#overview-cluster-import-url)
          - [Import from private S3 bucket](#overview-cluster-import-s3)
@@ -291,25 +291,25 @@ or the {ref}`glossary <glossary>`.
 Here you can see a list of snippets for the available clients and
 libraries. These include: CLI, Python, Ruby, Java, JavaScript, PHP.
 
-(overview-cluster-sql-console)=
+(overview-cluster-query-console)=
 :::
-### SQL Query Console
+### Query Console
 :::
 
-SQL Console enables direct interaction with your CrateDB Cloud cluster
-and running SQL queries from the Cloud UI. 
+The Query Console enables direct interaction with your CrateDB Cloud cluster
+and running queries directly from within the Cloud UI. 
 
-### Accessing and Using the SQL Query Console
+### Accessing and Using the Query Console
 
-SQL Scheduler can be found in "Console" tab in the left-hand navigation
+The Query Console can be found in the "Console" tab in the left-hand navigation
 menu. 
 
-![Cloud Console SQL Console](../_assets/img/cluster-sql-console.png)
+![Query Console](../_assets/img/cluster-sql-console.png)
 
-To the left side of console there is a table tree with overview of schemas/
-tables and columns within them. In the SQL Console, multiple queries can be 
+To the left side of editor there is a table tree with overview of schemas/
+tables and columns within them. In the Console, multiple queries can be 
 run at once. Once you execute a query, the output can be formatted as CSV or 
-JSON. Error traces are also shown, if an error occurs
+JSON. There is an option to show error traces if an error occurs.
 
 History of used queries can be accessed via the "Show history" button on the
 bottom of the console. Here you can see all the executed queries and copy them 
