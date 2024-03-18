@@ -304,7 +304,7 @@ and running queries directly from within the Cloud UI.
 The Query Console can be found in the "Console" tab in the left-hand navigation
 menu. 
 
-![Query Console](../_assets/img/cluster-sql-console.png)
+![Query Console](../_assets/img/cluster-query-console.png)
 
 To the left side of editor there is a table tree with overview of schemas/
 tables and columns within them. In the Console, multiple queries can be 
