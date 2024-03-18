@@ -26,7 +26,7 @@ more information on CrateDB Cloud-related terminology.
          - [Admin UI](#overview-cluster-overview-admin-ui)
          - [Next Steps](#overview-cluster-overview-next-steps)
          - [Connecting to your cluster](#overview-connect-to-your-cluster)
-     - [Query Console](#overview-cluster-sql-console)
+     - [Query Console](#overview-cluster-query-console)
      - [Import](#overview-import-tab)
          - [Import from URL](#overview-cluster-import-url)
          - [Import from private S3 bucket](#overview-cluster-import-s3)
