@@ -12,6 +12,8 @@ linkcheck_ignore = [
     "https://eastus2.azure.cratedb.cloud/",
     "https://portal.azure.com/",
     "https://azuremarketplace.microsoft.com/",
+    "https://azure.microsoft.com/",
+    "https://hub.docker.com/",
 ]
 
 linkcheck_timeout = 5

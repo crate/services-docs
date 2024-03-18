@@ -14,7 +14,7 @@ user free credits worth $200. The credits can be used on any kind of
 cluster configuration.
 
 To be eligible for free credits, you will need to
-:ref:`sign up <sign-up>` for an account, and :ref:`create an organization
+:ref:`sign up <quick-start>` for an account, and :ref:`create an organization
 <create-org>`.
 
 

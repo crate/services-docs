@@ -6,7 +6,7 @@ Deploy cluster directly
 
 In this tutorial, we will provide a step-by-step guide to deploying a cluster
 from scratch. It is assumed you have completed the
-:ref:`signup process <sign-up>`. If you're a first-time user, a new 
+:ref:`signup process <quick-start>`. If you're a first-time user, a new 
 organization will have been created for you as a part of the signup process.
 If not, you will need to create one manually to proceed.
 

@@ -4,33 +4,37 @@
 
 CrateDB is an exceptional choice for handling complex queries and large-scale
 data sets. One of its standout features is its full-text search capabilities,
-built on top of the powerful Lucene library. This makes it a great fit for
+using the BM25 ranking algorithm for information retrieval, built on top of
+the powerful Lucene indexing library. This makes CrateDB an excellent fit for
 organizing, searching, and analyzing extensive datasets.
 
 In this tutorial, we will explore how to manage a dataset of Netflix titles,
 making use of CrateDB Cloud's full-text search capabilities.
 Each entry in our imaginary dataset will have the following attributes:
 
-- `show_id`: A unique identifier for each show or movie.
-- `type`: Specifies whether the title is a movie, TV show, or another format.
-- `title`: The title of the movie or show.
-- `director`: The name of the director.
-- `cast`: An array listing the cast members.
-- `country`: The country where the title was produced.
-- `date_added`: A timestamp indicating when the title was added to the catalog.
-- `release_year`: The year the title was released.
-- `rating`: The content rating (e.g., PG, R, etc.).
-- `duration`: The duration of the title in minutes or seasons.
-- `listed_in`: An array containing genres that the title falls under.
-- `description`: A textual description of the title, indexed using full-text search.
+:show_id: A unique identifier for each show or movie.
+:type: Specifies whether the title is a movie, TV show, or another format.
+:title: The title of the movie or show.
+:director: The name of the director.
+:cast: An array listing the cast members.
+:country: The country where the title was produced.
+:date_added: A timestamp indicating when the title was added to the catalog.
+:release_year: The year the title was released.
+:rating: The content rating (e.g., PG, R, etc.).
+:duration: The duration of the title in minutes or seasons.
+:listed_in: An array containing genres that the title falls under.
+:description: A textual description of the title, indexed using full-text search.
 
-To begin, let's create the schema for this dataset:
+To begin, let's create the schema for this dataset.
+
 
 ## Creating the Table
 
-CrateDB uses SQL, a powerful and familiar language for database management. To
+CrateDB uses SQL, the most popular query language for database management. To
 store the data, create a table with columns tailored to the
-dataset using the `CREATE TABLE` command. Importantly, you will also take advantage
+dataset using the `CREATE TABLE` command.
+
+Importantly, you will also take advantage
 of CrateDB's full-text search capabilities by setting up a full-text index on
 the description column. This will enable you to perform complex textual queries
 later on.

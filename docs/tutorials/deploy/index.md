@@ -4,7 +4,7 @@
 # Deploy cluster
 
 This set of tutorials explains how to subscribe and deploy your cluster on
-CrateDB Cloud. The first step is always to [](#sign-up).
+CrateDB Cloud. The first step is always to {ref}`sign up <quick-start>`.
 
 After you have signed up successfully, CrateDB Cloud offers two different
 methods to subscribe and get started with deploying a cluster.
