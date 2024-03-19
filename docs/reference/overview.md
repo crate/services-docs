@@ -26,6 +26,7 @@ more information on CrateDB Cloud-related terminology.
          - [Admin UI](#overview-cluster-overview-admin-ui)
          - [Next Steps](#overview-cluster-overview-next-steps)
          - [Connecting to your cluster](#overview-connect-to-your-cluster)
+     - [Query Console](#overview-cluster-query-console)
      - [Import](#overview-import-tab)
          - [Import from URL](#overview-cluster-import-url)
          - [Import from private S3 bucket](#overview-cluster-import-s3)
@@ -290,6 +291,38 @@ or the {ref}`glossary <glossary>`.
 
 Here you can see a list of snippets for the available clients and
 libraries. These include: CLI, Python, Ruby, Java, JavaScript, PHP.
+
+(overview-cluster-query-console)=
+:::
+### Query Console
+:::
+
+The Query Console enables direct interaction with your CrateDB Cloud cluster
+and running queries directly from within the Cloud UI. 
+
+### Accessing and Using the Query Console
+
+The Query Console can be found in the "Console" tab in the left-hand navigation
+menu. 
+
+![Query Console](../_assets/img/cluster-query-console.png)
+
+To the left side of the editor panel, there is a tree view that displays all
+schemas and tables with corresponding columns.
+The Query Console is able to run multiple queries at once.
+
+Once you execute a query, the result output can be formatted and exported as
+CSV or JSON.
+In order to support self-service query debugging, there is an option to show
+diagnostic output if an error occurs.
+
+History of used queries can be accessed via the "Show history" button on the
+bottom of the console. Here you can see all the executed queries and copy them 
+or delete them from history.
+
+```{note}
+The Query Console is only available to organization admins.
+```
 
 (overview-import-tab)=
 ### Import 
