@@ -306,7 +306,7 @@ menu.
 
 ![Query Console](../_assets/img/cluster-query-console.png)
 
-To the left side of the editor pane, there is a tree view that displays all
+To the left side of the editor panel, there is a tree view that displays all
 schemas and tables with corresponding columns.
 The Query Console is able to run multiple queries at once.
 
