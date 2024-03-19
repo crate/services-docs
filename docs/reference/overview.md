@@ -56,38 +56,16 @@ on the CrateDB Cloud Console for free](https://crate.io/lp-free-trial).
 
 Here is a list of all currently available regions for CrateDB Cloud:
 
-::::{sd-table}
-:row-class: top-border
-
-:::{sd-row}
-:::{sd-item} **Region**
+:::{table}
+:width: 700px
+:widths: 200, 200, 100, 100
+:align: left
+| Region | Url |
+|  ----  | ----|
+| AWS West Europe | [eks1.eu-west-1.aws.cratedb.cloud](https://eks1.eu-west-1.aws.cratedb.cloud) |
+| Azure East-US2 | [aks1.eastus2.azure.cratedb.cloud](https://eastus2.azure.cratedb.cloud/) |
+| Azure West Europe | [aks1.westeurope.azure.cratedb.cloud](https://aks1.westeurope.azure.cratedb.cloud/) |
 :::
-:::{sd-item} **URL**
-:::
-:::
-
-:::{sd-row}
-:::{sd-item} AWS West Europe
-:::
-:::{sd-item} [eks1.eu-west-1.aws.cratedb.cloud](https://eks1.eu-west-1.aws.cratedb.cloud)
-:::
-:::
-
-:::{sd-row}
-:::{sd-item} Azure East-US2
-:::
-:::{sd-item} [aks1.eastus2.azure.cratedb.cloud](https://eastus2.azure.cratedb.cloud/)
-:::
-:::
-
-:::{sd-row}
-:::{sd-item} Azure West Europe
-:::
-:::{sd-item} [aks1.westeurope.azure.cratedb.cloud](https://aks1.westeurope.azure.cratedb.cloud/)
-:::
-:::
-
-::::
 
 Azure East-US2 and Azure West-Europe are managed by [Microsoft
 Azure](https://azure.microsoft.com/en-us/). The AWS region is managed by
