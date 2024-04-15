@@ -3,7 +3,7 @@
 
 The **CrateDB Cloud Console** is a hosted web administration interface
 for interacting 
-with [CrateDB Cloud](https://crate.io/products/cratedb-cloud/).
+with [CrateDB Cloud](https://cratedb.com/product/editions/cloud/).
 
 :::{note}
 Refer to individual items in the current section of the documentation
@@ -52,7 +52,7 @@ more information on CrateDB Cloud-related terminology.
 
 The CrateDB Cloud user interface permalink is the [CrateDB Cloud
 Console](https://console.cratedb.cloud). You can [deploy a trial cluster
-on the CrateDB Cloud Console for free](https://crate.io/lp-free-trial).
+on the CrateDB Cloud Console for free](https://cratedb.com/lp-crfree).
 
 Here is a list of all currently available regions for CrateDB Cloud:
 
@@ -91,7 +91,7 @@ Multiple clusters and users can exist in a organization at any moment.
 For first-time users, an organization called "My organization" is
 automatically created upon first login.
 
-To see a list of all the organizations you have acesss to, go to
+To see a list of all the organizations you have access to, go to
 
 the My Account page in the dropdown menu in the top-right.
 
@@ -130,7 +130,7 @@ It also shows a list of users in your organization. You can add new
 users by clicking the "Add user" button. You can also choose the role
 of a new user. To learn more about user roles and their meaning, see the
 documentation on [user
-roles](https://crate.io/docs/cloud/reference/en/latest/user-roles.html).
+roles](https://cratedb.com/docs/cloud/en/latest/reference/user-roles.html).
 
 (overview-org-billing)=
 ### Organization Billing 
@@ -171,7 +171,7 @@ This tab shows the Audit Logs of the current organization.
 ![Cloud Console organization audit log tab](../_assets/img/organization-audit-log.png)
 
 In the Audit Log, a user with the correct credentials ([an organization
-admin](https://crate.io/docs/cloud/reference/en/latest/user-roles.html#organization-roles))
+admin](https://cratedb.com/docs/cloud/en/latest/reference/user-roles.html#organization-roles))
 can see an overview of logged changes to the organization.
 
 (overview-org-regions)=
@@ -183,7 +183,7 @@ deployment. It is possible to deploy clusters on this screen as well, by
 clicking the *Deploy cluster* button under each respective region field.
 
 For those with access to [CrateDB
-Cloud on Kubernetes](https://crate.io/products/cratedb-edge/), this tab also allows the
+Cloud on Kubernetes](https://cratedb.com/products/cratedb-edge/), this tab also allows the
 deployment of {ref}`CrateDB Cloud on Kubernetes <gloss-cloud-on-kubernetes>`
 clusters in a {ref}`custom region <gloss-region>`. To do so, provide a name
 for the custom region and click the *Create edge region* button. Once
@@ -237,7 +237,7 @@ Information visible on the Overview page includes:
 #### Admin UI 
 
 -   **Access cluster**: The *Open Admin UI* button connects you to the
-    [CrateDB Admin UI](https://crate.io/docs/clients/admin-ui/) for the
+    [CrateDB Admin UI](https://cratedb.com/docs/crate/admin-ui/en/latest/) for the
     cluster at its unique URL.
 
 :::{note}
@@ -261,7 +261,7 @@ keep-alive heartbeat queries.
 
 For more information on the CrateDB concepts used here, refer to the
 [CrateDB architecture
-documentation](https://crate.io/docs/crate/howtos/en/latest/architecture/shared-nothing.html)
+documentation](https://cratedb.com/docs/crate/howtos/en/latest/architecture/shared-nothing.html)
 or the {ref}`glossary <glossary>`.
 
 (overview-connect-to-your-cluster)=
@@ -395,7 +395,7 @@ size limitation for imports is 10 GiB per file.
 #### Importing multiple files 
 
 Importing multiple files, also known as import globbing is supported in
-any s3-complatible blob storage. The steps are the same as if importing
+any s3-compatible blob storage. The steps are the same as if importing
 from S3, i.e. bucket name, path to the file and S3 ID/Secret.
 
 Importing multiple files from Azure Container/Blob Storage is also
@@ -557,7 +557,7 @@ day is mandatory.
 
 To restore a particular backup, click the *Restore* button. A popup
 window with a SQL statement will appear. Input this statement to your
-Admin UI console eitheir by copy-pasting it, or clicking the *Run query
+Admin UI console either by copy-pasting it, or clicking the *Run query
 in Admin UI*. The latter will bring you directly to the Admin UI console
 with the statement automatically pre-filled.
 
@@ -603,11 +603,11 @@ unexpectedly. These are:
     storage.
 -   You're trying to clone an invalid or no longer existing snapshot.
     This can happen if you're cloning through
-    [Croud](https://crate.io/docs/cloud/cli/en/latest/). In this case,
+    [Croud](https://cratedb.com/docs/cloud/cli/en/latest/). In this case,
     the cloning will fail.
 -   You're trying to restore a table that is not included in the
     snapshot. This can happen if you're restoring snapshots through
-    [Croud](https://crate.io/docs/cloud/cli/en/latest/). In this case,
+    [Croud](https://cratedb.com/docs/cloud/cli/en/latest/). In this case,
     the cloning will fail.
 
 When cloning fails, it is indicated by a banner in the cluster overview
@@ -754,7 +754,7 @@ Now you can do three different things:
 
 -   Change the plan of your cluster
 -   Increase storage on each node
--   Icrease/decrease the number of nodes
+-   Increase/decrease the number of nodes
 
 You can do only one of those operations at a time, i.e. you can't
 change plans and scale the number of nodes at the same time.
@@ -814,7 +814,7 @@ cluster options.
     mechanism that allows a secure, private connection to your cluster.
     Effectively, it allows you to bypass the public internet when
     accessing the environment where your cluster is deployed. Note that
-    private endpoints don't work accross providers, meaning that if you
+    private endpoints don't work across providers, meaning that if you
     want to securely access your AWS cluster, you must do so from within
     the AWS environment.
 
@@ -832,6 +832,6 @@ cluster options.
 ## Community 
 
 The Community link goes to the [CrateDB and CrateDB Cloud Community
-page](https://community.crate.io/). Here you can ask members of the
+page](https://community.cratedb.com/). Here you can ask members of the
 community and Crate.io employees questions about uncertainties or
 problems you are having when using our products.
