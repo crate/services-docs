@@ -69,15 +69,6 @@ Learn how to sign up and get started with a free cluster.
 :::
 
 
-:::{grid-item-card} {octicon}`mortar-board` Tutorials
-:link: tutorials
-:link-type: ref
-
-Learn how to use key features of CrateDB.
-:::
-
-
-
 :::{grid-item-card} {octicon}`tools` Manage
 :link: cloud-howtos-index
 :link-type: ref
@@ -162,7 +153,6 @@ for improvements], and [source code contributions], are always welcome. {fab}`gi
 :hidden:
 
 Quick Start <tutorials/quick-start>
-Tutorials <tutorials/index>
 Services <reference/services>
 Manage <howtos/index>
 Web Console <reference/overview>
