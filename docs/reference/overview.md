@@ -752,15 +752,19 @@ Log of executed policies can be found in the "Logs" tab.
 ![Table policy list](../_assets/img/cluster-table-policy-logs.png)
 :::
 
-New policy can be created with "Add New Policy" button.
+A new policy can be created with "Add New Policy" button.
 
 ![Table policy list](../_assets/img/cluster-table-policy-create.png)
 :::
 
-After you give the policy a name and choose the tables/schemas which should
-be affected, you need to choose the time column. The time column will be used 
-with the condition to select which data will be affected. This column should 
-be preset in all the tables/schemas that the policy is using.
+After naming the policy and selecting the tables/schemas to be impacted, you
+must specify the time column. This column, which should be a timestamp used for
+partitioning, will determine the data affected by the policy. It is important
+that this time column is consistently present across all targeted
+tables/schemas. While you can apply the policy to also tables without the
+specificed time column, it will not get executed for those. If your tables have
+different timestamp columns, consider setting up separate policies for each to
+ensure accuracy.
 
 :::{note}
 The "Time Column" must be of type `TIMESTAMP`.
@@ -778,7 +782,7 @@ Following actions are supported:
   number.
 
 After filling out the info, you can see the affected schemas/tables and
-the number of affected partitions at the next iteration of the action.
+the number of affected partitions if the policy gets executed at this very moment.
 
 (overview-cluster-settings-scale)=
 ### Scale 
