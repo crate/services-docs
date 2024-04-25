@@ -40,6 +40,7 @@ more information on CrateDB Cloud-related terminology.
          - [Cluster Cloning](#overview-cluster-cloning)
          - [Failed cloning](#overview-cluster-cloning-fail)
      - [SQL Scheduler](#overview-sql-scheduler)
+     - [Table Policies](#overview-table-policies)
      - [Scale](#overview-cluster-settings-scale)
      - [Manage](#overview-cluster-manage)
 - [Community](#overview-community)
@@ -271,9 +272,7 @@ Here you can see a list of snippets for the available clients and
 libraries. These include: CLI, Python, Ruby, Java, JavaScript, PHP.
 
 (overview-cluster-query-console)=
-:::
 ### Query Console
-:::
 
 The Query Console enables direct interaction with your CrateDB Cloud cluster
 and running queries directly from within the Cloud UI. 
@@ -616,9 +615,7 @@ screen.
 ![Cloud Console cluster failed cloning](../_assets/img/cluster-clone-failed.png)
 
 (overview-sql-scheduler)=
-:::
-## SQL Scheduler
-:::
+### SQL Scheduler
 
 The SQL Scheduler is designed to automate routine database tasks by scheduling 
 SQL queries to run at specific times, in UTC time. This feature
@@ -628,7 +625,7 @@ and SQL statements, enabling a wide range of tasks. Users can manage these jobs
 through the Cloud UI, adding, removing, editing, activating, and deactivating
 them as needed.
 
-### Use Cases
+#### Use Cases
 
 - Deleting old/redundant data to maintain database efficiency.
 - Regularly updating or aggregating table data.
@@ -640,7 +637,7 @@ them as needed.
   (Contact support for activation.)
 :::
 
-### Accessing and Using the SQL Scheduler
+#### Accessing and Using the SQL Scheduler
 
 SQL Scheduler can be found in "SQL Scheduler" tab in the left-hand navigation
 menu. There are 2 tabs on the SQL Scheduler page:
@@ -667,7 +664,7 @@ specific job.
 ![SQL Scheduler overview](../_assets/img/cluster-sql-scheduler-logs.png)
 :::
 
-### Examples
+#### Examples
 
 ::::{tab} Cleanup of old files
 <br>
@@ -736,6 +733,90 @@ Limitations and Known Issues:
   potential delays.
 :::
 
+(overview-table-policies)=
+### Table Policies
+
+Table policies allow to automate maintenance operations for 
+**partitioned tables**. Automated actions can be set up that are be 
+executed daily based on pre-configure ruleset.
+
+![Table policy list](../_assets/img/cluster-table-policy.png)
+:::
+
+Table policy overview can be found in the left-hand navigation menu under 
+"Table Policies". From the list of policies, you can create, delete, edit, 
+or (de)activate them. 
+
+Log of executed policies can be found in the "Logs" tab. 
+
+![Table policy list](../_assets/img/cluster-table-policy-logs.png)
+:::
+
+A new policy can be created with "Add New Policy" button.
+
+![Table policy list](../_assets/img/cluster-table-policy-create.png)
+:::
+
+After naming the policy and selecting the tables/schemas to be impacted, you
+must specify the time column. This column, which should be a timestamp used for
+partitioning, will determine the data affected by the policy. It is important
+that this time column is consistently present across all targeted
+tables/schemas. While you can apply the policy to also tables without the
+specificed time column, it will not get executed for those. If your tables have
+different timestamp columns, consider setting up separate policies for each to
+ensure accuracy.
+
+:::{note}
+The "Time Column" must be of type `TIMESTAMP`.
+:::
+
+Next, a condition is used to determine affected partitions. The system is
+time based. A partition is eligible for action if the value in the 
+partitioned column is smaller (`<`), or smaller or equal (`<=`) than the current
+date minus `n` days, months, or years.
+
+(overview-table-policies-actions)=
+#### Actions
+
+Following actions are supported:
+* **Delete:** Deletes eligible partitions along with their data.
+* **Set replicas:** Changes the replication factor of eligible partitions.
+* **Force merge:** Merges segments on eligible partitions to ensure a specified
+  number.
+
+After filling out the info, you can see the affected schemas/tables and
+the number of affected partitions if the policy gets executed at this very moment.
+
+(overview-table-policies-usage)=
+#### Examples
+
+Consider a scenario where you have a table and wish to optimize space on your
+cluster. For older data, which might already be snapshoted, it may be sufficient
+for it to exist just once in the cluster without replication. In such cases,
+high availability is not a priority, and you plan to retain the data for only
+60 days.
+
+Assume the following table schema:
+
+:::{code} sql
+CREATE TABLE data_table (
+   ts TIMESTAMP,
+   ts_day GENERATED ALWAYS AS date_trunc('day',ts),
+   val DOUBLE
+) PARTITIONED BY (ts_day);
+:::
+
+For the outlined scenario, the policies would be as follows:
+
+**Policy 1 - Saving replica space:**
+* **Time Column:** `ts_day`
+* **Condition:** `older than 30 days`
+* **Actions:** `Set replicas to 0.`
+
+**Policy 2 - Data removal:**
+* **Time Column:** `ts_day`
+* **Condition:** `older than 60 days`
+* **Actions:** `Delete eligible partition(s)`
 (overview-cluster-settings-scale)=
 ### Scale 
 
