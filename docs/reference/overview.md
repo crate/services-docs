@@ -775,6 +775,9 @@ time based. A partition is eligible for action if the value in the
 partitioned column is smaller (`<`), or smaller or equal (`<=`) than the current
 date minus `n` days, months, or years.
 
+(overview-table-policies-actions)=
+#### Actions
+
 Following actions are supported:
 * **Delete:** Deletes eligible partitions along with their data.
 * **Set replicas:** Changes the replication factor of eligible partitions.
@@ -783,6 +786,35 @@ Following actions are supported:
 
 After filling out the info, you can see the affected schemas/tables and
 the number of affected partitions if the policy gets executed at this very moment.
+
+(overview-table-policies-usage)=
+#### Usage
+
+Some examples of the Table Policy use cases are: 
+* Removal of data older than n days
+* Setting replicas to 0 to save replica space 
+
+Let's assume the following table schema:
+
+:::{code} sql
+CREATE TABLE data_table (
+   ts TIMESTAMP,
+   ts_day GENERATED ALWAYS AS date_trunc('day',ts),
+   val DOUBLE
+) PARTITIONED BY (ts_day);
+:::
+
+In this case, the configuration for the two use cases would be following:
+
+**Data removal:**
+* **Time Columnd:** `ts_day`
+* **Condition:** `< 60 days`
+* **Actions:** `Delete eligible partition(s)`
+
+**Saving replica space:**
+* **Time Columnd:** `ts_day`
+* **Condition:** `< 30 days`
+* **Actions:** `Set 0 replicas.`
 
 (overview-cluster-settings-scale)=
 ### Scale 
