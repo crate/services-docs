@@ -788,13 +788,15 @@ After filling out the info, you can see the affected schemas/tables and
 the number of affected partitions if the policy gets executed at this very moment.
 
 (overview-table-policies-usage)=
-#### Usage
+#### Examples
 
-Some examples of the Table Policy use cases are: 
-* Removal of data older than n days
-* Setting replicas to 0 to save replica space 
+Consider a scenario where you have a table and wish to optimize space on your
+cluster. For older data, which might already be snapshoted, it may be sufficient
+for it to exist just once in the cluster without replication. In such cases,
+high availability is not a priority, and you plan to retain the data for only
+60 days.
 
-Let's assume the following table schema:
+Assume the following table schema:
 
 :::{code} sql
 CREATE TABLE data_table (
@@ -804,18 +806,17 @@ CREATE TABLE data_table (
 ) PARTITIONED BY (ts_day);
 :::
 
-In this case, the configuration for the two use cases would be following:
+For the outlined scenario, the policies would be as follows:
 
-**Data removal:**
-* **Time Columnd:** `ts_day`
-* **Condition:** `< 60 days`
+**Policy 1 - Saving replica space:**
+* **Time Column:** `ts_day`
+* **Condition:** `older than 30 days`
+* **Actions:** `Set replicas to 0.`
+
+**Policy 2 - Data removal:**
+* **Time Column:** `ts_day`
+* **Condition:** `older than 60 days`
 * **Actions:** `Delete eligible partition(s)`
-
-**Saving replica space:**
-* **Time Columnd:** `ts_day`
-* **Condition:** `< 30 days`
-* **Actions:** `Set 0 replicas.`
-
 (overview-cluster-settings-scale)=
 ### Scale 
 
