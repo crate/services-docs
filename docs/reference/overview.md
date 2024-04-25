@@ -773,12 +773,12 @@ The "Time Column" must be of type `TIMESTAMP`.
 Next, a condition is used to determine affected partitions. The system is
 time based. A partition is eligible for action if the value in the 
 partitioned column is smaller (`<`), or smaller or equal (`<=`) than the current
-date minus N days, months, or years.
+date minus `n` days, months, or years.
 
 Following actions are supported:
-* Delete: Deletes eligible partitions along with their data.
-* Set replicas: Changes the replication factor of eligible partitions.
-* Force merge: Merges segments on eligible partitions to ensure a specified
+* **Delete:** Deletes eligible partitions along with their data.
+* **Set replicas:** Changes the replication factor of eligible partitions.
+* **Force merge:** Merges segments on eligible partitions to ensure a specified
   number.
 
 After filling out the info, you can see the affected schemas/tables and
