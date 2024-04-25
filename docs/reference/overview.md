@@ -40,6 +40,7 @@ more information on CrateDB Cloud-related terminology.
          - [Cluster Cloning](#overview-cluster-cloning)
          - [Failed cloning](#overview-cluster-cloning-fail)
      - [SQL Scheduler](#overview-sql-scheduler)
+     - [Table Policies](#overview-table-policies)
      - [Scale](#overview-cluster-settings-scale)
      - [Manage](#overview-cluster-manage)
 - [Community](#overview-community)
@@ -271,9 +272,7 @@ Here you can see a list of snippets for the available clients and
 libraries. These include: CLI, Python, Ruby, Java, JavaScript, PHP.
 
 (overview-cluster-query-console)=
-:::
 ### Query Console
-:::
 
 The Query Console enables direct interaction with your CrateDB Cloud cluster
 and running queries directly from within the Cloud UI. 
@@ -616,9 +615,7 @@ screen.
 ![Cloud Console cluster failed cloning](../_assets/img/cluster-clone-failed.png)
 
 (overview-sql-scheduler)=
-:::
-## SQL Scheduler
-:::
+### SQL Scheduler
 
 The SQL Scheduler is designed to automate routine database tasks by scheduling 
 SQL queries to run at specific times, in UTC time. This feature
@@ -628,7 +625,7 @@ and SQL statements, enabling a wide range of tasks. Users can manage these jobs
 through the Cloud UI, adding, removing, editing, activating, and deactivating
 them as needed.
 
-### Use Cases
+#### Use Cases
 
 - Deleting old/redundant data to maintain database efficiency.
 - Regularly updating or aggregating table data.
@@ -640,7 +637,7 @@ them as needed.
   (Contact support for activation.)
 :::
 
-### Accessing and Using the SQL Scheduler
+#### Accessing and Using the SQL Scheduler
 
 SQL Scheduler can be found in "SQL Scheduler" tab in the left-hand navigation
 menu. There are 2 tabs on the SQL Scheduler page:
@@ -667,7 +664,7 @@ specific job.
 ![SQL Scheduler overview](../_assets/img/cluster-sql-scheduler-logs.png)
 :::
 
-### Examples
+#### Examples
 
 ::::{tab} Cleanup of old files
 <br>
@@ -735,6 +732,53 @@ Limitations and Known Issues:
 * Long-running jobs may block the execution of queued jobs, leading to
   potential delays.
 :::
+
+(overview-table-policies)=
+### Table Policies
+
+Table policies allow to automate maintenance operations for 
+**partitioned tables**. Automated actions can be set up that are be 
+executed daily based on pre-configure ruleset.
+
+![Table policy list](../_assets/img/cluster-table-policy.png)
+:::
+
+Table policy overview can be found in the left-hand navigation menu under 
+"Table Policies". From the list of policies, you can create, delete, edit, 
+or (de)activate them. 
+
+Log of executed policies can be found in the "Logs" tab. 
+
+![Table policy list](../_assets/img/cluster-table-policy-logs.png)
+:::
+
+New policy can be created with "Add New Policy" button.
+
+![Table policy list](../_assets/img/cluster-table-policy-create.png)
+:::
+
+After you give the policy a name and choose the tables/schemas which should
+be affected, you need to choose the time column. The time column will be used 
+with the condition to select which data will be affected. This column should 
+be preset in all the tables/schemas that the policy is using.
+
+:::{note}
+The "Time Column" must be of type `TIMESTAMP`.
+:::
+
+Next, a condition is used to determine affected partitions. The system is
+time based. A partition is eligible for action if the value in the 
+partitioned column is smaller (`<`), or smaller or equal (`<=`) than the current
+date minus N days, months, or years.
+
+Following actions are supported:
+* Delete: Deletes eligible partitions along with their data.
+* Set replicas: Changes the replication factor of eligible partitions.
+* Force merge: Merges segments on eligible partitions to ensure a specified
+  number.
+
+After filling out the info, you can see the affected schemas/tables and
+the number of affected partitions at the next iteration of the action.
 
 (overview-cluster-settings-scale)=
 ### Scale 
