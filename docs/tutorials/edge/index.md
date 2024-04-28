@@ -29,7 +29,7 @@ met in order for it to work. This section of the documentation intends
 to serve as an end-to-end walkthrough of the corresponding process and
 prerequisites.
 
-(cloud-on-kubernetes-tutorials)
+(cloud-on-kubernetes-tutorials)=
 ## Tutorials
 
 In these tutorials, we first introduce the signup and configuration
