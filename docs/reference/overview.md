@@ -262,7 +262,7 @@ keep-alive heartbeat queries.
 
 For more information on the CrateDB concepts used here, refer to the
 [CrateDB architecture
-documentation](https://cratedb.com/docs/crate/howtos/en/latest/architecture/shared-nothing.html)
+documentation](https://cratedb.com/docs/crate/reference/en/latest/concepts/clustering.html)
 or the {ref}`glossary <glossary>`.
 
 (overview-connect-to-your-cluster)=
