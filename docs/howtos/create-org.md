@@ -42,6 +42,11 @@ name of your new organization and confirm by clicking *Create
 organization*. To delete an organization, click the trashcan icon next
 to the organization in the list.
 
+:::{note}
+By default, users can be part of a maximum of two organizations. If you need to
+join more organizations, please contact [Crate.io support](https://cratedb.com/contact).
+:::
+
 To switch the active organization, click on the organization name in the
 list. All organization and cluster management options displayed in the
 CrateDB Cloud Console will then refer to that organization until you
