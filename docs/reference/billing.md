@@ -1,106 +1,128 @@
 (reference-billing)=
 # Billing
 
-This page documents the way billing and related subjects are handled by
-CrateDB Cloud. Since - depending on your chosen offer - billing and
-payment forms may appear in different places across the CrateDB Cloud
-interface, this guide should function as a single reference document for
-finding the information you need about billing, invoicing, and payments.
+CrateDB Cloud offers flexible billing options to accommodate various needs and
+preferences. We only bill for actual usage of services, meaning there are no
+flat fees or minimum payments.
 
-Your current accumulated bill can be always found under the billing tab
-in Organization section:
+## Billing Information & Payment Methods
 
-![Cloud Console billing meter](../_assets/img/billing-meter.png)
+In the Billing tab under the Organization overview, you can add and edit your
+billing information, including your company address, country of residence, VAT
+info, invoice email, phone contacts, and more. You need to fill out this
+information whenever you use a paid offer on CrateDB Cloud, regardless of the
+payment method.
 
-(billing-principles)=
-## Billing principles
+After adding your billing information, you can add a payment method. CrateDB 
+Cloud supports the following payment methods:
 
-CrateDB Cloud has three general principles for billing. Firstly, we only
-ever bill actual usage of any of the provided services. This means there
-are no flat fees or minimum payments.
+- **Cloud Marketplaces**: Available on [AWS](https://aws.amazon.com/marketplace/pp/prodview-l7rqf2xpeaubk),
+  [Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud), 
+  and [GCP](https://console.cloud.google.com/marketplace/product/cratedb-public/cratedb-gcp) Marketplaces.
+- **Credit Card**: Available worldwide. We use Stripe as our payment provider.
+- **Bank Transfer**: Available in some markets (US and EU). [Contact](https://cratedb.com/contact) our sales team.
+- **Custom Contract**: For large deployments, [contact](https://cratedb.com/contact) our sales team.
 
-Secondly, we only bill for a given period. This means any usage costs
-are rounded up to the nearest hour of use for Marketplace customers and
-to the nearest minute of use for customers directly deploying via the
-CrateDB Cloud Console.
+:::{tip}
+**Marketplace Committed Spend**
 
-Thirdly, Billing is done in $0.001 increments for the compute + storage
-usage.
-
-(billing-info)=
-## Billing information & Payment methods 
-
-Your billing information consists of your (company) address, credit card
-details, country of residence, VAT info, and so forth. This information
-can be filled out whenever you make use of an offer on CrateDB Cloud
-that is not free (when you only use a free offer, the billing info page
-will not be visible to you). There are several ways you can provide the
-necessary billing information:
-
--   You can add a new payment method even without deploying a new
-    cluster. Simply navigate to the payment methods tab in the
-    Organization section. You can then use this payment method when
-    deploying a cluster later.
--   As part of deploying a cluster for a new organization. If you deploy
-    a cluster that is not free, you will be prompted for your billing
-    information as part of the configuration wizard.
--   By using the Billing tab in the Organization overview of the CrateDB
-    Cloud Console. If you have a promoted cluster deployed and the free
-    period expires, you can find the Billing tab by going to the
-    Organization overview and clicking the fifth tab from the left. Here
-    you can enter your billing details and your billing method (credit
-    card). See the {ref}`CrateDB Console
-    walkthrough <overview-org-billing>` for more information.
-
-Address information, along with the payment methods can be edited in the
-payment methods tab, in Organization section:
-
-![Cloud Console payment methods](../_assets/img/payment-methods2.png)
-
-(billing-invoicing)=
-## Invoicing 
-
-Invoicing is handled variously depending on which deployment method you
-use. If you deploy your cluster directly via the CrateDB Cloud Console,
-you will be invoiced at the email address you provided when
-{ref}`signing up with CrateDB Cloud. <quick-start>`
-
-If you use one of the marketplace offers, the invoicing is handled by
-the marketplace provider in question and will be part of your general
-invoicing for services via that marketplace.
-
-Currently, for direct deployments, VAT charges for EU customers are
-handled by CrateDB and are added to the invoices described above. For
-deployments via the marketplaces, any VAT charges due are handled by the
-respective marketplace owners (Microsoft Azure and AWS).
-
-(billing-custom-contract)=
-## Custom contract 
-
-Crate also offers a special type of payment method suited for large
-customers that don't want to use a credit card or marketplace
-subscriptions (AWS/Azure). With this type of subscription, a contract is
-created directly with Crate.
-
-![Custom contract payment option](../_assets/img/custom-contract.png)
-
-:::{note}
-This type of payment method does not show up in your Cloud console
-automatically as it needs to be configured specifically for every
-customer.
-
-If you're interested in this option, don't hesitate and contact us at
-**sales@crate.io**
+All three marketplace offerings (AWS, Azure, GCP) can be applied towards
+any committed spend agreement (e.g., MACC) you have with the cloud provider.
+This effectively reduces your committed spend balance and allows you to use
+CrateDB as if it were a native service provided by the cloud provider.
 :::
 
-## Payment processing {#billing-processing}
+### Setup Payment Method
 
-For clusters deployed in the {ref}`regular way
-<cluster-deployment-stripe>`, using the
-CrateDB Console cluster deployment route, payment processing is handled
-by [Stripe](https://stripe.com/). For clusters deployed through the
-[Microsoft Azure
-Marketplace](https://portal.azure.com/#create/crate.cratedbcloud/preview)
-and the [AWS
-Marketplace](https://aws.amazon.com/marketplace/pp/B089M4B1ND), payment
-is handled by Stripe on behalf of the respective marketplaces.
+:::{tab} Cloud Marketplaces
+<br>
+
+1. Register for an account on the [CrateDB Cloud sign-in page](https://console.cratedb.cloud/).
+2. Click on the **"Billing"** tab on the right side.
+3. Add your billing information.
+4. Click on **"Add Payment Method"**.
+5. Select your preferred cloud marketplace.
+6. Follow the instructions to sign up for **CrateDB Cloud** through the selected marketplace.
+7. After completing the subscription in the marketplace, you will be redirected to CrateDB Cloud.
+8. Connect one of your organizations to the created marketplace SaaS subscription.
+
+**You are now ready to deploy a cluster.**
+:::
+
+:::{tab} Credit Card
+<br>
+
+1. Register for an account on the [CrateDB Cloud sign-in page](https://console.cratedb.cloud/).
+2. Click on the **"Billing"** tab on the right side.
+3. Add your billing information.
+4. Click on **"Add Payment Method"**.
+5. Click on **"Add Credit Card"**.
+6. Fill out the required information and click **"Save"**.
+
+**You are now ready to deploy a cluster.**
+
+The payment cycle is monthly from the date you add your credit card. You will be
+charged for the previous period's usage and will get an invoice sent to the 
+previously provided email address. You can add another credit card if you need
+to replace the current one.
+:::
+
+:::{tab} Bank Transfer
+<br>
+
+1. Register for an account on the [CrateDB Cloud sign-in page](https://console.cratedb.cloud/).
+2. Click on the **"Billing"** tab on the right side.
+3. Add your billing information.
+4. [Contact](https://cratedb.com/contact) our sales team to request the bank transfer payment method.
+
+After your request has been approved:
+
+1. Click on **"Add Payment Method"**.
+2. Click on **"Pay via Bank Transfer"**.
+
+**You are now ready to deploy a cluster.**
+
+The payment cycle is monthly and aligns with the calendar month. You will be charged
+for the previous period's usage, and an invoice will be sent to the email address
+you provided. Payment is due within the specified terms.
+:::
+
+:::{tab} Custom Contract
+<br>
+
+1. Custom contracts are individually tailored to your needs. Please 
+[contact](https://cratedb.com/contact) our sales team to set up a custom contract
+that fits your requirements.
+:::
+
+
+## Usage Reporting
+
+Whenever you use a paid offer in CrateDB Cloud, we collect your usage
+information, including the cluster compute and storage size and the number of
+nodes deployed. You can view this usage in the CrateDB Cloud Console, where
+you'll find a usage snapshot for the current calendar month, the current cost
+for the deployed service, and any available credits that might be applied to
+the current usage period. Be aware that the billing period might deviate from
+the shown calendar month usage.
+
+
+## Credits
+
+Credits are another way to pay for CrateDB Cloud services and can be used together
+with other payment methods. Credits are applied to your account and are used up
+first before any other payment method is charged. This means that if credits are
+available, you will not be charged, nor will any usage be reported to your
+payment provider. You can see the remaining credits and their validity date on
+the Billing and Usage page.
+
+There is also the option to purchase more credits at a discount by
+[contacting](https://cratedb.com/contact) our sales team. 
+
+:::{tip}
+**Free Trial Credits**
+
+If you just signed up, you have the option to enable $200 of credits that can be
+used for any paid cluster. To enable these credits, you need to provide a valid
+payment method, which will only be charged if you have used up your credits.
+:::

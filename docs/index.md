@@ -154,6 +154,7 @@ for improvements], and [source code contributions], are always welcome. {fab}`gi
 
 Quick Start <tutorials/quick-start>
 Services <reference/services>
+Billing <reference/billing>
 Manage <howtos/index>
 Web Console <reference/overview>
 Croud CLI <tutorials/deploy/croud>
