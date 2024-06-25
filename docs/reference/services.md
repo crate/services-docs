@@ -98,8 +98,8 @@ and functional for everyone.
 __*CRFREE__: This plan is aimed at new users who want to test and evaluate
 CrateDB Cloud and is perpetually free to use. Every user can deploy one free
 tier cluster in their organization without adding a payment method. Free tier
-clusters will be suspended if they are not used for 7 days, and deleted after
-7 more days of inactivity. They cannot be scaled or changed.
+clusters will be suspended if they are not used for 4 days, and deleted after
+10 more days of inactivity. They cannot be scaled or changed.
 :::
 
 ##  Dedicated

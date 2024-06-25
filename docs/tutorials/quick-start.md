@@ -69,8 +69,8 @@ with the next step.
 :::{note}
 - The **"FREE"** cluster can be started without providing payment details.
   You can use one free cluster per organization.
-- The cluster will be suspended if not used for 7 consecutive days, and will be deleted
-  after an additional 7 days of inactivity.
+- The cluster will be suspended if not used for 4 consecutive days, and will be deleted
+  after an additional 10 days of inactivity.
 :::
 
 ## Connect
