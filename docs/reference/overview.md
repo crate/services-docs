@@ -59,7 +59,7 @@ Here is a list of all currently available regions for CrateDB Cloud:
 
 :::{table}
 :width: 700px
-:widths: 200, 200, 100, 100
+:widths: 300, 300
 :align: left
 | Region | Url |
 |  ----  | ----|
