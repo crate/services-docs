@@ -72,7 +72,7 @@ testing, or non-critical production environments.
 **Node sizes**
 :::{table}
 :width: 700px
-:widths: 200, 200, 100, 100
+:widths: 100, 100, 150, 150, 200
 :align: left
 | Plan | Size   | vCPUs     | RAM      |  Storage  |
 |----|--------|-----------|----------| ---- |
@@ -111,7 +111,7 @@ high-availability and high-throughput environments.
 **Node sizes**
 :::{table}
 :width: 700px
-:widths: 200, 200, 100, 100
+:widths: 200, 100, 100, 100, 200
 :align: left
 | Plan | Size   | vCPUs     | RAM      |  Storage  |
 |----|--------|-----------|----------| ---- |
@@ -128,7 +128,7 @@ nodes, the overall cluster size can be scaled up to the following limits:
 **Cluster sizes**
 :::{table}
 :width: 700px
-:widths: 200, 200, 100, 100
+:widths: 200, 100, 100, 150, 150
 :align: left
 | Plan | Size   | vCPUs     | RAM      |  Storage  |
 |----|--------|-----------|----------| ---- |
