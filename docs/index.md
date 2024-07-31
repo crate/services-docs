@@ -69,6 +69,22 @@ Learn how to sign up and get started with a free cluster.
 :::
 
 
+:::{grid-item-card} {octicon}`file-code` Import
+:link: cluster-import
+:link-type: ref
+
+Import your own data into your CrateDB Cloud cluster.
+:::
+
+
+:::{grid-item-card} {octicon}`table` Console
+:link: cluster-console
+:link-type: ref
+
+Explore your data and execute SQL queries in the Console.
+:::
+
+
 :::{grid-item-card} {octicon}`tools` Manage
 :link: cloud-howtos-index
 :link-type: ref
@@ -77,28 +93,11 @@ Learn how to manage your cluster.
 :::
 
 
-:::{grid-item-card} {octicon}`table` Web Console
-:link: console-overview
-:link-type: ref
-
-The web-based management console for all your managed and on-premise
-clusters.
-:::
-
-
 :::{grid-item-card} {octicon}`terminal` Croud CLI
 :link: cluster-deployment-croud
 :link-type: ref
 
-A command-line based terminal program to operate your managed clusters.
-:::
-
-
-:::{grid-item-card} {octicon}`container` CrateDB Cloud on Kubernetes
-:link: cloud-on-kubernetes
-:link-type: ref
-
-Run your own CrateDB Cloud region using Kubernetes.
+A command-line tool to operate your managed clusters.
 :::
 
 
@@ -132,13 +131,6 @@ Learn about compatible client applications and tools, and how to configure
 your favorite client library to connect to a CrateDB cluster.
 :::
 
-:::{grid-item-card} {octicon}`file-code` Import data
-:link: https://community.crate.io/t/importing-data-to-cratedb-cloud-clusters/1467
-:link-type: url
-
-Learn how to import data into your CrateDB Cloud clusters.
-:::
-
 ::::
 
 
@@ -154,9 +146,15 @@ for improvements], and [source code contributions], are always welcome. {fab}`gi
 
 Quick Start <tutorials/quick-start>
 Services <reference/services>
-Billing <reference/billing>
-Manage <howtos/index>
-Web Console <reference/overview>
+Import <cluster/import>
+Console <cluster/console>
+Automation <cluster/automation>
+Export <cluster/export>
+Backups <cluster/backups>
+Manage Cluster <cluster/manage>
+Billing <organization/billing>
+API <organization/api>
+How Tos <howtos/index>
 Croud CLI <tutorials/deploy/croud>
 tutorials/edge/index
 Reference <reference/index>
