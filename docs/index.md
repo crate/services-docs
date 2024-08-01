@@ -94,6 +94,12 @@ A command-line based terminal program to operate your managed clusters.
 :::
 
 
+:::{grid-item-card} {octicon}`mortar-board` Tutorials
+:link: usage
+:link-type: ref
+Learn how to use key features of CrateDB SQL.
+:::
+
 :::{grid-item-card} {octicon}`container` CrateDB Cloud on Kubernetes
 :link: cloud-on-kubernetes
 :link-type: ref
@@ -153,6 +159,7 @@ for improvements], and [source code contributions], are always welcome. {fab}`gi
 :hidden:
 
 Quick Start <tutorials/quick-start>
+Usage <tutorials/usage>
 Services <reference/services>
 Billing <reference/billing>
 Manage <howtos/index>
