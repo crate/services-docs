@@ -13,7 +13,6 @@ NoSQL with the power and simplicity of standard SQL.
 :maxdepth: 1
 
 User Roles <user-roles>
-API <api>
 Glossary <glossary>
 :::
 

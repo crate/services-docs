@@ -1,4 +1,4 @@
-(reference-billing)=
+(organization-billing)=
 # Billing
 
 CrateDB Cloud offers flexible billing options to accommodate various needs and
@@ -112,6 +112,10 @@ Custom contracts are individually tailored to your needs. Please
 that fits your requirements.
 ::::
 
+
+:::{note}
+To remove a subscription, please contact support.
+:::
 
 ## Usage Reporting
 

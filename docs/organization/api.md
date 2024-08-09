@@ -1,7 +1,7 @@
-(api)=
+(organization-api)=
 # API
 
-Similar to Croud, we offer an API to allow programmatic access to the
+We offer an API to allow programmatic access to the
 Cloud products. The API can be accessed by generating a key and secret
 in your account page:
 
