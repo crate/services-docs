@@ -91,9 +91,6 @@ Cloud also supports a CLI for interacting with the service, we assume
 use of the Console by default. Only the Console allows deployment of a
 {ref}`cluster <gloss-cluster>`.
 
-For information on how to use specific elements of the Console, refer to
-the {ref}`Console overview <console-overview>`.
-
 (gloss-consumer)=
 ## Consumer 
 
@@ -301,10 +298,6 @@ In CrateDB Cloud, there are two distinct system
     {ref}`explanation <system-user>` in the
     CrateDB Cloud reference.
 
-:::{note}
-See also {ref}`Audit Log <overview-org-audit>`
-:::
-
 (gloss-tier)=
 ## Tier
 
@@ -352,9 +345,7 @@ the versioning sequence, e.g. the 3 in 'version 5.3.4'.
 A patch version of CrateDB is a release that includes bug fixes and
 smaller quality of life improvements compared to the previous such
 version. It is indicated by the third numeral in the versioning
-sequence, e.g. the 4 in 'version 5.3.4'. All available upgrades are
-visible in the {ref}`Manage Tab <overview-cluster-manage>` of the
-cluster detailed view.
+sequence, e.g. the 4 in 'version 5.3.4'. 
 
 :::{note}
 See also: {ref}`CrateDB Release Notes <crate-reference:release_notes>`

@@ -7,12 +7,6 @@ through Microsoft Azure, the other is for a cluster created through AWS.
 For Azure, there are in turn two methods: via the CrateDB Cloud Console
 and through the Azure Portal. Each are outlined in the Azure section.
 
-Although the {ref}`general documentation <console-overview>`
-for the CrateDB Cloud Console explains how you can delete a cluster
-specifically within the Console, this tutorial provides a step-by-step
-guide for *all* methods of deleting a CrateDB Cloud cluster. This is to
-make the process more transparent and easier to find and use.
-
 :::{Warning}
 All cluster data will be lost on deletion. This action cannot be undone.
 :::

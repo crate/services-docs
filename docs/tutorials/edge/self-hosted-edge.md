@@ -119,8 +119,7 @@ before the full install.
 
 The `<token>` in question is the token you receive from the CrateDB
 Console Cloud on Kubernetes region field in the Regions tab of the Organization
-Overview. For more information on this section of the CrateDB Console,
-refer to the {ref}`CrateDB Cloud Console overview <overview-org-regions>`.
+Overview.
 
 With this, you should be ready to use CrateDB Cloud on 
 Kubernetes via Microk8s.
@@ -236,8 +235,7 @@ before the full install.
 
 The `<token>` in question is the token you receive from the CrateDB
 Console Cloud on Kubernetes region field in the Regions tab of the Organization
-Overview. For more information on this section of the CrateDB Console,
-refer to the {ref}`CrateDB Cloud Console overview <overview-org-regions>`.
+Overview.
 
 With this, you should be ready to use CrateDB Cloud on Kubernetes via K3S.
 

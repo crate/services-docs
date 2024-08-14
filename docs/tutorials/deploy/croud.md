@@ -80,16 +80,16 @@ sh$ croud organizations create --name samplecroudorganization
 This will create an organization called "samplecroudorganization".
 
 (croud-create-project)
-## Create project
+## Create subscription
 
-The next step is to create a project in your organization. To create a
-new project execute this command:
+The next step is to create a subscription in your organization. To create a
+new subscription execute this command:
 
 :::{code} console
-sh$ croud projects create --name sampleproject
+sh$ croud subscriptions create --type contract --org-id <org-id>
 :::
 
-This will create a new project named [sampleproject]{.title-ref}.
+This will create a new subscription.
 
 (croud-deploy-cluster)
 ## Deploy cluster
@@ -104,9 +104,6 @@ When deploying a cluster, these are the required arguments:
 
 :   The product tier to use.
 
-`-p, --project-id`
-
-:   The project ID to use.
 
 `--cluster-name`
 
@@ -128,6 +125,11 @@ When deploying a cluster, these are the required arguments:
 
 :   The CrateDB subscription to use.
 
+`--region`
+
+:   The region the cluster will be created in.
+
+
 (croud-deploy-example)=
 ### Example
 
@@ -136,8 +138,8 @@ sh$ croud clusters deploy /
   --product-name cr1 /
   --tier default /
   --cluster-name my-crate-cluster /
-  --project-id 952cd102-91c1-4837-962a-12ecb71a6ba8 /
-  --version 4.8.1 /
+  --region aks1.eastus2  /
+  --version 5.8.1 /
   --username admin /
   --password "as6da9ddasfaad7i902jcv780dmcba" /
   --subscription-id 782dfc00-7b25-4f48-8381-b1b096dd1619
@@ -146,7 +148,7 @@ sh$ croud clusters deploy /
 +--------------------------------------+------------------------+----------+--------------+--------------------------------------+-------------+--------------------------------------------------+
 | id                                   | name                   | numNodes | crateVersion | projectId                            | username    | fqdn                                             |
 |--------------------------------------+------------------------+----------+--------------+--------------------------------------+-------------+--------------------------------------------------|
-| 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 | my-crate-cluster |        1 | 4.8.1        | 952cd102-91c1-4837-962a-12ecb71a6ba8 | admin       | my-crate-cluster.eastus.azure.cratedb.net. |
+| 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 | my-crate-cluster |        1 | 5.8.1       | 952cd102-91c1-4837-962a-12ecb71a6ba8 | admin       | my-crate-cluster.eastus2.azure.cratedb.net. |
 +--------------------------------------+------------------------+----------+--------------+--------------------------------------+-------------+--------------------------------------------------+
 ==> Info: Cluster creation initiated. It may take a few minutes to complete.
 ==> Info: Status: REGISTERED (Your creation request was received and is pending processing.)
@@ -155,7 +157,7 @@ sh$ croud clusters deploy /
 +--------------------------------------+------------------------+----------+--------------+--------------------------------------+-------------+--------------------------------------------------+
 | id                                   | name                   | numNodes | crateVersion | projectId                            | username    | fqdn                                             |
 |--------------------------------------+------------------------+----------+--------------+--------------------------------------+-------------+--------------------------------------------------|
-| 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 | my-crate-cluster |        1 | 4.8.1        | 952cd102-91c1-4837-962a-12ecb71a6ba8 | admin       | my-crate-cluster.eastus.azure.cratedb.net. |
+| 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 | my-crate-cluster |        1 | 5.8.1       | 952cd102-91c1-4837-962a-12ecb71a6ba8 | admin       | my-crate-cluster.eastus.azure.cratedb.net. |
 +--------------------------------------+------------------------+----------+--------------+--------------------------------------+-------------+--------------------------------------------------+
 :::
 
@@ -166,8 +168,7 @@ sh$ croud clusters deploy /
 The minimum length of a password is 24 characters.
 
 * To see all the available products issue: `croud products list`.
-* To find out your *project-id* issue:
-  `croud projects list`.
+* To see all regions available issue: `croud regions list`.
 * To find out your *subscription-id* issue:
   `croud subscriptions list`.
 :::
@@ -192,8 +193,8 @@ channels, you must use the `--channel` parameter.
 sh$ croud clusters deploy --product-name cr1 /
   --tier default /
   --cluster-name my-crate-cluster /
-  --project-id 3ac44505-1d6e-419c-ad23-5d0d572915ba /
-  --version 5.2.0 /
+  --region aks1.eastus.azure
+  --version 5.8.1 /
   --username admin /
   --password "as6da9ddasfaad7i902jcv780dmcba" /
   --subscription-id 3a35974f-5319-47fb-9a1f-ab85dca75c86 /
@@ -210,8 +211,8 @@ sh$ croud clusters deploy /
   --product-name cr1 /
   --tier default /
   --cluster-name my-crate-cluster /
-  --project-id f76d96aa-f1a7-46aa-a89b-8cdd2b3cef15 /
-  --version 4.8.0 /
+  --region aks1.eastus.azure
+  --version 5.8.1 /
   --username admin /
   --password "as6da9ddasfaad7i902jcv780dmcba" /
   --subscription-id 3a35974f-5319-47fb-9a1f-ab85dca75c86
@@ -248,7 +249,6 @@ Example:
 
 :::{code} console
 sh$ croud clusters scale \
-  --project-id 952cd102-91c1-4837-962a-12ecb71a6ba8 \
   --cluster-id 8d6a7c3c-61d5-11e9-a639-34e12d2331a1 \
   --unit 1
 
