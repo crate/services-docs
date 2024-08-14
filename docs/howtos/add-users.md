@@ -2,9 +2,7 @@
 # Add Users
 
 This is a quick guide on how to add users to organizations and how to manage
-their privileges. This information can also be found in the CrateDB Cloud  
-Console {ref}`Overview <console-overview>`, but is presented here separately 
-for ease of use.
+their privileges. 
 
 In CrateDB Cloud, you can add team members to your organizations. In order to 
 add a user, they must first have signed up for CrateDB Cloud. Once they have 
