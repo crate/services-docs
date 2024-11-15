@@ -144,6 +144,7 @@ for improvements], and [source code contributions], are always welcome. {fab}`gi
 :maxdepth: 1
 :hidden:
 
+All Features <feature/index>
 Quick Start <tutorials/quick-start>
 Services <reference/services>
 Import <cluster/import>
