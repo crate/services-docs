@@ -76,6 +76,95 @@ authentication mechanisms, and its operational certifications.
 :::::
 
 
+
+:::{rubric} Learn
+:::
+If you want to start using CrateDB Cloud, or make the most of your
+existing subscription, we are maintaining resources and tutorials
+to support you correspondingly.
+
+
+:::::{grid} 2
+:margin: 3
+:gutter: 2
+
+::::{grid-item}
+
+:::{card} {octicon}`tools` Manage
+:link: cloud-howtos-index
+:link-type: ref
+Learn how to manage your cluster.
+:::
+
+:::{card} {octicon}`codespaces` API
+:link: api
+:link-type: ref
+Programmatic access to CrateDB Cloud services.
+:::
+
+:::{card} {octicon}`terminal` API CLI
+:link: cluster-deployment-croud
+:link-type: ref
+CrateDB Cloud services from the command-line.
+:::
+
+::::
+
+::::{grid-item}
+
+:::{card} {octicon}`table` SQL Console
+:link: cluster-console
+:link-type: ref
+Explore data and execute SQL queries.
+:::
+
+:::{card} {octicon}`file-code` Import
+:link: cluster-import
+:link-type: ref
+Import data into your CrateDB Cloud cluster.
+:::
+
+:::{card} {octicon}`file-code` Export
+:link: cluster-export
+:link-type: ref
+Export data from your CrateDB Cloud cluster.
+:::
+
+::::
+
+:::::
+
+
+Learn about key database drivers and client applications for CrateDB,
+such as CrateDB Admin UI, crash, psql, DataGrip, and DBeaver.
+Discover how to configure these tools and explore CrateDB's compatibility
+with analytics, ETL, BI, and monitoring solutions.
+
+
+::::{grid} 1 2 2 3
+:margin: 4 4 0 0
+:gutter: 2
+
+
+:::{grid-item-card} {material-outlined}`table_chart` Admin UI
+:link: crate-admin-ui:index
+:link-type: ref
+
+Each CrateDB Cloud cluster offers a dedicated Admin UI, which can be used to explore
+data, schema metadata, and cluster status information.
+:::
+
+:::{grid-item-card} {material-outlined}`link` Clients, Tools, and Integrations
+:link: crate-clients-tools:index
+:link-type: ref
+
+Learn about compatible client applications and tools, and how to configure
+your favorite client library to connect to a CrateDB cluster.
+:::
+
+::::
+
+
 [Auditing]: https://cratedb.com/product/features/auditing
 [AWS Marketplace]: https://aws.amazon.com/marketplace/pp/prodview-l7rqf2xpeaubk
 [Azure Marketplace]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=overview
