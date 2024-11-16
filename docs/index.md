@@ -3,7 +3,7 @@
 
 # CrateDB Cloud
 
-CrateDB Cloud is a fully managed, terabyte-scale, and cost-effective
+[CrateDB Cloud] is a fully managed, terabyte-scale, and cost-effective
 analytics database that lets you run analytics over vast amounts of
 data in near real time, even with complex queries.
 
@@ -18,7 +18,7 @@ that works across clouds and scales with your data.
 :class: rubric-slimmer
 :columns: 6
 
-:::{rubric} Database Features
+:::{rubric} Database Service Features
 :::
 CrateDB Cloud helps you manage and analyze your data with procedures
 like machine learning, geospatial analysis, and business intelligence.
@@ -48,96 +48,129 @@ flexible pricing models across on-demand and flat-rate options.
 :::::
 
 
-:::{rubric} Learn
+::::{grid}
+
+:::{grid-item}
+:columns: 7
+![image](https://cratedb.com/hs-fs/hubfs/cloud-edge-config.png?width=480)
 :::
-Users around the world rely on CrateDB Cloud clusters to store billions of records
-and terabytes of data, all accessible without delays. If you want to start using
-CrateDB Cloud, or make the most of your existing subscription, we are maintaining
-resources and tutorials to support you correspondingly.
+:::{grid-item}
+:columns: 5
+![image](https://cratedb.com/hs-fs/hubfs/CrateDB-Security-Certifications-Logos.png?width=320)
+![image](https://cratedb.com/hs-fs/hubfs/CrateDB-Cloud-Integrations.png?width=320)
+:::
+
+::::
 
 
-::::{grid} 1 2 2 3
+::::{grid} 1 2 2 2
 :margin: 4 4 0 0
-:gutter: 1
+:padding: 0
+:gutter: 2
 
 
-:::{grid-item-card} {octicon}`rocket` Quick Start
+:::{grid-item-card} {material-outlined}`description;2em` All Features
+:link: all-features
+:link-type: ref
+:link-alt: All features of CrateDB Cloud
+:class-footer: text-smaller
+
+- Functional: SQL Database, SQL Console, Automation, Import, Export, API
+- Operational: Management Console, Automatic Backups, Marketplaces AWS, Azure, GCP,
+  Support Plans
+- Security: Encryption, RBAC, Auditing, Certifications
++++
+**What's inside:**
+All features of CrateDB Cloud on one page.
+:::
+
+
+:::{grid-item-card} {material-outlined}`rocket;2em` Quick Start
 :link: quick-start
 :link-type: ref
+:link-alt: Sign up and get started with CrateDB Cloud
+:class-footer: text-smaller
 
-Learn how to sign up and get started with a free cluster.
-:::
-
-
-:::{grid-item-card} {octicon}`file-code` Import
-:link: cluster-import
-:link-type: ref
-
-Import your own data into your CrateDB Cloud cluster.
-:::
-
-
-:::{grid-item-card} {octicon}`table` Console
-:link: cluster-console
-:link-type: ref
-
-Explore your data and execute SQL queries in the Console.
-:::
-
-
-:::{grid-item-card} {octicon}`tools` Manage
-:link: cloud-howtos-index
-:link-type: ref
-
-Learn how to manage your cluster.
-:::
-
-
-:::{grid-item-card} {octicon}`terminal` Croud CLI
-:link: cluster-deployment-croud
-:link-type: ref
-
-A command-line tool to operate your managed clusters.
-:::
-
-
-::::
-
-
-Do you want to learn about key database drivers and client applications for 
-CrateDB, such as CrateDB Admin UI, crash, psql, DataGrip, and DBeaver? Discover
-how to configure these tools and explore CrateDB's compatibility with analytics,
-ETL, BI, and monitoring solutions.
-
-
-::::{grid} 1 2 2 3
-:margin: 4 4 0 0
-:gutter: 1
-
-
-:::{grid-item-card} {material-outlined}`table_chart` Admin UI
-:link: crate-admin-ui:index
-:link-type: ref
-
-Each CrateDB Cloud cluster offers a dedicated Admin UI, which can be used to explore
-data, schema metadata, and cluster status information.
-:::
-
-:::{grid-item-card} {material-outlined}`link` Clients, Tools, and Integrations
-:link: crate-clients-tools:index
-:link-type: ref
-
-Learn about compatible client applications and tools, and how to configure
-your favorite client library to connect to a CrateDB cluster.
+Users around the world rely on CrateDB Cloud clusters to store billions of records
+and terabytes of data, all accessible without delays.
+<br><br>
+```{button-link} https://example.com
+:color: primary
+:expand:
+**Start using CrateDB Cloud now**
+```
++++
+**What's inside:**
+Learn how to sign up and get started.
 :::
 
 ::::
 
 
-:::{note}
-Like [CrateDB itself], this is an open source documentation project. [Suggestions
-for improvements], and [source code contributions], are always welcome. {fab}`github`
+
+:::{rubric} Resource Access
 :::
+
+::::::{grid} 2
+
+:::{grid-item-card} CrateDB Cloud Console
+:link: https://console.cratedb.cloud/
+:link-type: url
+:margin: 0
+:padding: 0
+
+![image](/_assets/img/cluster-manage.png)
+
+Access the management console of CrateDB Cloud.
++++
+```{image} https://console.cratedb.cloud/static/media/login_logo.29bc89cf03a01ccf3ed2aa57b8a4e1c1.svg
+:class: bg-primary
+:height: 20px
+:align: center
+```
+:::
+
+:::::{grid-item}
+
+::::{grid} 1
+:gutter: 3
+
+:::{grid-item-card}
+:link: https://aws.amazon.com/marketplace/pp/prodview-l7rqf2xpeaubk
+:link-type: url
+```{image} /_assets/logo/aws-marketplace.png
+:class: bg-primary
+:height: 60px
+:align: center
+```
+CrateDB Cloud on AWS Marketplace.
+:::
+
+:::{grid-item-card}
+:link: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud
+:link-type: url
+```{image} /_assets/logo/microsoft.png
+:height: 60px
+:align: center
+```
+CrateDB Cloud on Azure Marketplace.
+:::
+
+
+:::{grid-item-card}
+:link: https://console.cloud.google.com/marketplace/product/cratedb-public/cratedb-gcp
+:link-type: url
+```{image} /_assets/logo/google-cloud.png
+:height: 60px
+:align: center
+```
+CrateDB Cloud on Google Cloud Marketplace.
+:::
+
+::::
+
+:::::
+::::::
 
 
 :::{toctree}
@@ -147,24 +180,23 @@ for improvements], and [source code contributions], are always welcome. {fab}`gi
 All Features <feature/index>
 Quick Start <tutorials/quick-start>
 Services <reference/services>
-Import <cluster/import>
 Console <cluster/console>
 Automation <cluster/automation>
+Import <cluster/import>
 Export <cluster/export>
 Backups <cluster/backups>
 Manage Cluster <cluster/manage>
 Billing <organization/billing>
 API <organization/api>
+API CLI <tutorials/deploy/croud>
 How Tos <howtos/index>
-Croud CLI <tutorials/deploy/croud>
 tutorials/edge/index
 Reference <reference/index>
 :::
 
+
 [CrateDB]: https://crate.io/product/
+[CrateDB Cloud]: https://cratedb.com/product/cloud
 [Croud CLI]: https://crate.io/docs/cloud/cli/
 [How-To Guides]: https://crate.io/docs/cloud/en/latest/howtos/
 [Reference]: https://crate.io/docs/cloud/en/latest/reference/
-[CrateDB itself]: https://github.com/crate/crate
-[source code contributions]: https://github.com/crate/cloud-docs/tree/main/docs
-[suggestions for improvements]: https://github.com/crate/cloud-docs/issues
