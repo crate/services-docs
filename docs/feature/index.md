@@ -41,9 +41,6 @@ Management Console <../cluster/manage>
 Automatic Backups <../cluster/backups>
 :::
 - Monitoring
-- Marketplace Coverage
-
-  [AWS][AWS Marketplace], [Azure][Azure Marketplace], [GCP][GCP Marketplace]
 - [Support Plans]
 
 
@@ -56,18 +53,13 @@ CrateDB Cloud provides confident scaling of your workloads,
 and deployments on your preferred infrastructure provider.
 ::::
 
-::::{grid-item-card} {material-outlined}`security;2em` Security
+::::{grid-item-card} {material-outlined}`security;2em` Confidence
 :class-footer: text-smaller
 
-CrateDB Cloud is [secure, certified, and compliant].
-- [Encryption]
-- [RBAC]
-- [Auditing]
-- [ISO 27001]
-- [SOC 2 Type 2]
-- [HIPAA]
-- [GDPR]
-- [CCPA]
+- [Secure, certified, and compliant]
+- Marketplace Coverage:
+
+  [AWS][AWS Marketplace], [Azure][Azure Marketplace], [GCP][GCP Marketplace]
 +++
 CrateDB Cloud ensures secure data management with its encryption and
 authentication mechanisms, and its operational certifications.
