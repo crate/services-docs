@@ -22,7 +22,7 @@ the CrateDB Cloud Console.
 
 Create Organization <create-org>
 Add users to organization <add-users>
-Reconfigure Cluster <reconfigure-cluster>
+Scale Cluster <reconfigure-cluster>
 Suspend Cluster <suspend-cluster>
 Delete Cluster <delete-cluster>
 Restore Backups <restore-backups>
@@ -60,7 +60,7 @@ Learn how to add users to organizations and manage their privileges.
 :margin: 4 4 0 0
 :gutter: 1
 
-:::{grid-item-card} {octicon}`tools` Reconfigure Cluster
+:::{grid-item-card} {octicon}`tools` Scale Cluster
 :link: reconfigure-cluster
 :link-type: ref
 Learn how to scale your cluster up or down, depending on your needs.
