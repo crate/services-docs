@@ -1,9 +1,15 @@
 (organization-api)=
 # API
 
-We offer an API to allow programmatic access to the
-Cloud products. The API can be accessed by generating a key and secret
-in your account page:
+We offer an API to allow programmatic access to CrateDB Cloud. The API can
+be accessed by generating a key and secret in your
+[account page](https://console.cratedb.cloud/account/settings) (login required).
+
+The API keys are bound to the CrateDB Cloud user account that generates them. 
+This means that any actions performed using the API keys will be executed as
+that user. Consequently, the API keys inherit the same permissions as the user,
+allowing the same level of access and control over the organization and its
+resources.
 
 ![Cloud Console New Api Key](../_assets/img/create-api-key.png)
 
