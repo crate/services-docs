@@ -149,6 +149,7 @@ Services <reference/services>
 Import <cluster/import>
 Console <cluster/console>
 Automation <cluster/automation>
+Integrations <cluster/integrations>
 Export <cluster/export>
 Backups <cluster/backups>
 Manage Cluster <cluster/manage>
