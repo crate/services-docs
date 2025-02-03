@@ -153,7 +153,7 @@ out to our support team.
 
 #### Step 4: Access Connection String
 
-You’ll need to provide the connection string for your MongoDB Atlas cluster so
+You'll need to provide the connection string for your MongoDB Atlas cluster so
 that CrateDB Cloud can connect to it.
 
 1. **Navigate to Your Cluster**  
@@ -244,3 +244,36 @@ want to sync with CrateDB Cloud.
 #### Step 7: Create the Integration  
 Click **Create Integration** to finalize the setup. CrateDB Cloud will now sync
 your MongoDB data based on the selected settings.
+
+---
+
+## Limitations
+
+The MongoDB CDC integration is available as a preview. The feature is stable
+enough for broader use but may still have limitations, known issues, or
+incomplete features. While suitable for many use cases, it is not yet
+recommended for mission-critical workloads.
+
+
+### Column Name Restrictions
+
+Column or property names containing square brackets (`[]`) are not supported and
+are replaced wit `__openbrk__` and `__closebrk__` respectively. Likewise, column
+names containing dots (`.`) are not supported and are replaced with (`__dot__`).
+
+:::{warning}
+This behavior may change in future releases.
+:::
+
+
+### Unsupported Data Types
+
+The following MongoDB data types are not supported in the CrateDB Cloud MongoDB
+CDC integration:
+
+- **Long Strings** exceeding 32,766 characters are replaced with a placeholder
+  value.
+- **Binary data types** other than UUIDs, which are converted to `TEXT` and
+  **vectors**, which are converted to `ARRAY`s of numbers.
+- The `Decimal128` data type is not supported and is converted to a string, as 
+  CrateDB does not support a decimal data type.
